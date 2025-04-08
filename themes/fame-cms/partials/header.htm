@@ -1,0 +1,101 @@
+[viewBag]
+snippetProperties[0][id] = -1
+==
+<header id="headerNavigation">
+    <nav id="navContainer">
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ 'assets/logo.png'|media }}" alt="logo">
+            </a>
+        </div>
+
+        <div class="right-side">
+            <div id="mobileCloseBtn" class="mobile-close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <ul class="navigation-items-w">
+                <li class="nav-item dropdown-nav">
+                    <span class="label">
+                        About Fame
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                    <div class="dropdown-content">
+                        <a href="{{ 'our-story' | page }}">
+                            <span class="dd-label">
+                                Our Story
+                            </span>
+                        </a>
+                        <a href="/">
+                            <span class="dd-label">
+                                Meet the Team
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ 'talent-hub' | page }}">
+                        <span class="label">
+                            The Talent Hub
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown-nav">
+                    <span class="label">
+                        Our Events
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                    <div class="dropdown-content">
+                        <a href="{{ 'our-events' | page }}">
+                            <span class="dd-label">
+                                Fame Events
+                            </span>
+                        </a>
+                        <a href="{{ 'gallery' | page }}">
+                            <span class="dd-label">
+                                Gallery
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown-nav">
+                    <span class="label">
+                        Connect
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                    <div class="dropdown-content">
+                        <a href="{{ 'sponsored' | page }}">
+                            <span class="dd-label">
+                                Sponsors
+                            </span>
+                        </a>
+                        <a href="{{ 'featured-in' | page }}">
+                            <span class="dd-label">
+                                Featured In
+                            </span>
+                        </a>
+                        <a href="{{ 'contact-us' | page }}">
+                            <span class="dd-label">
+                                Contact
+                            </span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="contact-us-btn-w">
+                <a href="{{ 'contact-us' | page }}">
+                    <button class="btn primary">
+                        <img src="{{ 'assets/icons/phone-message.png'|media }}" />
+                        Contact us
+                    </button>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="mobileNavBtn" class="mobile-nav-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,11 @@
+name: Navigation
+modelClass: div\DivCms\Models\Navigation
+form: $/div/divcms/models/navigation/fields.yaml
+defaultRedirect: div/divcms/navigation
+create:
+    redirect: 'div/divcms/navigation/update/:id'
+    redirectClose: div/divcms/navigation
+update:
+    redirect: div/divcms/navigation
+    redirectClose: div/divcms/navigation
+preview: {  }

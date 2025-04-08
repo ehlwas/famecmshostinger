@@ -1,0 +1,29 @@
+plugin:
+    name: 'div.divcms::lang.plugin.name'
+    description: 'div.divcms::lang.plugin.description'
+    author: div
+    icon: 'fas icon-scroll'
+    replaces: {  }
+permissions:
+    div.team:
+        tab: Team
+        label: 'Team CMS'
+    div.navigation:
+        tab: Navigation
+        label: 'Team CMS'
+navigation:
+    main-cms:
+        label: 'Main CMS'
+        url: div/divcms/team
+        icon: icon-cc
+        permissions:
+            - div.team
+        sideMenu:
+            navigation-menu-item:
+                label: Navigation
+                url: div/divcms/navigation
+                icon: icon-sitemap
+            team:
+                label: Team
+                url: div/divcms/team
+                icon: icon-sitemap

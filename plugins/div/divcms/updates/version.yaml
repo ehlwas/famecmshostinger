@@ -1,0 +1,23 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table div_divcms_team'
+    - builder_table_create_div_divcms_team.php
+1.0.3:
+    - 'Updated table div_divcms_team'
+    - builder_table_update_div_divcms_team.php
+1.0.4:
+    - 'Created table div_divcms_'
+    - builder_table_create_div_divcms_.php
+1.0.5:
+    - 'Drop table div_divcms_'
+    - builder_table_delete_div_divcms_.php
+1.0.6:
+    - 'Updated table div_divcms_team'
+    - builder_table_update_div_divcms_team_2.php
+1.0.7:
+    - 'Created table div_divcms_'
+    - builder_table_create_div_divcms__2.php
+1.0.8:
+    - 'Updated table div_divcms_'
+    - builder_table_update_div_divcms_navigation.php

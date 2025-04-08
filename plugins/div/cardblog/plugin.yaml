@@ -1,0 +1,6 @@
+plugin:
+    name: 'div.cardblog::lang.plugin.name'
+    description: 'div.cardblog::lang.plugin.description'
+    author: div
+    icon: 'fas icon-code-branch'
+    replaces: {  }

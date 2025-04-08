@@ -1,0 +1,429 @@
+title = "Home"
+url = "/"
+layout = "default"
+is_hidden = 0
+==
+<?php
+function onStart() {
+	$this->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+    $this->addJs('https://cdn.jsdelivr.net/npm/simple-parallax-js@6.0.1/dist/vanilla/simpleParallaxVanilla.umd.min.js');
+}
+?>
+==
+{% put scripts %}
+    <script type="module" src="{{ 'assets/js/swiper-initial.js' | theme }}"></script>
+{% endput %}
+<div class="home-page">
+
+    <div class="page-content">
+
+        <div class="banner-container" id="bannerContainer">
+            <img src="{{ 'images/home/home.png'|media }}" class="home-banner-img" id="img-moving-vertical" />
+            
+            <div class="banner-text-wrapper">
+                <h1 class="title">
+                    A yearly event displaying<br />
+                    the talents of<br />
+                    <strong>people of determination.</strong>
+                </h1>
+                <h2 class="description">We encourage creativity and showcase fashion, art, music and entertainment.</h2>
+                <div class="btn-container">
+                    <button class="btn outline-dashed">
+                        <img src="{{ 'assets/icons/play.png'|media }}" />
+                        See Promotion Video
+                    </button>
+                    <button class="btn primary">
+                        <img src="{{ 'assets/icons/phone-message.png'|media }}" />
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <section class="featured-in-section">
+            <div class="featured-in-wrapper">
+                <div class="featured-in-item fi-1">
+                    <img src="{{ 'images/home/featured-in-1.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-2">
+                    <img src="{{ 'images/home/featured-in-2.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-3">
+                    <img src="{{ 'images/home/featured-in-3.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-4">
+                    <img src="{{ 'images/home/featured-in-4.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-5">
+                    <img src="{{ 'images/home/featured-in-5.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-6">
+                    <img src="{{ 'images/home/featured-in-6.png'|media }}" />
+                </div>
+                <!-- Duplicates -->
+                <div class="featured-in-item fi-1 duplicates">
+                    <img src="{{ 'images/home/featured-in-1.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-2 duplicates">
+                    <img src="{{ 'images/home/featured-in-2.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-3 duplicates">
+                    <img src="{{ 'images/home/featured-in-3.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-4 duplicates">
+                    <img src="{{ 'images/home/featured-in-4.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-5 duplicates">
+                    <img src="{{ 'images/home/featured-in-5.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-6 duplicates">
+                    <img src="{{ 'images/home/featured-in-6.png'|media }}" />
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="info-section">
+            <div class="info-content">
+                <h4 class="info-text"><strong>FAME</strong> is an annual stage show
+                    celebrating people of determination with
+                    <span class="bg-text">fashion, music, and drama</span> performances.</h4>
+            </div>
+        </section>
+
+
+
+        <section class="home-video-section" style="background-image: url('{{ 'images/home/bg-rectangle.png'|media }}');">
+            <!-- <img src="./assets/images/home/bg-rectangle.png" class="bg" /> -->
+            
+            <div class="video-container">
+                <video controls width="250">
+                    <source src="https://tekeye.uk/html/images/Joren_Falls_Izu_Jap.webm" type="video/webm" />
+                </video>
+            </div>
+        </section>
+
+
+
+        <section class="recent-events-section">
+            <h3 class="section-title">Our Recent <span class="bg-text">Events</span></h3>
+
+            <!-- <div class="recent-events-container">
+
+                <div class="recent-events-box">
+                    <div class="img-container">
+                        <img src="./assets/images/home/recent-events-1.png" />
+                    </div>
+                    <div class="details-container">
+                        <p class="re-date">01/01/2025</p>
+                        <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
+                        <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                        <a href="/" class="btn primary">View Event</a>
+                    </div>
+                </div>
+
+                <div class="recent-events-box">
+                    <div class="img-container">
+                        <img src="./assets/images/home/recent-events-1.png" />
+                    </div>
+                    <div class="details-container">
+                        <p class="re-date">01/01/2025</p>
+                        <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
+                        <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                        <a href="/" class="btn primary">View Event</a>
+                    </div>
+                </div>
+
+                <div class="recent-events-box">
+                    <div class="img-container">
+                        <img src="./assets/images/home/recent-events-1.png" />
+                    </div>
+                    <div class="details-container">
+                        <p class="re-date">01/01/2025</p>
+                        <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
+                        <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                        <a href="/" class="btn primary">View Event</a>
+                    </div>
+                </div>
+
+            </div> -->
+
+            <div class="swiper" id="recentEventsSwiper">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        
+                        <div class="recent-events-box">
+                            <div class="img-container">
+                                <img src="{{ 'images/home/recent-events-1.png'|media }}" />
+                            </div>
+                            <div class="details-container">
+                                <p class="re-date">01/01/2025</p>
+                                <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
+                                <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        
+                                <a href="/" class="btn primary">View Event</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide">
+
+                        <div class="recent-events-box">
+                            <div class="img-container">
+                                <img src="{{ 'images/home/recent-events-1.png'|media }}" />
+                            </div>
+                            <div class="details-container">
+                                <p class="re-date">01/01/2025</p>
+                                <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
+                                <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        
+                                <a href="/" class="btn primary">View Event</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide">
+
+                        <div class="recent-events-box">
+                            <div class="img-container">
+                                <img src="{{ 'images/home/recent-events-1.png'|media }}" />
+                            </div>
+                            <div class="details-container">
+                                <p class="re-date">01/01/2025</p>
+                                <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
+                                <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        
+                                <a href="/" class="btn primary">View Event</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+        </section>
+
+
+        
+        <section class="enroll-section">
+
+            <h3 class="section-title">
+                <span class="bg-text">Empowering Talent:</span> Enroll Today
+            </h3>
+
+            <div class="enroll-card card-one">
+                <p class="page-t">1/6</p>
+
+                <div class="title-description-text">
+                    <h5 class="ec-title">Lorem Ipsum Dolor sit amet</h5>
+                    <p class="ec-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                
+                <div class="image-text-wrapper">
+                    <div class="img-container">
+                        
+                    </div>
+                    <div class="text-c">
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enroll-card card-two">
+                <p class="page-t">2/6</p>
+                
+                <div class="title-description-text">
+                    <h5 class="ec-title">Lorem Ipsum Dolor sit amet</h5>
+                    <p class="ec-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                
+                <div class="image-text-wrapper">
+                    <div class="img-container">
+                        
+                    </div>
+                    <div class="text-c">
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enroll-card card-three">
+                <p class="page-t">3/6</p>
+                
+                <div class="title-description-text">
+                    <h5 class="ec-title">Lorem Ipsum Dolor sit amet</h5>
+                    <p class="ec-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                
+                <div class="image-text-wrapper">
+                    <div class="img-container">
+                        
+                    </div>
+                    <div class="text-c">
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do.</p>
+                    </div>
+                </div>
+
+                <div class="enroll-link-c">
+                    <a href="/">
+                        and so much more <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+
+
+
+        <section class="our-experience-section">
+
+            <h3 class="section-title">
+                Our <span class="bg-text">Experience</span> Speaks
+            </h3>
+
+
+            <div class="img-grid-container">
+
+                <div class="g-col first">
+                    <div class="img-container img-one">
+                        <img src="{{ 'images/home/exp-1.png'|media }}" id="img-moving-vertical" />
+                    </div>
+
+                    <div class="img-container img-two">
+                        <img src="{{ 'images/home/exp-2.png'|media }}" id="img-moving-vertical" />
+                    </div>
+                </div>
+
+                <div class="g-col second">
+                    <div class="img-container img-three">
+                        <img src="{{ 'images/home/exp-3.png'|media }}" id="img-moving-vertical" />
+                    </div>
+
+                    <div class="img-container img-four">
+                        <img src="{{ 'images/home/exp-4.png'|media }}" id="img-moving-vertical" />
+                    </div>
+
+                    <div class="img-container img-five">
+                        <img src="{{ 'images/home/exp-5.png'|media }}" id="img-moving-vertical" />
+                    </div>
+                </div>
+                
+            </div>
+
+        </section>
+
+
+
+        <section class="testimonial-section">
+
+            <h3 class="section-title">
+                Why they <span class="bg-text">love</span> us
+            </h3>
+
+            <p class="section-description">
+                See what our clients are saying about their experience
+            </p>
+
+            <div class="testimonial-wrapper">
+                
+                <div class="swiper" id="testimonialSwiper">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            
+                            <div class="testimonial-box">
+
+                                <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
+                                
+                                <p class="message">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor
+                                </p>
+
+                                <p class="name">Ms. Lorem Ipsum 1</p>
+                                
+                            </div>
+                        
+                        </div>
+
+                        <div class="swiper-slide">
+                            
+                            <div class="testimonial-box">
+
+                                <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
+                                
+                                <p class="message">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor
+                                </p>
+
+                                <p class="name">Ms. Lorem Ipsum 2</p>
+                                
+                            </div>
+                            
+                        </div>
+
+                        <div class="swiper-slide">
+                            
+                            <div class="testimonial-box">
+
+                                <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
+                                
+                                <p class="message">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor
+                                </p>
+
+                                <p class="name">Ms. Lorem Ipsum 3</p>
+                                
+                            </div>
+                            
+                        </div>
+
+                        <div class="swiper-slide">
+                            
+                            <div class="testimonial-box">
+
+                                <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
+                                
+                                <p class="message">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor
+                                </p>
+
+                                <p class="name">Ms. Lorem Ipsum 4</p>
+                                
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                
+                    <div class="swiper-controls-container">
+                        <div class="swiper-button-prev" id="testimonialPrev">
+                            <img src="/assets/images/icons/prev.png" alt="" srcset="">
+                        </div>
+                        <div class="swiper-button-next" id="testimonialNext">
+                            <img src="/assets/images/icons/next.png" alt="" srcset="">
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            
+        </section>
+        
+        
+    </div>
+
+</div>

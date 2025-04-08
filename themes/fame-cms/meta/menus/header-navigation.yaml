@@ -1,0 +1,103 @@
+items:
+    -
+        title: 'Our Story'
+        type: cms-page
+        code: ''
+        reference: our-story
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'The Talent Hub'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: talent-hub
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Our Events'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: our-events
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Gallery
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: gallery
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Connect
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: Sponsored
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: sponsored
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Featured In'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: featured
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Contact Us'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: contact-us
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+name: 'Header Navigation'

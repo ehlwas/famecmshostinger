@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table div_cardblog_'
+    - builder_table_create_div_cardblog_.php
+1.0.3:
+    - 'Updated table div_cardblog_'
+    - builder_table_update_div_cardblog_.php

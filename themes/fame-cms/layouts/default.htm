@@ -1,0 +1,25 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ 'assets/css/style.css'|theme }}">
+    {% styles %}
+    <script src="https://kit.fontawesome.com/f5bf1013c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	{% partial "header" %}
+
+    {% page %}
+
+	{% partial "components/footer" %}
+	
+	
+	<script src="{{ 'assets/js/index.js'|theme }}"></script>
+	{% scripts %}
+</body>
+</html>

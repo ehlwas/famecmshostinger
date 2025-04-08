@@ -1,0 +1,176 @@
+title = "Our Story"
+url = "/our-story"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use div\DivCms\Models\Team;
+function onStart() {
+
+    $items = Team::all();
+
+    $this['data'] = $items;
+    
+}
+?>
+==
+<div class="our-story-page">
+
+    <div class="page-content">
+    
+        <section class="banner-container">
+            <img 
+                src="/assets/images/our-story/os-banner-effect.png"
+                class="smoke"
+            />
+
+            <div class="banner-wrapper">
+
+                <div class="left-c">
+                    <h1 class="banner-title">F.A.M.E. was founded
+                        in 2016 by <span class="name">Rosy Ahmed</span>,
+                        the CEO of Purple Vogue Events.</h1>
+
+                    <p class="paragraph">F.A.M.E. which represents fashion, art, music & entertainment, is an annual stage show that was launched as a means of encouraging integration and providing a platform for people of determination to showcase their talents.</p>
+                    <p class="paragraph">Using these four channels, F.A.M.E. acts include a fashion show, musical and dance performances and dramatic acts. Over the years the show has become the UAE’s biggest inclusive event and each year grows in participants and creativity. New participants are encouraged to the stage each year as we develop the show content.</p>
+                    <p class="paragraph">With the growing interest in the annual F.A.M.E. production, we are pleased to be launching the F.A.M.E. TALENT HUB. A place where children and youths from the community can sign up to a variety of recreational classes and enjoy all that the Talent Hub has to offer.</p>
+                </div>
+
+                <div class="right-c">
+
+                    <div class="model-container">
+                        <img src="/assets/images/our-story/bg-circle.png" class="circle" />
+                        <img src="/assets/images/our-story/model.png" class="model" />
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </section>
+
+        <section class="card-container">
+
+            <div class="card-wrapper">
+
+                {% for item in data %}
+                        
+                    <div class="card-box">
+
+                        <img 
+                            src="/assets/images/our-story/card-img-2.png"
+                            class="card-img"
+                        />
+
+                        <div class="card-info-w">
+
+                            <p class="card-name">{{ item.name }}</p>
+
+                            <p class="card-description">{{ item.description }}</p>
+                            
+                        </div>
+                        
+                    </div>
+            
+                {% endfor %}
+
+                {# <div class="card-box">
+
+                    <img 
+                        src="/assets/images/our-story/card-img-1.png"
+                        class="card-img"
+                    />
+
+                    <div class="card-info-w">
+
+                        <p class="card-name">Hana Ahmed</p>
+
+                        <p class="card-description">Born and blessed with an extra chromosome, Hana is the inspiration
+                            behind F.A.M.E and a friendly supporter of all our special F.A.M.E stars.
+                            Her love for fashion and dance and passion for art has been the
+                            foundation of building the annual showcase for the past 6 years.</p>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="card-box">
+
+                    <img 
+                        src="/assets/images/our-story/card-img-2.png"
+                        class="card-img"
+                    />
+
+                    <div class="card-info-w">
+
+                        <p class="card-name">Zahra Ahmed</p>
+
+                        <p class="card-description">A former counsellor at Emirates International School, Zahra is the co-founder of F.A.M.E. and holds a decade of experience working with young people of determination in the UAE and UK. She is currently under training to become an educational psychologist to provide support to schools across London.</p>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="card-box">
+
+                    <img 
+                        src="/assets/images/our-story/card-img-3.png"
+                        class="card-img"
+                    />
+
+                    <div class="card-info-w">
+
+                        <p class="card-name">Rebecca Shamji</p>
+
+                        <p class="card-description">An entrepreneur, model and designer, Rebecca is our fabulous Event Director and has made F.A.M.E. a massive showcase since its inception. She brings magic to the stage with her eye for aesthetics and creativity, along with her passion for community building.</p>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="card-box">
+
+                    <img 
+                        src="/assets/images/our-story/card-img-4.png"
+                        class="card-img"
+                    />
+
+                    <div class="card-info-w">
+
+                        <p class="card-name">Anouska Mason</p>
+
+                        <p class="card-description">A graduate in theatre studies, Anouska is our Production Coordinator for the past 6 years and specializes in bringing spectacular visual displays to life with the support of our production partner, SOLIDE productions. She is also an empathetic and caring friend to all our special children at F.A.M.E.</p>
+                        
+                    </div>
+                    
+                </div> #}
+
+            </div>
+            
+        </section>
+        
+        <section class="mission-vision-container">
+
+            <div class="mission-vision-wrapper">
+
+                <img 
+                    src="/assets/images/our-story/mission-vision.png"
+                    class="img-section"
+                />
+
+                <div class="info-wrapper">
+                    <h2 class="section-title">
+                        Our <span class="bg-text">Mission</span> & <span class="bg-text">Vision</span>
+                    </h2>
+                    <p class="text">Our mission is to provide a creative, engaging and safe space for children and young people of determination to learn new skills, develop existing talents and to build confidence.</p>
+                    <p class="text">In the social setting of the Talent Hub, our members have all the benefits of being a part of a unique youth club. Enriching independence whilst encouraging socialising and team ethic as we work towards end of term productions and ultimately the end of year F.A.M.E. event.</p>
+                    <p class="text">Our vision is to be fully inclusive and to ensure integration into the community by enabling the people of determination to fully participate in all spheres of life.</p>
+                </div>
+                
+            </div>
+            
+        </section>
+        
+    </div>
+    
+</div>

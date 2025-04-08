@@ -1,0 +1,11 @@
+name: Team
+modelClass: div\DivCms\Models\Team
+form: $/div/divcms/models/team/fields.yaml
+defaultRedirect: div/divcms/team
+create:
+    redirect: 'div/divcms/team/update/:id'
+    redirectClose: div/divcms/team
+update:
+    redirect: div/divcms/team
+    redirectClose: div/divcms/team
+preview: {  }
