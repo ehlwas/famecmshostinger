@@ -21,3 +21,6 @@
 1.0.8:
     - 'Updated table div_divcms_'
     - builder_table_update_div_divcms_navigation.php
+1.0.9:
+    - 'Created table div_divcms_volunteers'
+    - builder_table_create_div_divcms_volunteers.php

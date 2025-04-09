@@ -10,7 +10,10 @@ permissions:
         label: 'Team CMS'
     div.navigation:
         tab: Navigation
-        label: 'Team CMS'
+        label: 'Navigation CMS'
+    div.volunteers:
+        tab: Volunteers
+        label: 'Volunteers CMS'
 navigation:
     main-cms:
         label: 'Main CMS'
@@ -19,11 +22,11 @@ navigation:
         permissions:
             - div.team
         sideMenu:
-            navigation-menu-item:
-                label: Navigation
-                url: div/divcms/navigation
-                icon: icon-sitemap
             team:
                 label: Team
                 url: div/divcms/team
+                icon: icon-sitemap
+            volunteers:
+                label: Volunteers
+                url: div/divcms/volunteers
                 icon: icon-sitemap

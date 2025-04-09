@@ -19,12 +19,12 @@ new Swiper('#testimonialSwiper', {
 new Swiper('#recentEventsSwiper', {
     loop: true,
     slidesPerView: 1,
-    // spaceBetween: 10,
+    spaceBetween: 30,
     breakpoints: {
         800: {
             slidesPerView: 2,
         },
-        1200: {
+        1270: {
             slidesPerView: 3,
         },
     },

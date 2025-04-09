@@ -1,0 +1,11 @@
+name: Volunteers
+modelClass: div\DivCms\Models\Volunteers
+form: $/div/divcms/models/volunteers/fields.yaml
+defaultRedirect: div/divcms/volunteers
+create:
+    redirect: 'div/divcms/volunteers/update/:id'
+    redirectClose: div/divcms/volunteers
+update:
+    redirect: div/divcms/volunteers
+    redirectClose: div/divcms/volunteers
+preview: {  }

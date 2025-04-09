@@ -1,0 +1,99 @@
+title = "Our Team"
+url = "/our-team"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use div\divcms\models\Team;
+use div\divcms\models\Volunteers;
+
+function onStart() {
+    $this['volunteersList'] = Volunteers::all();
+    $this['teamList'] = Team::all();
+}
+?>
+==
+<div class="our-team-page">
+
+
+    <div class="page-content">
+
+        <section class="banner-container">
+            <img 
+                src="/assets/images/our-events/bg-our-events.png"
+                class="bg-img"
+            />
+    
+            <div class="banner-wrapper">
+                <h2 class="section-title">
+                    Meet the Team Behind <strong>F.A.M.E.</strong>
+                </h2>
+                <p class="section-description">
+                    Meet the dedicated team and volunteers who make FAME possible.
+                </p>
+            </div>
+            
+        </section>
+
+        <section class="main-team-section">
+
+            <div class="card-wrapper">
+
+                {% for item in teamList %}
+
+                    <div class="card-box">
+                        
+                        <img 
+                            src="{{ item.image | media }}"
+                            class="card-img"
+                        />
+
+                        <div class="card-info-w">
+
+                            <p class="card-name">{{ item.name }}</p>
+
+                            <p class="card-description">{{ item.description }}</p>
+                            
+                        </div>
+                        
+                    </div>
+
+                {% endfor %}
+
+            </div>
+            
+        </section>
+
+        <section class="volunteers-section">
+            
+            <div class="card-wrapper">
+
+                {% for item in volunteersList %}
+
+                    <div class="card-box">
+                            
+                        <img 
+                            src="{{ item.image | media }}"
+                            class="card-img"
+                        />
+
+                        <div class="card-info-w">
+
+                            <p class="card-name">{{item.name}}</p>
+
+                            <p class="card-description">{{item.description}}</p>
+                            
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+                
+            </div>
+
+        </section>
+        
+    </div>
+    
+    
+</div>
