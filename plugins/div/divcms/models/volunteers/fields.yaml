@@ -4,9 +4,10 @@ fields:
         span: auto
         type: text
     description:
-        label: Description
+        label: 'Text area'
         span: auto
-        type: text
+        size: ''
+        type: textarea
     image:
         label: Image
         span: auto
