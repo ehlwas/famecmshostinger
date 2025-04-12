@@ -16,9 +16,9 @@ function onStart() {
 
     $this['record'] = $record;
     $this['slug'] = $slug;
-
     
-    $this['folderContents'] = File::allFiles('storage/app/media/assets');
+    $this['folderContents'] = File::allFiles("storage/app/media/$record->gallery_name");
+    // $this['folderContents'] = $record->gallery_name;
 }
 ?>
 ==
@@ -52,88 +52,43 @@ function onStart() {
                 </a>
             </div>
 
-{{ dump(folderContents)}}
-
             <div class="header-text-w">
                 <p class="date">{{ record.event_date | date("d/m/Y") }}</p>
                 <p class="title">{{ record.title }}</p>
-                <div class="photo-count">69 Photos</div>
+                <div class="photo-count">{{ folderContents|length }} Photos</div>
             </div>
 
             <div class="gallery-slideshow-container">
                 <div class="displayed-image-c">
-                    <img src="/assets/images/home/exp-1.png" />
+                    <img src="{{ folderContents[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
                 </div>
                 
                 <div class="swiper" id="imageSlides">
     
                     <div class="swiper-wrapper">
     
-                        <div class="swiper-slide">
+                        {% for item in folderContents %}
     
-                            <div class="img-container">
-                                <img src="/assets/images/home/exp-1.png" />
+                            <div class="swiper-slide">
+        
+                                <div class="img-container">
+                                    <img src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" />
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-    
-                        <div class="swiper-slide">
-    
-                            <div class="img-container">
-                                <img src="/assets/images/home/exp-1.png" />
-                            </div>
-                            
-                        </div>
-    
-                        <div class="swiper-slide">
-    
-                            <div class="img-container">
-                                <img src="/assets/images/home/exp-1.png" />
-                            </div>
-                            
-                        </div>
-    
-                        <div class="swiper-slide">
-    
-                            <div class="img-container">
-                                <img src="/assets/images/home/exp-1.png" />
-                            </div>
-                            
-                        </div>
-    
-                        <div class="swiper-slide">
-    
-                            <div class="img-container">
-                                <img src="/assets/images/home/exp-1.png" />
-                            </div>
-                            
-                        </div>
-    
-                        <div class="swiper-slide">
-    
-                            <div class="img-container">
-                                <img src="/assets/images/home/exp-1.png" />
-                            </div>
-                            
-                        </div>
+
+                        {% endfor %}
                         
                     </div>
                     
                 </div>
             </div>
 
-            <div class="bottom-text-w">
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor.
-                </p>
-
-                <ul class="desc-list">
-                    <li>Lorem ipsum dolor sit amet,</li>
-                    <li>consectetur adipiscing elit, sed</li>
-                    <li>do eiusmod tempor incididunt ut</li>
-                    <li>labore et dolore magna aliqua.</li>
-                    <li>sed do eiusmod tempor.</li>
-                </ul>
+            {# <div class="bottom-text-w">
+                {{ record.event_details | raw }}
+            </div> #}
+            <div class="rich-text-editor">
+                {{ record.event_details | raw }}
             </div>
             
         </div>

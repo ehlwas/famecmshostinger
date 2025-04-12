@@ -1705,8 +1705,20 @@ footer .line-c {
 .our-events-details-page .page-content .details-content-container .bottom-text-w .desc-list li ~ li {
   margin-top: 20px;
 }
+.our-events-details-page .page-content .details-content-container .rich-text-editor {
+  all: initial; /* Reset everything first */
+  font-family: "Poppins", sans-serif; /* Now re-apply what you want */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.our-events-details-page .page-content .details-content-container .rich-text-editor * {
+  all: unset;
+  display: revert;
+}
 .our-events-details-page .page-content .details-content-container .gallery-slideshow-container {
   margin-top: 60px;
+  margin-bottom: 20px;
 }
 .our-events-details-page .page-content .details-content-container .gallery-slideshow-container .displayed-image-c {
   margin-bottom: 30px;

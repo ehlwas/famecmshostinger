@@ -29,6 +29,10 @@ fields:
         type: mediafinder
     description:
         label: Description
+        span: auto
+        type: text
+    event_details:
+        label: 'Event Content'
         size: ''
         span: auto
         type: richeditor

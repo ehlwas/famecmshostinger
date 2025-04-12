@@ -39,8 +39,7 @@ function onStart() {
                     <div class="details-container">
                         <p class="re-date">{{ item.event_date | date("d/m/Y")  }}</p>
                         <h5 class="re-title">{{ item.title }}</h5>
-                        <p class="re-description">{{ item.description | striptags }}</p>
-                            {{item.slug}}
+                        <p class="re-description">{{ item.description }}</p>
                         <a href="{{ 'our-event-details' | page({ slug: item.slug }) }}" class="btn primary">View Event</a>
                     </div>
                 </div>

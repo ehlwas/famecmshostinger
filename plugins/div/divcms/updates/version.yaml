@@ -36,3 +36,9 @@
 1.0.13:
     - 'Updated table div_divcms_events'
     - builder_table_update_div_divcms_events.php
+1.0.14:
+    - 'Updated table div_divcms_events'
+    - builder_table_update_div_divcms_events_2.php
+1.0.15:
+    - 'Updated table div_divcms_events'
+    - builder_table_update_div_divcms_events_3.php
