@@ -1,0 +1,15 @@
+columns:
+    title:
+        label: 'Event Title'
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: Description
+        type: text
+        searchable: false
+        sortable: false
+    event_date:
+        label: Date
+        type: date
+        sortable: true

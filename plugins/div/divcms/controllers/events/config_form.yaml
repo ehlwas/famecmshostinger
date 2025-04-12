@@ -1,0 +1,11 @@
+name: Events
+modelClass: div\DivCms\Models\Events
+form: $/div/divcms/models/events/fields.yaml
+defaultRedirect: div/divcms/events
+create:
+    redirect: 'div/divcms/events/update/:id'
+    redirectClose: div/divcms/events
+update:
+    redirect: div/divcms/events
+    redirectClose: div/divcms/events
+preview: {  }

@@ -1564,6 +1564,12 @@ footer .line-c {
   height: 213px;
   overflow: hidden;
 }
+.our-events-page .page-content .grid-container .recent-events-box .img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .our-events-page .page-content .grid-container .recent-events-box .details-container .re-date {
   font-weight: 500;
   font-size: 21.68px;

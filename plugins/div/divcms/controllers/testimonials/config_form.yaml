@@ -1,0 +1,10 @@
+name: Testimonials
+modelClass: div\DivCms\Models\Testimonials
+form: $/div/divcms/models/testimonials/fields.yaml
+defaultRedirect: div/divcms/testimonials
+create:
+    redirect: 'div/divcms/testimonials/update/:id'
+    redirectClose: div/divcms/testimonials
+update:
+    redirect: div/divcms/testimonials
+    redirectClose: div/divcms/testimonials

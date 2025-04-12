@@ -1,0 +1,34 @@
+fields:
+    title:
+        label: 'Event Title'
+        span: auto
+        type: text
+    slug:
+        label: 'URL Text'
+        span: auto
+        disabled: 0
+        preset:
+            field: title
+            type: slug
+        readOnly: 1
+        type: text
+    event_date:
+        label: Date
+        mode: date
+        span: auto
+        type: datepicker
+    gallery_name:
+        label: 'Gallery Name'
+        mode: file
+        span: auto
+        type: mediafinder
+    img_poster:
+        label: Poster
+        span: auto
+        mode: file
+        type: mediafinder
+    description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor

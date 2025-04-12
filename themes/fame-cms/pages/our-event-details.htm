@@ -1,0 +1,144 @@
+title = "Our Event Details"
+url = "/our-event-details/:slug"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use div\DivCms\Models\Events;
+use Illuminate\Support\Facades\File;
+
+function onStart() {
+    $slug = $this->param('slug'); // dynamic URL slug
+    
+    $this->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+
+    $record = Events::where('slug', $slug)->first();
+
+    $this['record'] = $record;
+    $this['slug'] = $slug;
+
+    
+    $this['folderContents'] = File::allFiles('storage/app/media/assets');
+}
+?>
+==
+{% put scripts %}
+    <script type="module" src="{{ 'assets/js/swiper-initial.js' | theme }}"></script>
+{% endput %}
+
+<div class="our-events-details-page">
+
+    <div class="page-content">
+
+        <section class="banner-container">
+            <img 
+                src="/assets/images/our-events/bg-our-events.png"
+                class="bg-img"
+            />
+
+            <div class="banner-wrapper">
+                <h2 class="section-title">
+                    Experience the Magic of <strong>F.A.M.E.</strong> Events
+                </h2>
+            </div>
+            
+        </section>
+
+        <div class="details-content-container">
+            
+            <div class="close-btn-w">
+                <a href="/our-events.html">
+                    <img src="/assets/images/icons/close-icon.png" class="close-icon" />
+                </a>
+            </div>
+
+{{ dump(folderContents)}}
+
+            <div class="header-text-w">
+                <p class="date">{{ record.event_date | date("d/m/Y") }}</p>
+                <p class="title">{{ record.title }}</p>
+                <div class="photo-count">69 Photos</div>
+            </div>
+
+            <div class="gallery-slideshow-container">
+                <div class="displayed-image-c">
+                    <img src="/assets/images/home/exp-1.png" />
+                </div>
+                
+                <div class="swiper" id="imageSlides">
+    
+                    <div class="swiper-wrapper">
+    
+                        <div class="swiper-slide">
+    
+                            <div class="img-container">
+                                <img src="/assets/images/home/exp-1.png" />
+                            </div>
+                            
+                        </div>
+    
+                        <div class="swiper-slide">
+    
+                            <div class="img-container">
+                                <img src="/assets/images/home/exp-1.png" />
+                            </div>
+                            
+                        </div>
+    
+                        <div class="swiper-slide">
+    
+                            <div class="img-container">
+                                <img src="/assets/images/home/exp-1.png" />
+                            </div>
+                            
+                        </div>
+    
+                        <div class="swiper-slide">
+    
+                            <div class="img-container">
+                                <img src="/assets/images/home/exp-1.png" />
+                            </div>
+                            
+                        </div>
+    
+                        <div class="swiper-slide">
+    
+                            <div class="img-container">
+                                <img src="/assets/images/home/exp-1.png" />
+                            </div>
+                            
+                        </div>
+    
+                        <div class="swiper-slide">
+    
+                            <div class="img-container">
+                                <img src="/assets/images/home/exp-1.png" />
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="bottom-text-w">
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor.
+                </p>
+
+                <ul class="desc-list">
+                    <li>Lorem ipsum dolor sit amet,</li>
+                    <li>consectetur adipiscing elit, sed</li>
+                    <li>do eiusmod tempor incididunt ut</li>
+                    <li>labore et dolore magna aliqua.</li>
+                    <li>sed do eiusmod tempor.</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        
+    </div>
+    
+</div>

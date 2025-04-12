@@ -4,9 +4,12 @@ layout = "default"
 is_hidden = 0
 ==
 <?php
+use div\divcms\models\Testimonials;
 function onStart() {
 	$this->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
     $this->addJs('https://cdn.jsdelivr.net/npm/simple-parallax-js@6.0.1/dist/vanilla/simpleParallaxVanilla.umd.min.js');
+
+    $this['testimonialsList'] = Testimonials::all();
 }
 ?>
 ==
@@ -299,78 +302,35 @@ function onStart() {
 
                     <div class="swiper-wrapper">
 
-                        <div class="swiper-slide">
+                        {% for item in testimonialsList %}
+
+                            <div class="swiper-slide">
+                                
+                                <div class="testimonial-box">
+
+                                    <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
+                                    
+                                    <p class="message">
+                                        “{{ item.message }}
+                                    </p>
+
+                                    <p class="name">{{ item.name }}</p>
+                                    
+                                </div>
                             
-                            <div class="testimonial-box">
-
-                                <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
-                                
-                                <p class="message">
-                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor
-                                </p>
-
-                                <p class="name">Ms. Lorem Ipsum 1</p>
-                                
                             </div>
-                        
-                        </div>
 
-                        <div class="swiper-slide">
-                            
-                            <div class="testimonial-box">
+                        {% endfor %}
 
-                                <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
-                                
-                                <p class="message">
-                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor
-                                </p>
-
-                                <p class="name">Ms. Lorem Ipsum 2</p>
-                                
-                            </div>
-                            
-                        </div>
-
-                        <div class="swiper-slide">
-                            
-                            <div class="testimonial-box">
-
-                                <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
-                                
-                                <p class="message">
-                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor
-                                </p>
-
-                                <p class="name">Ms. Lorem Ipsum 3</p>
-                                
-                            </div>
-                            
-                        </div>
-
-                        <div class="swiper-slide">
-                            
-                            <div class="testimonial-box">
-
-                                <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
-                                
-                                <p class="message">
-                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor
-                                </p>
-
-                                <p class="name">Ms. Lorem Ipsum 4</p>
-                                
-                            </div>
-                            
-                        </div>
 
                     </div>
                 
                     <div class="swiper-controls-container">
                         <div class="swiper-button-prev" id="testimonialPrev">
-                            <img src="/assets/images/icons/prev.png" alt="" srcset="">
+                            <img src="{{ 'assets/icons/prev.png' | media }}" alt="" srcset="">
                         </div>
                         <div class="swiper-button-next" id="testimonialNext">
-                            <img src="/assets/images/icons/next.png" alt="" srcset="">
+                            <img src="{{ 'assets/icons/next.png' | media }}" alt="" srcset="">
                         </div>
                     </div>
 

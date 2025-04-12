@@ -14,6 +14,9 @@ permissions:
     div.volunteers:
         tab: Volunteers
         label: 'Volunteers CMS'
+    div.general:
+        tab: 'General Permission'
+        label: 'General Permission'
 navigation:
     main-cms:
         label: 'Main CMS'
@@ -29,4 +32,12 @@ navigation:
             volunteers:
                 label: Volunteers
                 url: div/divcms/volunteers
+                icon: icon-sitemap
+            testimonials:
+                label: Testimonials
+                url: div/divcms/testimonials
+                icon: icon-sitemap
+            events:
+                label: Events
+                url: div/divcms/events
                 icon: icon-sitemap

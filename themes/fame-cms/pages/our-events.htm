@@ -3,6 +3,13 @@ url = "/our-events"
 layout = "default"
 is_hidden = 0
 ==
+<?php
+use div\divcms\models\Events;
+function onStart() {
+    $this['eventsList'] = Events::all();
+}
+?>
+==
 <div class="our-events-page">
 
     <div class="page-content">
@@ -23,83 +30,22 @@ is_hidden = 0
 
         <section class="grid-container">
 
-            <div class="recent-events-box">
-                <div class="img-container">
-                    <img src="./assets/images/home/recent-events-1.png" />
+            {% for item in eventsList %}
+                
+                <div class="recent-events-box">
+                    <div class="img-container">
+                        <img src="{{ item.img_poster | media }}" />
+                    </div>
+                    <div class="details-container">
+                        <p class="re-date">{{ item.event_date | date("d/m/Y")  }}</p>
+                        <h5 class="re-title">{{ item.title }}</h5>
+                        <p class="re-description">{{ item.description | striptags }}</p>
+                            {{item.slug}}
+                        <a href="{{ 'our-event-details' | page({ slug: item.slug }) }}" class="btn primary">View Event</a>
+                    </div>
                 </div>
-                <div class="details-container">
-                    <p class="re-date">01/01/2025</p>
-                    <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
-                    <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-                    <a href="/our-events-details.html" class="btn primary">View Event</a>
-                </div>
-            </div>
-
-            <div class="recent-events-box">
-                <div class="img-container">
-                    <img src="./assets/images/home/recent-events-1.png" />
-                </div>
-                <div class="details-container">
-                    <p class="re-date">01/01/2025</p>
-                    <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
-                    <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                    <a href="/our-events-details.html" class="btn primary">View Event</a>
-                </div>
-            </div>
-
-            <div class="recent-events-box">
-                <div class="img-container">
-                    <img src="./assets/images/home/recent-events-1.png" />
-                </div>
-                <div class="details-container">
-                    <p class="re-date">01/01/2025</p>
-                    <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
-                    <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                    <a href="/our-events-details.html" class="btn primary">View Event</a>
-                </div>
-            </div>
-
-            <div class="recent-events-box">
-                <div class="img-container">
-                    <img src="./assets/images/home/recent-events-1.png" />
-                </div>
-                <div class="details-container">
-                    <p class="re-date">01/01/2025</p>
-                    <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
-                    <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                    <a href="/our-events-details.html" class="btn primary">View Event</a>
-                </div>
-            </div>
-
-            <div class="recent-events-box">
-                <div class="img-container">
-                    <img src="./assets/images/home/recent-events-1.png" />
-                </div>
-                <div class="details-container">
-                    <p class="re-date">01/01/2025</p>
-                    <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
-                    <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                    <a href="/our-events-details.html" class="btn primary">View Event</a>
-                </div>
-            </div>
-
-            <div class="recent-events-box">
-                <div class="img-container">
-                    <img src="./assets/images/home/recent-events-1.png" />
-                </div>
-                <div class="details-container">
-                    <p class="re-date">01/01/2025</p>
-                    <h5 class="re-title">Lorem ipsum dolor sit amet.</h5>
-                    <p class="re-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                    <a href="/our-events-details.html" class="btn primary">View Event</a>
-                </div>
-            </div>
+            {% endfor %}
             
         </section>
         

@@ -1,0 +1,21 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    message:
+        label: Message
+        size: ''
+        span: auto
+        type: textarea
+    star:
+        label: Rating
+        span: auto
+        options:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+            5: '5'
+        showSearch: true
+        type: dropdown
