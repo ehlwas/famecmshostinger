@@ -3,6 +3,36 @@ url = "/gallery"
 layout = "default"
 is_hidden = 0
 ==
+<?php
+use div\DivCms\Models\Gallery;
+use Illuminate\Support\Facades\File;
+
+function onStart() {
+    
+    $galleries = Gallery::all();
+
+    $this['galleryList'] = $galleries->map(function ($item) {
+        $galleryPath = "storage/app/media/$item->gallery_path";
+
+        // Get all files in the gallery folder
+        $files = collect(File::allFiles($galleryPath));
+
+        // Count total files
+        $fileCount = $files->count();
+
+        // Get only the latest 3 files (by modified time)
+        $fileList = $files->sortByDesc(function ($file) {
+            return $file->getMTime();
+        })->take(3)->values(); // Reset keys just in case
+
+        // Return modified item
+        return $item->setAttribute('fileCount', $fileCount)
+                    ->setAttribute('fileList', $fileList);
+    });
+
+}
+?>
+==
 <div class="gallery-page">
 
     <div class="page-content">
@@ -26,61 +56,38 @@ is_hidden = 0
 
         <div class="album-grid-container">
 
-            <div class="album-box" id="albumBox" data-album-id="album-1">
-                <div class="img-wrapper">
-                    <div class="left-c">
-                        <div class="img-container one"></div>
-                        <div class="img-container two"></div>
-                    </div>
-                    <div class="img-container three"></div>
-                </div>
-                <div class="album-info-w">
-                    <p class="album-title">Lorem ipsum dolor sit</p>
-                    <p class="photo-count">59 Photos</p>
-                </div>
-            </div>
+            {% for item in galleryList %}
 
-            <div class="album-box" id="albumBox" data-album-id="album-2">
-                <div class="img-wrapper">
-                    <div class="left-c">
-                        <div class="img-container one"></div>
-                        <div class="img-container two"></div>
-                    </div>
-                    <div class="img-container three"></div>
-                </div>
-                <div class="album-info-w">
-                    <p class="album-title">Lorem ipsum dolor sit</p>
-                    <p class="photo-count">59 Photos</p>
-                </div>
-            </div>
+                <div class="album-box" id="albumBox" data-album-id="album-1">
+                
+                    <div class="img-wrapper">
+                        <div class="left-c">
+                            <div class="img-container one">
+                                {% if item.fileList|length > 0 %}
+                                    <img src="{{ item.fileList[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
+                                {% endif %}
+                            </div>
 
-            <div class="album-box" id="albumBox" data-album-id="album-3">
-                <div class="img-wrapper">
-                    <div class="left-c">
-                        <div class="img-container one"></div>
-                        <div class="img-container two"></div>
+                            <div class="img-container two">
+                                {% if item.fileList|length > 1 %}
+                                    <img src="{{ item.fileList[1].pathname | replace({'storage/app/media/': ''}) | media }}" />
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="img-container three">
+                            {% if item.fileList|length > 2 %}
+                                <img src="{{ item.fileList[2].getPathname() | replace({'storage/app/media/': ''}) | media }}" />
+                            {% endif %}
+                        </div>
                     </div>
-                    <div class="img-container three"></div>
+                    <div class="album-info-w">
+                        <p class="album-title">{{ item.title }}</p>
+                        <p class="photo-count">{{ item.fileCount }} Photos</p>
+                    </div>
                 </div>
-                <div class="album-info-w">
-                    <p class="album-title">Lorem ipsum dolor sit</p>
-                    <p class="photo-count">59 Photos</p>
-                </div>
-            </div>
 
-            <div class="album-box" id="albumBox" data-album-id="album-4">
-                <div class="img-wrapper">
-                    <div class="left-c">
-                        <div class="img-container one"></div>
-                        <div class="img-container two"></div>
-                    </div>
-                    <div class="img-container three"></div>
-                </div>
-                <div class="album-info-w">
-                    <p class="album-title">Lorem ipsum dolor sit</p>
-                    <p class="photo-count">59 Photos</p>
-                </div>
-            </div>
+            {% endfor %}
+        
             
         </div>
         

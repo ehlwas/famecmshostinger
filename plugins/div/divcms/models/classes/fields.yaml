@@ -1,0 +1,40 @@
+fields:
+    header_title:
+        label: Title
+        span: auto
+        type: text
+    text1:
+        label: Text
+        span: auto
+        readOnly: 1
+        preset:
+            field: header_title
+            type: slug
+        type: text
+    header_description:
+        label: Description
+        span: auto
+        type: text
+    img_poster:
+        label: 'Media finder'
+        mode: file
+        span: auto
+        type: mediafinder
+    photo_album:
+        label: 'Photo Album'
+        mode: file
+        span: auto
+        type: mediafinder
+    show_on_home:
+        label: 'Show on Home'
+        options:
+            Hide: Hide
+            Show: Show
+        showSearch: true
+        span: auto
+        type: dropdown
+    rich_text:
+        label: 'Content Description'
+        size: ''
+        span: auto
+        type: richeditor

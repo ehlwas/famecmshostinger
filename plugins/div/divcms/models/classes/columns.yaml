@@ -1,0 +1,15 @@
+columns:
+    header_title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    header_description:
+        label: Description
+        type: text
+        searchable: true
+        sortable: true
+    show_on_home:
+        label: 'Show on Home'
+        type: text
+        sortable: true

@@ -41,3 +41,19 @@ navigation:
                 label: Events
                 url: div/divcms/events
                 icon: icon-sitemap
+            gallery:
+                label: Gallery
+                url: div/divcms/gallery
+                icon: icon-sitemap
+            classes:
+                label: Classes
+                url: div/divcms/classes
+                icon: icon-sitemap
+            featured-in:
+                label: 'Featured In'
+                url: div/divcms/featured
+                icon: icon-sitemap
+            partners:
+                label: Partners
+                url: div/divcms/partners
+                icon: icon-sitemap

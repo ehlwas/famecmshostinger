@@ -72,7 +72,7 @@ function onStart() {
                             <div class="swiper-slide">
         
                                 <div class="img-container">
-                                    <img src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" />
+                                    <img src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" loading="lazy" />
                                 </div>
                                 
                             </div>

@@ -1,0 +1,11 @@
+name: Gallery
+modelClass: div\DivCms\Models\Gallery
+form: $/div/divcms/models/gallery/fields.yaml
+defaultRedirect: div/divcms/gallery
+create:
+    redirect: 'div/divcms/gallery/update/:id'
+    redirectClose: div/divcms/gallery
+update:
+    redirect: div/divcms/gallery
+    redirectClose: div/divcms/gallery
+preview: {  }

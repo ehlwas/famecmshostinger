@@ -42,3 +42,24 @@
 1.0.15:
     - 'Updated table div_divcms_events'
     - builder_table_update_div_divcms_events_3.php
+1.0.16:
+    - 'Created table div_divcms_gallery'
+    - builder_table_create_div_divcms_gallery.php
+1.0.17:
+    - 'Created table div_divcms_classes'
+    - builder_table_create_div_divcms_classes.php
+1.0.18:
+    - 'Updated table div_divcms_classes'
+    - builder_table_update_div_divcms_classes.php
+1.0.19:
+    - 'Updated table div_divcms_classes'
+    - builder_table_update_div_divcms_classes_2.php
+1.0.20:
+    - 'Updated table div_divcms_classes'
+    - builder_table_update_div_divcms_classes_3.php
+1.0.21:
+    - 'Created table div_divcms_featured_in'
+    - builder_table_create_div_divcms_featured_in.php
+1.0.22:
+    - 'Created table div_divcms_partners'
+    - builder_table_create_div_divcms_partners.php

@@ -1,0 +1,11 @@
+name: Classes
+modelClass: div\DivCms\Models\Classes
+form: $/div/divcms/models/classes/fields.yaml
+defaultRedirect: div/divcms/classes
+create:
+    redirect: 'div/divcms/classes/update/:id'
+    redirectClose: div/divcms/classes
+update:
+    redirect: div/divcms/classes
+    redirectClose: div/divcms/classes
+preview: {  }

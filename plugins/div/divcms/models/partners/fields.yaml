@@ -1,0 +1,18 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    type:
+        label: Type
+        options:
+            Sponsor: Sponsor
+            Supporter: Supporter
+        showSearch: true
+        span: auto
+        type: dropdown
+    img_path:
+        label: Logo
+        span: auto
+        mode: file
+        type: mediafinder

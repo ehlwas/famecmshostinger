@@ -1,0 +1,10 @@
+name: Featured
+form: $/div/divcms/models/featured/fields.yaml
+modelClass: div\DivCms\Models\Featured
+defaultRedirect: div/divcms/featured
+create:
+    redirect: 'div/divcms/featured/update/:id'
+    redirectClose: div/divcms/featured
+update:
+    redirect: div/divcms/featured
+    redirectClose: div/divcms/featured

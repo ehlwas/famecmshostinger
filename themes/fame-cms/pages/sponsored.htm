@@ -3,6 +3,15 @@ url = "/sponsored"
 layout = "default"
 is_hidden = 0
 ==
+<?php
+use div\divcms\models\Partners;
+function onStart() {
+
+    $this['partnerList'] = Partners::all();
+
+}
+?>
+==
 <div class="sponsors-page">
 
     <div class="page-content">
@@ -42,29 +51,35 @@ is_hidden = 0
         
         <div class="grid-container">
 
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-1.png" />
-            </div>
+            {% for item in partnerList %}
 
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-2.png" />
-            </div>
+                {% if item.type == "Sponsor" %}
 
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-3.png" />
-            </div>
+                    <div class="img-container">
+                        <img src="{{ item.img_path | media }}" />
+                    </div>
 
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-4.png" />
-            </div>
+                {% endif %}
 
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-5.png" />
-            </div>
+            {% endfor %}
+            
+        </div>
 
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-6.png" />
-            </div>
+        <p class="grid-title">Supported by</p>
+        
+        <div class="grid-container">
+
+            {% for item in partnerList %}
+
+                {% if item.type == "Supporter" %}
+
+                    <div class="img-container">
+                        <img src="{{ item.img_path | media }}" />
+                    </div>
+
+                {% endif %}
+
+            {% endfor %}
             
         </div>
         

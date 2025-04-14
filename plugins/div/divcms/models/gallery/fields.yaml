@@ -1,0 +1,18 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    slug_gallery:
+        label: 'Gallery URL'
+        span: auto
+        readOnly: 1
+        preset:
+            field: title
+            type: slug
+        type: text
+    gallery_path:
+        label: 'Album Folder'
+        span: auto
+        mode: file
+        type: mediafinder

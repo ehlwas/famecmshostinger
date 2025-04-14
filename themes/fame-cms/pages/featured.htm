@@ -3,7 +3,16 @@ url = "/featured-in"
 layout = "default"
 is_hidden = 0
 ==
-<div class="sponsors-page">
+<?php
+use div\divcms\models\Featured;
+function onStart() {
+
+    $this['featuredList'] = Featured::all();
+
+}
+?>
+==
+<div class="media-page">
 
     <div class="page-content">
         
@@ -15,57 +24,34 @@ is_hidden = 0
     
             <div class="banner-wrapper">
                 <h2 class="section-title">
-                    Standing Together for <strong>F.A.M.E.</strong>
+                    <strong>F.A.M.E.</strong> in the Headlines
                 </h2>
                 <p class="section-description">
-                    celebrates the invaluable support of our sponsors, making this event possible and impactful.
+                    Bringing FAME to the World—One Story at a Time
                 </p>
             </div>
             
         </section>
 
-        <div class="info-section">
-            <div class="info-content">
-                
-                <h3 class="info-title">
-                    F.A.M.E. Talent Hub is a not-for-profit organization. We have been supported through the years by various companies, centers and private donors.
-                </h3>
-
-                <p class="info-description">
-                    It is with this support that we can bring our vision to life and the dreams of the participants are made into a reality. We are grateful to all of the supporters and we welcome sponsorship opportunities and support for our ongoing ventures. Please get in touch if you would like to support us!
-                </p>
-                
-            </div>
-        </div>
-
-        <p class="grid-title">Sponsored by</p>
-        
         <div class="grid-container">
 
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-1.png" />
-            </div>
+            {% for item in featuredList %}
 
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-2.png" />
-            </div>
+                <a href="{{ item.type == 'URL' ? item.url_link : item.image_link }}" target="_blank">
+                    <div class="card-box">
+                        <div class="img-container">
+                            <img src="{{ item.image | media }}" alt="{{ item.title }}" />
+                        </div>
 
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-3.png" />
-            </div>
-
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-4.png" />
-            </div>
-
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-5.png" />
-            </div>
-
-            <div class="img-container">
-                <img src="/assets/images/sponsored/sponsored-img-6.png" />
-            </div>
+                        <div class="info-w">
+                            <p class="card-title">{{ item.title }}</p>
+                            <img src="{{ 'assets/icons/link-icon.png' | media }}" class="link-icon" />
+                        </div>
+                    </div>
+                </a>
             
+            {% endfor %}
+
         </div>
         
     </div>

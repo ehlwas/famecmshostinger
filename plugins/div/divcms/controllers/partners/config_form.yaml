@@ -1,0 +1,11 @@
+name: Partners
+modelClass: div\DivCms\Models\Partners
+form: $/div/divcms/models/partners/fields.yaml
+defaultRedirect: div/divcms/partners
+create:
+    redirect: 'div/divcms/partners/update/:id'
+    redirectClose: div/divcms/partners
+update:
+    redirect: div/divcms/partners
+    redirectClose: div/divcms/partners
+preview: {  }

@@ -438,6 +438,9 @@ footer .links-list li {
     text-align: center;
   }
 }
+footer .links-list li a {
+  color: #fff;
+}
 footer .logo-footer-wrapper {
   display: flex;
   align-items: center;
@@ -1829,6 +1832,14 @@ footer .line-c {
 .gallery-page .page-content .album-grid-container .album-box .img-wrapper .img-container {
   background-color: #EEEEEE;
   border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.gallery-page .page-content .album-grid-container .album-box .img-wrapper .img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery-page .page-content .album-grid-container .album-box .img-wrapper .one {
   height: 124px;
@@ -1998,6 +2009,8 @@ footer .line-c {
 .media-page .page-content .grid-container .card-box .img-container img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .media-page .page-content .grid-container .card-box .info-w {
   display: flex;
@@ -2006,6 +2019,7 @@ footer .line-c {
   padding: 20px 30px;
 }
 .media-page .page-content .grid-container .card-box .info-w .card-title {
+  color: #2B2B2B;
   font-weight: 600;
   font-size: 25px;
   line-height: 32.9px;

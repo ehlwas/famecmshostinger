@@ -1,0 +1,27 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    image:
+        label: 'Poster Image'
+        span: auto
+        mode: file
+        type: mediafinder
+    type:
+        label: Dropdown
+        options:
+            URL: URL
+            Image: Image
+        showSearch: true
+        span: auto
+        type: dropdown
+    url_link:
+        label: 'URL Link'
+        span: auto
+        type: text
+    image_link:
+        label: Image
+        mode: file
+        span: auto
+        type: mediafinder
