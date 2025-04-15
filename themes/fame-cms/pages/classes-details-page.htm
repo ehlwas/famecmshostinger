@@ -1,32 +1,29 @@
-title = "Our Event Details"
-url = "/our-event-details/:slug"
+title = "Classes Details Page"
+url = "/classes-details/:slug"
 layout = "default"
 is_hidden = 0
 ==
 <?php
-use div\DivCms\Models\Events;
+use div\divcms\models\Classes;
 use Illuminate\Support\Facades\File;
 
 function onStart() {
     $slug = $this->param('slug');
     
     $this->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-
-    $record = Events::where('slug', $slug)->first();
+    
+    $record = Classes::where('slug', $slug)->first();
 
     $this['record'] = $record;
-    $this['slug'] = $slug;
     
-    $this['folderContents'] = File::allFiles("storage/app/media/$record->gallery_name");
-    // $this['folderContents'] = $record->gallery_name;
+    $this['folderContents'] = File::allFiles("storage/app/media/$record->photo_album");
 }
 ?>
 ==
 {% put scripts %}
     <script type="module" src="{{ 'assets/js/swiper-initial.js' | theme }}"></script>
 {% endput %}
-
-<div class="our-events-details-page">
+<div class="classes-details-page">
 
     <div class="page-content">
 
@@ -35,44 +32,57 @@ function onStart() {
                 src="/assets/images/our-events/bg-our-events.png"
                 class="bg-img"
             />
-
+    
             <div class="banner-wrapper">
                 <h2 class="section-title">
-                    Experience the Magic of <strong>F.A.M.E.</strong> Events
+                    <strong>{{ record.header_title }}</strong>
                 </h2>
+                <p class="section-description">
+                    {{ record.header_description }}
+                </p>
             </div>
             
         </section>
 
-        <div class="details-content-container">
-            
-            <div class="close-btn-w">
-                <a href="/our-events.html">
-                    <img src="/assets/images/icons/close-icon.png" class="close-icon" />
-                </a>
+
+        <section class="poster-section">
+            <div class="img-container">
+                <img src="{{ record.img_poster | media }}" />
+            </div>
+        </section>
+
+
+        <section class="classes-details">
+
+            <div class="section-content">
+
+                {{ record.rich_text | raw }}
+
             </div>
 
-            <div class="header-text-w">
-                <p class="date">{{ record.event_date | date("d/m/Y") }}</p>
-                <p class="title">{{ record.title }}</p>
-                <div class="photo-count">{{ folderContents|length }} Photos</div>
-            </div>
+        </section>
 
-            <div class="gallery-slideshow-container">
-                <div class="displayed-image-c">
+
+        <section class="images-section">
+
+            <div class="content-wrapper">
+
+                <p class="images-title">Images of Previous Salsa Classes</p>
+
+                <div class="preview-img-container">
                     <img src="{{ folderContents[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
                 </div>
-                
+
                 <div class="swiper" id="imageSlides">
-    
+        
                     <div class="swiper-wrapper">
     
                         {% for item in folderContents %}
-    
+                    
                             <div class="swiper-slide">
         
                                 <div class="img-container">
-                                    <img src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" loading="lazy" />
+                                    <img src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" />
                                 </div>
                                 
                             </div>
@@ -82,18 +92,11 @@ function onStart() {
                     </div>
                     
                 </div>
+                    
             </div>
+        </section>
 
-            {# <div class="bottom-text-w">
-                {{ record.event_details | raw }}
-            </div> #}
-            <div class="rich-text-editor">
-                {{ record.event_details | raw }}
-            </div>
-            
-        </div>
 
-        
     </div>
-    
+
 </div>

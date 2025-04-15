@@ -3,6 +3,13 @@ url = "/talent-hub"
 layout = "default"
 is_hidden = 0
 ==
+<?php
+use div\divcms\models\Classes;
+function onStart() {
+    $this['classesList'] = Classes::all();
+}
+?>
+==
 <div class="talent-hub-page">
 
     <div class="page-content">
@@ -26,40 +33,19 @@ is_hidden = 0
 
         <div class="grid-container">
 
-            <div class="card-box">
-                <img src="/assets/images/talent-hub/th-img-1.png" class="card-img" />
+            {% for item in classesList %}
 
-                <p class="card-title">Salsa</p>
-                
-            </div>
+                <div class="card-box">
 
-            <div class="card-box">
-                <img src="/assets/images/talent-hub/th-img-1.png" class="card-img" />
+                    <img src="{{ item.img_poster | media }}" class="card-img" />
 
-                <p class="card-title">Salsa</p>
-                
-            </div>
+                    <a href="{{ 'classes-details-page' | page({ slug: item.slug }) }}">
+                        <p class="card-title">{{ item.header_title }}</p>
+                    </a>
+                    
+                </div>
 
-            <div class="card-box">
-                <img src="/assets/images/talent-hub/th-img-1.png" class="card-img" />
-
-                <p class="card-title">Salsa</p>
-                
-            </div>
-
-            <div class="card-box">
-                <img src="/assets/images/talent-hub/th-img-1.png" class="card-img" />
-
-                <p class="card-title">Salsa</p>
-                
-            </div>
-
-            <div class="card-box">
-                <img src="/assets/images/talent-hub/th-img-1.png" class="card-img" />
-
-                <p class="card-title">Salsa</p>
-                
-            </div>
+            {% endfor %}
             
         </div>
         

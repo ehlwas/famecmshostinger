@@ -1,0 +1,91 @@
+title = "Gallery Images Page"
+url = "/gallery-images/:slug"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use div\DivCms\Models\Gallery;
+use Illuminate\Support\Facades\File;
+
+function onStart() {
+    $slug = $this->param('slug');
+    
+    $this->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+    
+    $record = Gallery::where('slug_gallery', $slug)->first();
+
+    $this['record'] = $record;
+    
+    $this['folderContents'] = File::allFiles("storage/app/media/$record->gallery_path");
+}
+?>
+==
+{% put scripts %}
+    <script type="module" src="{{ 'assets/js/swiper-initial.js' | theme }}"></script>
+{% endput %}
+<div class="gallery-images-page">
+
+    <div class="page-content">
+        
+        <section class="banner-container">
+            <img 
+                src="/assets/images/our-events/bg-our-events.png"
+                class="bg-img"
+            />
+    
+            <div class="banner-wrapper">
+                <h2 class="section-title">
+                    <strong>F.A.M.E.</strong> Gallery: A Talent Showcase
+                </h2>
+                <p class="section-description">
+                    Capturing the Magic, Passion, and Talent Behind the Spotlight
+                </p>
+            </div>
+            
+        </section>
+
+
+        <section class="images-content-section">
+
+
+            <div class="section-content">
+
+                <p class="link-info">
+                    <a href="{{ 'gallery' | page }}" class="link">Back to Gallery</a> / <span class="album-name">{{ record.title }}</span>
+                </p>
+
+                <p class="images-count">{{ folderContents | length }} photos</p>
+
+                <div class="preview-img-container">
+                    <img src="{{ folderContents[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
+                </div>
+
+                <div class="swiper" id="imageSlides">
+        
+                    <div class="swiper-wrapper">
+    
+                        {% for item in folderContents %}
+                    
+                            <div class="swiper-slide">
+        
+                                <div class="img-container">
+                                    <img src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" />
+                                </div>
+                                
+                            </div>
+
+                        {% endfor %}
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>                
+
+            
+        </section>
+
+        
+    </div>
+    
+</div>

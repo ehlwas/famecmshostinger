@@ -3,8 +3,8 @@ fields:
         label: Title
         span: auto
         type: text
-    text1:
-        label: Text
+    slug:
+        label: Slug
         span: auto
         readOnly: 1
         preset:
@@ -16,7 +16,7 @@ fields:
         span: auto
         type: text
     img_poster:
-        label: 'Media finder'
+        label: Poster
         mode: file
         span: auto
         type: mediafinder

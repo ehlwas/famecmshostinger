@@ -58,33 +58,35 @@ function onStart() {
 
             {% for item in galleryList %}
 
-                <div class="album-box" id="albumBox" data-album-id="album-1">
-                
-                    <div class="img-wrapper">
-                        <div class="left-c">
-                            <div class="img-container one">
-                                {% if item.fileList|length > 0 %}
-                                    <img src="{{ item.fileList[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
-                                {% endif %}
-                            </div>
+                <a href="{{ 'gallery-images-page' | page({ slug: item.slug_gallery }) }}">
+                    <div class="album-box" id="albumBox" data-album-id="album-1">
+                    
+                        <div class="img-wrapper">
+                            <div class="left-c">
+                                <div class="img-container one">
+                                    {% if item.fileList|length > 0 %}
+                                        <img src="{{ item.fileList[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
+                                    {% endif %}
+                                </div>
 
-                            <div class="img-container two">
-                                {% if item.fileList|length > 1 %}
-                                    <img src="{{ item.fileList[1].pathname | replace({'storage/app/media/': ''}) | media }}" />
+                                <div class="img-container two">
+                                    {% if item.fileList|length > 1 %}
+                                        <img src="{{ item.fileList[1].pathname | replace({'storage/app/media/': ''}) | media }}" />
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="img-container three">
+                                {% if item.fileList|length > 2 %}
+                                    <img src="{{ item.fileList[2].getPathname() | replace({'storage/app/media/': ''}) | media }}" />
                                 {% endif %}
                             </div>
                         </div>
-                        <div class="img-container three">
-                            {% if item.fileList|length > 2 %}
-                                <img src="{{ item.fileList[2].getPathname() | replace({'storage/app/media/': ''}) | media }}" />
-                            {% endif %}
+                        <div class="album-info-w">
+                            <p class="album-title">{{ item.title }}</p>
+                            <p class="photo-count">{{ item.fileCount }} Photos</p>
                         </div>
                     </div>
-                    <div class="album-info-w">
-                        <p class="album-title">{{ item.title }}</p>
-                        <p class="photo-count">{{ item.fileCount }} Photos</p>
-                    </div>
-                </div>
+                </a>
 
             {% endfor %}
         

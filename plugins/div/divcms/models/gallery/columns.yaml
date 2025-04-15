@@ -4,8 +4,3 @@ columns:
         type: text
         searchable: true
         sortable: true
-    slug_gallery:
-        label: Slug
-        type: text
-        searchable: true
-        sortable: true

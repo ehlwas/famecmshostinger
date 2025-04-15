@@ -63,3 +63,6 @@
 1.0.22:
     - 'Created table div_divcms_partners'
     - builder_table_create_div_divcms_partners.php
+1.0.23:
+    - 'Updated table div_divcms_classes'
+    - builder_table_update_div_divcms_classes_4.php
