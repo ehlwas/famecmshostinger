@@ -1197,7 +1197,7 @@ footer .line-c {
 .home-page .testimonial-section .swiper .swiper-wrapper .swiper-slide.swiper-slide-active .testimonial-box .quote-sign {
   display: block;
 }
-.home-page .testimonial-section .swiper .swiper-controls-container {
+.home-page .testimonial-section .testimonials-controls-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1208,25 +1208,26 @@ footer .line-c {
   transform: translateX(-50%);
 }
 @media (max-width: 800px) {
-  .home-page .testimonial-section .swiper .swiper-controls-container {
+  .home-page .testimonial-section .testimonials-controls-container {
     bottom: 4px;
   }
 }
-.home-page .testimonial-section .swiper .swiper-controls-container .swiper-button-prev,
-.home-page .testimonial-section .swiper .swiper-controls-container .swiper-button-next {
+.home-page .testimonial-section .testimonials-controls-container .testimonials-button-prev,
+.home-page .testimonial-section .testimonials-controls-container .testimonials-button-next {
   position: unset;
 }
-.home-page .testimonial-section .swiper .swiper-controls-container .swiper-button-prev::after,
-.home-page .testimonial-section .swiper .swiper-controls-container .swiper-button-next::after {
+.home-page .testimonial-section .testimonials-controls-container .testimonials-button-prev::after,
+.home-page .testimonial-section .testimonials-controls-container .testimonials-button-next::after {
   content: unset;
 }
-.home-page .testimonial-section .swiper .swiper-controls-container .swiper-button-prev img,
-.home-page .testimonial-section .swiper .swiper-controls-container .swiper-button-next img {
+.home-page .testimonial-section .testimonials-controls-container .testimonials-button-prev img,
+.home-page .testimonial-section .testimonials-controls-container .testimonials-button-next img {
   width: 62px;
 }
 .home-page .testimonial-section .testimonial-wrapper {
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
 }
 .home-page .testimonial-section .testimonial-box {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='19' ry='19' stroke='%23333' stroke-width='3' stroke-dasharray='6%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
