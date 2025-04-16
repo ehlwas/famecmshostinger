@@ -1157,13 +1157,6 @@ footer .line-c {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  height: 440px;
-}
-@media (max-width: 800px) {
-  .home-page .testimonial-section .swiper {
-    height: 400px;
-    margin-top: 30px;
-  }
 }
 .home-page .testimonial-section .swiper .swiper-wrapper {
   align-items: flex-end;
@@ -1202,15 +1195,7 @@ footer .line-c {
   align-items: center;
   justify-content: center;
   gap: 50px;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-@media (max-width: 800px) {
-  .home-page .testimonial-section .testimonials-controls-container {
-    bottom: 4px;
-  }
+  margin-top: 30px;
 }
 .home-page .testimonial-section .testimonials-controls-container .testimonials-button-prev,
 .home-page .testimonial-section .testimonials-controls-container .testimonials-button-next {
