@@ -2440,18 +2440,21 @@ footer .line-c {
   }
 }
 .our-team-page .page-content .main-team-section .card-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
   gap: 50px;
   padding: 50px 30px;
   max-width: 1400px;
   margin: 0 auto;
 }
+@media (max-width: 1400px) {
+  .our-team-page .page-content .main-team-section .card-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+}
 .our-team-page .page-content .main-team-section .card-wrapper .card-box {
   border: 2px solid #FF3465;
   border-radius: 10px;
-  max-width: 530px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2487,9 +2490,14 @@ footer .line-c {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 50px 30px;
+}
+@media (max-width: 1400px) {
+  .our-team-page .page-content .volunteers-section .card-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
 }
 .our-team-page .page-content .volunteers-section .card-wrapper .card-box {
   background-color: #F4F4F4;
