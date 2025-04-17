@@ -47,40 +47,51 @@ function onStart() {
             </div>
         </div>
 
-        <p class="grid-title">Sponsored by</p>
-        
-        <div class="grid-container">
+        <div class="info-section">
+            <div class="info-content">
+                <p class="grid-title">Sponsored by</p>
+                
+                <div class="grid-container">
 
-            {% for item in partnerList %}
+                    {% for item in partnerList %}
 
-                {% if item.type == "Sponsor" %}
+                        {% if item.type == "Sponsor" %}
 
-                    <div class="img-container">
-                        <img src="{{ item.img_path | media }}" />
-                    </div>
+                            <div class="img-container">
+                                <img src="{{ item.img_path | media }}" />
+                            </div>
 
-                {% endif %}
+                        {% endif %}
 
-            {% endfor %}
-            
+                    {% endfor %}
+                    
+                </div>
+            </div>
         </div>
 
-        <p class="grid-title">Supported by</p>
         
-        <div class="grid-container">
+        <div class="info-section">
+            <div class="info-content">
 
-            {% for item in partnerList %}
+                <p class="grid-title">Supported by</p>
+                
+                <div class="grid-container">
 
-                {% if item.type == "Supporter" %}
+                    {% for item in partnerList %}
 
-                    <div class="img-container">
-                        <img src="{{ item.img_path | media }}" />
-                    </div>
+                        {% if item.type == "Supporter" %}
 
-                {% endif %}
+                            <div class="img-container">
+                                <img src="{{ item.img_path | media }}" />
+                            </div>
 
-            {% endfor %}
-            
+                        {% endif %}
+
+                    {% endfor %}
+                    
+                </div>
+                
+            </div>
         </div>
         
     </div>
