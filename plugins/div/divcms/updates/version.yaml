@@ -66,3 +66,6 @@
 1.0.23:
     - 'Updated table div_divcms_classes'
     - builder_table_update_div_divcms_classes_4.php
+1.0.24:
+    - 'Updated table div_divcms_events'
+    - builder_table_update_div_divcms_events_4.php
