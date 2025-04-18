@@ -58,28 +58,19 @@ snippetProperties[0][id] = -1
                         </a>
                     </div>
                 </li>
-                <li class="nav-item dropdown-nav">
-                    <span class="label">
-                        Connect
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                    <div class="dropdown-content">
-                        <a href="{{ 'sponsored' | page }}">
-                            <span class="dd-label">
-                                Sponsors
-                            </span>
-                        </a>
-                        <a href=" {{ 'featured' | page }}">
-                            <span class="dd-label">
-                                Featured In
-                            </span>
-                        </a>
-                        <a href="{{ 'contact-us' | page }}">
-                            <span class="dd-label">
-                                Contact
-                            </span>
-                        </a>
-                    </div>
+                <li class="nav-item">
+                    <a href="{{ 'sponsored' | page }}">
+                        <span class="label">
+                            Sponsors
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ 'featured' | page }}">
+                        <span class="label">
+                            Featured In
+                        </span>
+                    </a>
                 </li>
             </ul>
 
@@ -95,7 +86,7 @@ snippetProperties[0][id] = -1
         </div>
 
         <div id="mobileNavBtn" class="mobile-nav-btn">
-            <i class="fa-solid fa-bars"></i>
+            <img src="{{ 'assets/icons/burger-icon.png' | media }}" />
         </div>
     </nav>
 </header>

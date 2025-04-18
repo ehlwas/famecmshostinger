@@ -112,12 +112,12 @@ header nav {
   max-width: 1400px;
   margin: 0 auto;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1190px) {
   header nav {
     justify-content: center;
   }
 }
-@media (max-width: 1120px) {
+@media (max-width: 1190px) {
   header nav.show::before {
     content: "";
     background-color: rgba(0, 0, 0, 0.3);
@@ -138,7 +138,7 @@ header nav .right-side {
   justify-content: space-between;
   padding-right: 20px;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1190px) {
   header nav .right-side {
     background-color: #FF3465;
     display: none;
@@ -166,7 +166,7 @@ header nav .right-side .navigation-items-w {
   align-items: center;
   gap: 24px;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1190px) {
   header nav .right-side .navigation-items-w {
     flex-direction: column;
     align-items: flex-start;
@@ -192,7 +192,7 @@ header nav .right-side .navigation-items-w .nav-item::before {
 header nav .right-side .navigation-items-w .nav-item:hover::before {
   width: 100%;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1190px) {
   header nav .right-side .navigation-items-w .nav-item.dropdown-nav {
     width: 100%;
   }
@@ -214,7 +214,7 @@ header nav .right-side .navigation-items-w .nav-item.dropdown-nav .dropdown-cont
   top: 100%;
   white-space: nowrap;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1190px) {
   header nav .right-side .navigation-items-w .nav-item.dropdown-nav .dropdown-content {
     background-color: transparent;
     width: 100%;
@@ -250,7 +250,7 @@ header nav .right-side .navigation-items-w .nav-item.dropdown-nav .dropdown-cont
   position: relative;
   z-index: 1;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1190px) {
   header nav .right-side .navigation-items-w .nav-item.dropdown-nav .dropdown-content .dd-label {
     color: #fff;
   }
@@ -265,7 +265,7 @@ header nav .right-side .navigation-items-w .nav-item .label {
   z-index: 1;
   transition: all 200ms;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1190px) {
   header nav .right-side .navigation-items-w .nav-item .label {
     color: #fff;
   }
@@ -287,7 +287,7 @@ header nav .right-side .mobile-close-btn {
   color: #fff;
   display: none;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1190px) {
   header nav .right-side .mobile-close-btn {
     display: block;
     position: absolute;
@@ -302,12 +302,15 @@ header nav .mobile-nav-btn {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  font-size: 28px;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1190px) {
   header nav .mobile-nav-btn {
-    display: block;
+    display: flex;
   }
+}
+header nav .mobile-nav-btn img {
+  cursor: pointer;
+  width: 28px;
 }
 
 footer {
@@ -798,6 +801,8 @@ footer .line-c {
   }
 }
 .home-page .recent-events-section .recent-events-container .recent-events-box {
+  background-color: #F4F4F4;
+  border-radius: 10px 10px 0 0;
   width: 381px;
 }
 .home-page .recent-events-section .recent-events-container .recent-events-box .img-container {
@@ -805,6 +810,9 @@ footer .line-c {
   width: 380px;
   height: 213px;
   overflow: hidden;
+}
+.home-page .recent-events-section .recent-events-container .recent-events-box .details-container {
+  padding: 0 30px 20px;
 }
 .home-page .recent-events-section .recent-events-container .recent-events-box .details-container .re-date {
   font-weight: 500;
@@ -834,11 +842,23 @@ footer .line-c {
   margin-top: 50px;
   padding: 0 30px;
 }
+.home-page .recent-events-section .recent-events-box {
+  background-color: #F4F4F4;
+  border-radius: 10px;
+}
 .home-page .recent-events-section .recent-events-box .img-container {
   border-radius: 10px 10px 0 0;
   width: 100%;
   height: 213px;
   overflow: hidden;
+}
+.home-page .recent-events-section .recent-events-box .img-container img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home-page .recent-events-section .recent-events-box .details-container {
+  padding: 0 30px 20px;
 }
 .home-page .recent-events-section .recent-events-box .details-container .re-date {
   font-weight: 500;
@@ -1498,6 +1518,8 @@ footer .line-c {
   margin: 0 auto;
 }
 .our-events-page .page-content .grid-container .recent-events-box {
+  background-color: #F4F4F4;
+  border-radius: 10px 10px 0 0;
   width: 381px;
 }
 .our-events-page .page-content .grid-container .recent-events-box .img-container {
@@ -1511,6 +1533,9 @@ footer .line-c {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.our-events-page .page-content .grid-container .recent-events-box .details-container {
+  padding: 0 30px 20px;
 }
 .our-events-page .page-content .grid-container .recent-events-box .details-container .re-date {
   font-weight: 500;
