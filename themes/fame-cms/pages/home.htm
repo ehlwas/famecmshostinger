@@ -9,6 +9,9 @@ use div\divcms\models\Events;
 function onStart() {
 	$this->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
     $this->addJs('https://cdn.jsdelivr.net/npm/simple-parallax-js@6.0.1/dist/vanilla/simpleParallaxVanilla.umd.min.js');
+    $this->addJs('assets/js/parallax.js');
+    $this->addJs('assets/js/home.js');
+
 
     $this['testimonialsList'] = Testimonials::all();
     $this['eventList'] = Events::latest()->take(3)->get();
@@ -105,8 +108,8 @@ function onStart() {
             <!-- <img src="./assets/images/home/bg-rectangle.png" class="bg" /> -->
             
             <div class="video-container">
-                <video controls width="250">
-                    <source src="https://tekeye.uk/html/images/Joren_Falls_Izu_Jap.webm" type="video/webm" />
+                <video controls width="250" id="foundersVideo">
+                    <source src="{{ 'images/home/founders-video.mp4' | media }}" type="video/mp4" />
                 </video>
             </div>
         </section>
@@ -145,6 +148,9 @@ function onStart() {
                     
                 </div>
 
+                <p class="view-all-events">
+                    <a href="{{ 'our-events' | page }}">View all events <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </p>
             </section>
 
         {% endif %}
@@ -254,6 +260,10 @@ function onStart() {
                 </div>
                 
             </div>
+            
+            <p class="view-gallery">
+                <a href="{{ 'gallery' | page }}">View Gallery <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </p>
 
         </section>
 

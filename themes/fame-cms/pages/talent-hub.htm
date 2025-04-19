@@ -21,9 +21,14 @@ function onStart() {
             />
     
             <div class="banner-wrapper">
-                <h2 class="section-title">
-                    <strong>The Talent Hub:</strong> Your Stage, Your Journey
-                </h2>
+
+                <div class="title-w">
+                    <img src="{{ 'assets/talent-hub-icon.png' | media }}" class="talent-hub-icon" />
+                    <h2 class="section-title">
+                        <strong>The Talent Hub:</strong>
+                        Your Stage, Your Journey
+                    </h2>
+                </div>
                 <p class="section-description">
                     Enhancing Skills and Building Confidence Through Art & Performance
                 </p>
@@ -31,30 +36,13 @@ function onStart() {
             
         </section>
 
-        <div class="grid-container">
 
-            {% for item in classesList %}
-
-                <div class="card-box">
-
-                    <img src="{{ item.img_poster | media }}" class="card-img" />
-
-                    <a href="{{ 'classes-details-page' | page({ slug: item.slug }) }}">
-                        <p class="card-title">{{ item.header_title }}</p>
-                    </a>
-                    
-                </div>
-
-            {% endfor %}
-            
-        </div>
-            
         <section class="mission-vision-container">
 
             <div class="mission-vision-wrapper">
 
                 <img 
-                    src="/assets/images/our-story/mission-vision.png"
+                    src="{{ 'images/classes/mv-img.png' | media }}"
                     class="img-section"
                 />
 
@@ -70,6 +58,27 @@ function onStart() {
             </div>
             
         </section>
+
+
+        <div class="grid-container">
+
+            {% for item in classesList %}
+
+                <a href="{{ 'classes-details-page' | page({ slug: item.slug }) }}">
+
+                    <div class="card-box">
+
+                        <img src="{{ item.img_poster | media }}" class="card-img" />
+
+                        <p class="card-title">{{ item.header_title }}</p>
+                                                
+                    </div>
+                    
+                </a>
+
+            {% endfor %}
+            
+        </div>
         
     </div>
     
