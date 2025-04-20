@@ -38,3 +38,30 @@ new Swiper('#imageSlides', {
     allowTouchMove: true,
     freeMode: true,
 })
+
+let swiperInstance = null;
+
+function initSwiperIfNeeded() {
+  if (window.innerWidth >= 1400) {
+    if (!swiperInstance) {
+      swiperInstance = new Swiper('.marquee-swiper', {
+        slidesPerView: 'auto',
+        loop: true,
+        // allowTouchMove: false,
+        speed: 10000, // 10s for full loop
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+      });
+    }
+  } else {
+    if (swiperInstance) {
+      swiperInstance.destroy(true, true);
+      swiperInstance = null;
+    }
+  }
+}
+
+window.addEventListener('load', initSwiperIfNeeded);
+window.addEventListener('resize', initSwiperIfNeeded);

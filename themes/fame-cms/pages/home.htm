@@ -21,6 +21,10 @@ function onStart() {
 {% put scripts %}
     <script type="module" src="{{ 'assets/js/swiper-initial.js' | theme }}"></script>
 {% endput %}
+
+{% put headScript %}
+    <script src="https://cdn.jsdelivr.net/gh/Sean-93/newmarquee@v0.9.1/dist/newmarquee-min.js"></script>
+{% endput %}
 <div class="home-page">
 
     <div class="page-content">
@@ -47,11 +51,10 @@ function onStart() {
                 </div>
             </div>
         </div>
-
-
+        
 
         <section class="featured-in-section">
-            <div class="featured-in-wrapper">
+            <div class="featured-in-wrapper static-w">
                 <div class="featured-in-item fi-1">
                     <img src="{{ 'images/home/featured-in-1.png'|media }}" />
                 </div>
@@ -70,26 +73,30 @@ function onStart() {
                 <div class="featured-in-item fi-6">
                     <img src="{{ 'images/home/featured-in-6.png'|media }}" />
                 </div>
-                <!-- Duplicates -->
-                <div class="featured-in-item fi-1 duplicates">
-                    <img src="{{ 'images/home/featured-in-1.png'|media }}" />
-                </div>
-                <div class="featured-in-item fi-2 duplicates">
-                    <img src="{{ 'images/home/featured-in-2.png'|media }}" />
-                </div>
-                <div class="featured-in-item fi-3 duplicates">
-                    <img src="{{ 'images/home/featured-in-3.png'|media }}" />
-                </div>
-                <div class="featured-in-item fi-4 duplicates">
-                    <img src="{{ 'images/home/featured-in-4.png'|media }}" />
-                </div>
-                <div class="featured-in-item fi-5 duplicates">
-                    <img src="{{ 'images/home/featured-in-5.png'|media }}" />
-                </div>
-                <div class="featured-in-item fi-6 duplicates">
-                    <img src="{{ 'images/home/featured-in-6.png'|media }}" />
-                </div>
             </div>
+            
+            <new-marquee class="marquee-w" speed="100" direction="left">
+                <div class="featured-in-wrapper">
+                    <div class="featured-in-item fi-1">
+                        <img src="{{ 'images/home/featured-in-1.png'|media }}" />
+                    </div>
+                    <div class="featured-in-item fi-2">
+                        <img src="{{ 'images/home/featured-in-2.png'|media }}" />
+                    </div>
+                    <div class="featured-in-item fi-3">
+                        <img src="{{ 'images/home/featured-in-3.png'|media }}" />
+                    </div>
+                    <div class="featured-in-item fi-4">
+                        <img src="{{ 'images/home/featured-in-4.png'|media }}" />
+                    </div>
+                    <div class="featured-in-item fi-5">
+                        <img src="{{ 'images/home/featured-in-5.png'|media }}" />
+                    </div>
+                    <div class="featured-in-item fi-6">
+                        <img src="{{ 'images/home/featured-in-6.png'|media }}" />
+                    </div>
+                </div>
+            </new-marquee>
         </section>
 
 
@@ -163,11 +170,12 @@ function onStart() {
             </h3>
 
             <div class="enroll-card card-one">
-                <p class="page-t">1/6</p>
-
                 <div class="title-description-text">
                     <h5 class="ec-title">Lorem Ipsum Dolor sit amet</h5>
                     <p class="ec-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="btn-container">
+                        <button class="btn primary">Learn More <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
                 </div>
                 
                 <div class="image-text-wrapper">
@@ -175,17 +183,18 @@ function onStart() {
                         
                     </div>
                     <div class="text-c">
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do.</p>
+                        <p class="text"></p>
                     </div>
                 </div>
             </div>
 
             <div class="enroll-card card-two">
-                <p class="page-t">2/6</p>
-                
                 <div class="title-description-text">
                     <h5 class="ec-title">Lorem Ipsum Dolor sit amet</h5>
                     <p class="ec-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="btn-container">
+                        <button class="btn primary">Learn More <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
                 </div>
                 
                 <div class="image-text-wrapper">
@@ -193,17 +202,18 @@ function onStart() {
                         
                     </div>
                     <div class="text-c">
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do.</p>
+                        <p class="text"></p>
                     </div>
                 </div>
             </div>
 
             <div class="enroll-card card-three">
-                <p class="page-t">3/6</p>
-                
                 <div class="title-description-text">
                     <h5 class="ec-title">Lorem Ipsum Dolor sit amet</h5>
                     <p class="ec-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="btn-container">
+                        <button class="btn primary">Learn More <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
                 </div>
                 
                 <div class="image-text-wrapper">
@@ -211,7 +221,7 @@ function onStart() {
                         
                     </div>
                     <div class="text-c">
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do.</p>
+                        <p class="text"></p>
                     </div>
                 </div>
 

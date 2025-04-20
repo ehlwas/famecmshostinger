@@ -11,6 +11,8 @@ function onStart() {
     $slug = $this->param('slug');
     
     $this->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+    $this->addJs('assets/js/img-slides-swapper.js');
+
 
     $record = Events::where('slug', $slug)->first();
 
@@ -60,7 +62,7 @@ function onStart() {
 
             <div class="gallery-slideshow-container">
                 <div class="displayed-image-c">
-                    <img src="{{ folderContents[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
+                    <img id="previewImg" src="{{ folderContents[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
                 </div>
                 
                 <div class="swiper" id="imageSlides">
@@ -72,7 +74,7 @@ function onStart() {
                             <div class="swiper-slide">
         
                                 <div class="img-container">
-                                    <img src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" loading="lazy" />
+                                    <img id="imageSlideItem" src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" loading="lazy" />
                                 </div>
                                 
                             </div>
