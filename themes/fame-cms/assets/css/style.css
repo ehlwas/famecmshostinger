@@ -627,6 +627,11 @@ footer .line-c {
   display: flex;
   align-items: center;
 }
+@media (max-width: 1400px) {
+  .home-page .featured-in-section {
+    padding: 20px 0;
+  }
+}
 .home-page .featured-in-section .marquee-w {
   opacity: 1;
 }
