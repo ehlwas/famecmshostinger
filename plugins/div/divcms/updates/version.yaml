@@ -69,3 +69,9 @@
 1.0.24:
     - 'Updated table div_divcms_events'
     - builder_table_update_div_divcms_events_4.php
+1.0.25:
+    - 'Updated table div_divcms_gallery'
+    - builder_table_update_div_divcms_gallery.php
+1.0.26:
+    - 'Updated table div_divcms_featured_in'
+    - builder_table_update_div_divcms_featured_in.php

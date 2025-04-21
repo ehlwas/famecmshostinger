@@ -7,7 +7,7 @@ is_hidden = 0
 use div\divcms\models\Featured;
 function onStart() {
 
-    $this['featuredList'] = Featured::all();
+    $this['featuredList'] = Featured::orderBy('created_at', 'desc')->get();
 
 }
 ?>
@@ -42,7 +42,7 @@ function onStart() {
                         <div class="img-container">
                             <img src="{{ item.image | media }}" alt="{{ item.title }}" />
                         </div>
-
+{# {{ item.type }} #}
                         <div class="info-w">
                             <p class="card-title">{{ item.title }}</p>
                             <img src="{{ 'assets/icons/link-icon.png' | media }}" class="link-icon" />

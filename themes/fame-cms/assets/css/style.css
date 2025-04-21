@@ -413,6 +413,9 @@ footer .contact-group {
     justify-content: center;
   }
 }
+footer .contact-group a {
+  display: flex;
+}
 footer .contact-group img {
   height: 50px;
   width: 50px;
@@ -448,6 +451,9 @@ footer .links-list li {
 }
 footer .links-list li a {
   color: #fff;
+}
+footer .links-list li a:hover {
+  text-decoration: underline;
 }
 footer .logo-footer-wrapper {
   display: flex;
@@ -1387,6 +1393,12 @@ footer .line-c {
   min-width: 450px;
   position: relative;
 }
+@media (max-width: 500px) {
+  .our-story-page .page-content .banner-container .banner-wrapper .right-c {
+    min-width: unset;
+    width: 100%;
+  }
+}
 .our-story-page .page-content .banner-container .banner-wrapper .right-c .model-container {
   width: 433px;
   height: 433px;
@@ -1403,6 +1415,9 @@ footer .line-c {
     top: unset;
     transform: unset;
     overflow: hidden;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
   }
 }
 .our-story-page .page-content .banner-container .banner-wrapper .right-c .model-container .model {
@@ -1615,6 +1630,26 @@ footer .line-c {
   padding: 60px 30px;
   position: relative;
 }
+.our-events-details-page .page-content .details-content-container .link-info {
+  color: #000;
+  font-weight: 500;
+  font-size: 21px;
+  margin-bottom: 40px;
+}
+@media (max-width: 800px) {
+  .our-events-details-page .page-content .details-content-container .link-info {
+    font-size: 18px;
+  }
+}
+.our-events-details-page .page-content .details-content-container .link-info a {
+  color: #FF3465;
+}
+.our-events-details-page .page-content .details-content-container .link-info a:hover {
+  text-decoration: underline;
+}
+.our-events-details-page .page-content .details-content-container .link-info .album-name {
+  color: #FF3465;
+}
 .our-events-details-page .page-content .details-content-container .close-btn-w {
   position: absolute;
   display: flex;
@@ -1713,15 +1748,39 @@ footer .line-c {
     aspect-ratio: 1/1;
   }
 }
-.our-events-details-page .page-content .details-content-container .gallery-slideshow-container .swiper .swiper-wrapper .swiper-slide {
+.our-events-details-page .page-content .details-content-container .gallery-slideshow-container .swiper-container {
+  position: relative;
+}
+.our-events-details-page .page-content .details-content-container .gallery-slideshow-container .swiper-container .swiper-button-next {
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 10;
+}
+.our-events-details-page .page-content .details-content-container .gallery-slideshow-container .swiper-container .swiper-button-prev {
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 10;
+}
+.our-events-details-page .page-content .details-content-container .gallery-slideshow-container .swiper-container .swiper .swiper-wrapper .swiper-slide {
   width: auto;
 }
-.our-events-details-page .page-content .details-content-container .gallery-slideshow-container .swiper .swiper-wrapper .swiper-slide .img-container img {
+.our-events-details-page .page-content .details-content-container .gallery-slideshow-container .swiper-container .swiper .swiper-wrapper .swiper-slide .img-container img {
   border-radius: 6.97px;
   width: auto;
   height: 161px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 1080px) {
+  .our-events-details-page .page-content .details-content-container .gallery-slideshow-container .swiper-container .swiper .swiper-wrapper .swiper-slide .img-container img {
+    height: 100px;
+  }
 }
 
 .gallery-page .page-content .banner-container {
@@ -2578,6 +2637,11 @@ footer .line-c {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   }
 }
+@media (max-width: 800px) {
+  .our-team-page .page-content .main-team-section .card-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 .our-team-page .page-content .main-team-section .card-wrapper .card-box {
   border: 2px solid #FF3465;
   border-radius: 10px;
@@ -2588,14 +2652,21 @@ footer .line-c {
   gap: 28px;
   padding: 50px 43px;
 }
+@media (max-width: 800px) {
+  .our-team-page .page-content .main-team-section .card-wrapper .card-box {
+    padding: 50px 30px;
+  }
+}
 .our-team-page .page-content .main-team-section .card-wrapper .card-box .card-img {
   background: linear-gradient(185.43deg, #FF3465 -51.21%, #500E71 177.74%);
   border-radius: 50%;
-  width: 267px;
-  height: 267px;
+  max-width: 267px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   -o-object-fit: cover;
      object-fit: cover;
+  aspect-ratio: 1;
 }
 .our-team-page .page-content .main-team-section .card-wrapper .card-box .card-info-w .card-name {
   color: #9F1F6B;
@@ -2623,6 +2694,11 @@ footer .line-c {
 @media (max-width: 1400px) {
   .our-team-page .page-content .volunteers-section .card-wrapper {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+@media (max-width: 800px) {
+  .our-team-page .page-content .volunteers-section .card-wrapper {
+    grid-template-columns: 1fr;
   }
 }
 .our-team-page .page-content .volunteers-section .card-wrapper .card-box {
@@ -2713,8 +2789,33 @@ footer .line-c {
     display: none;
   }
 }
+.classes-details-page .page-content .link-section {
+  padding: 50px 20px;
+}
+.classes-details-page .page-content .link-section .link-info {
+  color: #000;
+  font-weight: 500;
+  font-size: 21px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  .classes-details-page .page-content .link-section .link-info {
+    font-size: 18px;
+  }
+}
+.classes-details-page .page-content .link-section .link-info a {
+  color: #FF3465;
+}
+.classes-details-page .page-content .link-section .link-info a:hover {
+  text-decoration: underline;
+}
+.classes-details-page .page-content .link-section .link-info .album-name {
+  color: #FF3465;
+}
 .classes-details-page .page-content .poster-section {
   padding: 50px 20px;
+  padding-top: 0;
 }
 .classes-details-page .page-content .poster-section .img-container {
   border-radius: 15px;
@@ -2768,15 +2869,39 @@ footer .line-c {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.classes-details-page .page-content .images-section .content-wrapper .swiper .swiper-wrapper .swiper-slide {
+.classes-details-page .page-content .images-section .content-wrapper .swiper-container {
+  position: relative;
+}
+.classes-details-page .page-content .images-section .content-wrapper .swiper-container .swiper-button-next {
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 10;
+}
+.classes-details-page .page-content .images-section .content-wrapper .swiper-container .swiper-button-prev {
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 10;
+}
+.classes-details-page .page-content .images-section .content-wrapper .swiper-container .swiper .swiper-wrapper .swiper-slide {
   width: auto;
 }
-.classes-details-page .page-content .images-section .content-wrapper .swiper .swiper-wrapper .swiper-slide .img-container img {
+.classes-details-page .page-content .images-section .content-wrapper .swiper-container .swiper .swiper-wrapper .swiper-slide .img-container img {
   border-radius: 6.97px;
   width: auto;
   height: 161px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 1080px) {
+  .classes-details-page .page-content .images-section .content-wrapper .swiper-container .swiper .swiper-wrapper .swiper-slide .img-container img {
+    height: 100px;
+  }
 }
 
 .gallery-images-page .page-content .banner-container {
@@ -2847,11 +2972,18 @@ footer .line-c {
 .gallery-images-page .page-content .images-content-section .section-content .link-info {
   color: #000;
   font-weight: 500;
-  font-size: 21.68px;
+  font-size: 21px;
   margin-bottom: 10px;
+}
+@media (max-width: 800px) {
+  .gallery-images-page .page-content .images-content-section .section-content .link-info {
+    font-size: 18px;
+  }
 }
 .gallery-images-page .page-content .images-content-section .section-content .link-info a {
   color: #FF3465;
+}
+.gallery-images-page .page-content .images-content-section .section-content .link-info a:hover {
   text-decoration: underline;
 }
 .gallery-images-page .page-content .images-content-section .section-content .link-info .album-name {
@@ -2861,6 +2993,11 @@ footer .line-c {
   font-family: Inter;
   font-weight: 400;
   font-size: 25px;
+}
+@media (max-width: 800px) {
+  .gallery-images-page .page-content .images-content-section .section-content .images-count {
+    font-size: 21px;
+  }
 }
 .gallery-images-page .page-content .images-content-section .section-content .preview-img-container {
   height: 720px;
@@ -2883,13 +3020,37 @@ footer .line-c {
      object-fit: contain;
   background: #000;
 }
-.gallery-images-page .page-content .images-content-section .section-content .swiper .swiper-wrapper .swiper-slide {
+.gallery-images-page .page-content .images-content-section .section-content .swiper-container {
+  position: relative;
+}
+.gallery-images-page .page-content .images-content-section .section-content .swiper-container .swiper-button-next {
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 10;
+}
+.gallery-images-page .page-content .images-content-section .section-content .swiper-container .swiper-button-prev {
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 10;
+}
+.gallery-images-page .page-content .images-content-section .section-content .swiper-container .swiper .swiper-wrapper .swiper-slide {
   width: auto;
 }
-.gallery-images-page .page-content .images-content-section .section-content .swiper .swiper-wrapper .swiper-slide .img-container img {
+.gallery-images-page .page-content .images-content-section .section-content .swiper-container .swiper .swiper-wrapper .swiper-slide .img-container img {
   border-radius: 6.97px;
   width: auto;
   height: 161px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 1080px) {
+  .gallery-images-page .page-content .images-content-section .section-content .swiper-container .swiper .swiper-wrapper .swiper-slide .img-container img {
+    height: 100px;
+  }
 }/*# sourceMappingURL=style.css.map */

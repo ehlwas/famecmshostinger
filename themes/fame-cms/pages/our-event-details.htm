@@ -46,13 +46,17 @@ function onStart() {
             
         </section>
 
+
         <div class="details-content-container">
             
-            <div class="close-btn-w">
+            {# <div class="close-btn-w">
                 <a href="{{ 'our-events' | page }}">
                     <img src="{{ 'assets/icons/close-icon.png' | media }}" class="close-icon" />
                 </a>
-            </div>
+            </div> #}
+            <p class="link-info">
+                <a href="{{ 'our-events' | page }}" class="link">Back to Talent Hub</a> / <span class="album-name">{{ record.title }}</span>
+            </p>
 
             <div class="header-text-w">
                 <p class="date">{{ record.event_date | date("d/m/Y") }}</p>
@@ -64,26 +68,35 @@ function onStart() {
                 <div class="displayed-image-c">
                     <img id="previewImg" src="{{ folderContents[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
                 </div>
-                
-                <div class="swiper" id="imageSlides">
-    
-                    <div class="swiper-wrapper">
-    
-                        {% for item in folderContents %}
-    
-                            <div class="swiper-slide">
-        
-                                <div class="img-container">
-                                    <img id="imageSlideItem" src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" loading="lazy" />
-                                </div>
-                                
-                            </div>
 
-                        {% endfor %}
+                <div class="swiper-container">
+
+                    <div class="swiper-button-prev"></div>
+
+                    <div class="swiper" id="imageSlides">
+        
+                        <div class="swiper-wrapper">
+        
+                            {% for item in folderContents %}
+        
+                                <div class="swiper-slide">
+            
+                                    <div class="img-container">
+                                        <img id="imageSlideItem" src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" loading="lazy" />
+                                    </div>
+                                    
+                                </div>
+
+                            {% endfor %}
+                            
+                        </div>
                         
                     </div>
-                    
+
+                    <div class="swiper-button-next"></div>
+
                 </div>
+                
             </div>
 
             {# <div class="bottom-text-w">

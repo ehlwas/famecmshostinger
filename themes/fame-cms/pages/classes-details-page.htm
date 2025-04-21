@@ -44,6 +44,13 @@ function onStart() {
             </div>
             
         </section>
+        
+
+        <section class="link-section">
+            <p class="link-info">
+                <a href="{{ 'talent-hub' | page }}" class="link">Back to Talent Hub</a> / <span class="album-name">{{ record.header_title }}</span>
+            </p>
+        </section>
 
 
         <section class="poster-section">
@@ -74,25 +81,34 @@ function onStart() {
                     <img id="previewImg" src="{{ folderContents[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
                 </div>
 
-                <div class="swiper" id="imageSlides">
-        
-                    <div class="swiper-wrapper">
-    
-                        {% for item in folderContents %}
-                    
-                            <div class="swiper-slide">
-        
-                                <div class="img-container">
-                                    <img id="imageSlideItem" src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" />
-                                </div>
-                                
-                            </div>
+                <div class="swiper-container">
 
-                        {% endfor %}
+                    <div class="swiper-button-prev"></div>
+
+                    <div class="swiper" id="imageSlides">
+            
+                        <div class="swiper-wrapper">
+        
+                            {% for item in folderContents %}
+                        
+                                <div class="swiper-slide">
+            
+                                    <div class="img-container">
+                                        <img id="imageSlideItem" src="{{ item.pathname | replace({'storage/app/media/': ''}) | media }}" />
+                                    </div>
+                                    
+                                </div>
+
+                            {% endfor %}
+                            
+                        </div>
                         
                     </div>
-                    
+
+                    <div class="swiper-button-next"></div>
+
                 </div>
+
                     
             </div>
         </section>

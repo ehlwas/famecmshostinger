@@ -17,26 +17,35 @@ new Swiper('#testimonialSwiper', {
 });
 
 new Swiper('#recentEventsSwiper', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    breakpoints: {
-        800: {
-            slidesPerView: 2,
-        },
-        1270: {
-            slidesPerView: 3,
-        },
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    800: {
+      slidesPerView: 2,
     },
+    1270: {
+      slidesPerView: 3,
+    },
+  },
 })
 
 new Swiper('#imageSlides', {
-    direction: 'horizontal', // Change to 'horizontal' if needed
-    slidesPerView: 'auto',
-    autoHeight: true,
-    spaceBetween: 30,
-    allowTouchMove: true,
-    freeMode: true,
+  direction: 'horizontal', // Change to 'horizontal' if needed
+  slidesPerView: 'auto',
+  autoHeight: true,
+  spaceBetween: 10,
+  allowTouchMove: true,
+  freeMode: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    800: {
+      spaceBetween: 30
+    }
+  }
 })
 
 let swiperInstance = null;

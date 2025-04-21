@@ -6,7 +6,7 @@ is_hidden = 0
 <?php
 use div\divcms\models\Events;
 function onStart() {
-    $this['eventsList'] = Events::all();
+    $this['eventsList'] = Events::orderBy('event_date', 'desc')->get();
 }
 ?>
 ==
