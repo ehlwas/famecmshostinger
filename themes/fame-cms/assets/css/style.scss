@@ -1036,7 +1036,7 @@ footer {
             top: 42px;
             right: 180px;
     
-            @media (max-width: 800px) {
+            @media (max-width: 1080px) {
                 // display: none;            
                 top: 0 !important;
                 left: 0 !important;
@@ -1075,7 +1075,7 @@ footer {
                 justify-content: center;
                 padding: 25px 35px;
                 
-                @media (max-width: 800px) {
+                @media (max-width: 1080px) {
                     display: none;
                 }
     

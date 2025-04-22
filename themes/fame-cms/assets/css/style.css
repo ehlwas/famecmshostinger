@@ -952,7 +952,7 @@ footer .line-c {
   top: 42px;
   right: 180px;
 }
-@media (max-width: 800px) {
+@media (max-width: 1080px) {
   .home-page .enroll-section .image-text-wrapper {
     top: 0 !important;
     left: 0 !important;
@@ -990,7 +990,7 @@ footer .line-c {
   justify-content: center;
   padding: 25px 35px;
 }
-@media (max-width: 800px) {
+@media (max-width: 1080px) {
   .home-page .enroll-section .image-text-wrapper .text-c {
     display: none;
   }
