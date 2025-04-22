@@ -14,16 +14,12 @@ function onStart() {
 
 
     $this['testimonialsList'] = Testimonials::all();
-    $this['eventList'] = Events::latest()->take(3)->get();
+    $this['eventList'] = Events::orderBy('event_date', 'desc')->take(3)->get();
 }
 ?>
 ==
 {% put scripts %}
     <script type="module" src="{{ 'assets/js/swiper-initial.js' | theme }}"></script>
-{% endput %}
-
-{% put headScript %}
-    <script src="https://cdn.jsdelivr.net/gh/Sean-93/newmarquee@v0.9.1/dist/newmarquee-min.js"></script>
 {% endput %}
 <div class="home-page">
 
@@ -54,7 +50,61 @@ function onStart() {
         
 
         <section class="featured-in-section">
-            <div class="featured-in-wrapper static-w">
+            <div class="featured-in-wrapper">
+                <div class="featured-in-item fi-1">
+                    <img src="{{ 'images/home/featured-in-1.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-2">
+                    <img src="{{ 'images/home/featured-in-2.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-3">
+                    <img src="{{ 'images/home/featured-in-3.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-4">
+                    <img src="{{ 'images/home/featured-in-4.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-5">
+                    <img src="{{ 'images/home/featured-in-5.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-6">
+                    <img src="{{ 'images/home/featured-in-6.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-1">
+                    <img src="{{ 'images/home/featured-in-1.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-2">
+                    <img src="{{ 'images/home/featured-in-2.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-3">
+                    <img src="{{ 'images/home/featured-in-3.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-4">
+                    <img src="{{ 'images/home/featured-in-4.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-5">
+                    <img src="{{ 'images/home/featured-in-5.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-6">
+                    <img src="{{ 'images/home/featured-in-6.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-1">
+                    <img src="{{ 'images/home/featured-in-1.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-2">
+                    <img src="{{ 'images/home/featured-in-2.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-3">
+                    <img src="{{ 'images/home/featured-in-3.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-4">
+                    <img src="{{ 'images/home/featured-in-4.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-5">
+                    <img src="{{ 'images/home/featured-in-5.png'|media }}" />
+                </div>
+                <div class="featured-in-item fi-6">
+                    <img src="{{ 'images/home/featured-in-6.png'|media }}" />
+                </div>
                 <div class="featured-in-item fi-1">
                     <img src="{{ 'images/home/featured-in-1.png'|media }}" />
                 </div>
@@ -74,29 +124,6 @@ function onStart() {
                     <img src="{{ 'images/home/featured-in-6.png'|media }}" />
                 </div>
             </div>
-            
-            <new-marquee class="marquee-w" speed="100" direction="left">
-                <div class="featured-in-wrapper">
-                    <div class="featured-in-item fi-1">
-                        <img src="{{ 'images/home/featured-in-1.png'|media }}" />
-                    </div>
-                    <div class="featured-in-item fi-2">
-                        <img src="{{ 'images/home/featured-in-2.png'|media }}" />
-                    </div>
-                    <div class="featured-in-item fi-3">
-                        <img src="{{ 'images/home/featured-in-3.png'|media }}" />
-                    </div>
-                    <div class="featured-in-item fi-4">
-                        <img src="{{ 'images/home/featured-in-4.png'|media }}" />
-                    </div>
-                    <div class="featured-in-item fi-5">
-                        <img src="{{ 'images/home/featured-in-5.png'|media }}" />
-                    </div>
-                    <div class="featured-in-item fi-6">
-                        <img src="{{ 'images/home/featured-in-6.png'|media }}" />
-                    </div>
-                </div>
-            </new-marquee>
         </section>
 
 
