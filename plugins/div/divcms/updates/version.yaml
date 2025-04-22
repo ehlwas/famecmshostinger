@@ -78,3 +78,6 @@
 1.0.27:
     - 'Created table div_divcms_register_link'
     - builder_table_create_div_divcms_register_link.php
+1.0.28:
+    - 'Updated table div_divcms_classes'
+    - builder_table_update_div_divcms_classes_5.php
