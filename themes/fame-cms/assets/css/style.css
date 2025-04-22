@@ -1860,7 +1860,7 @@ footer .line-c {
 }
 @media (max-width: 800px) {
   .gallery-page .page-content .album-grid-container .album-box {
-    width: auto;
+    max-width: 409px;
   }
 }
 .gallery-page .page-content .album-grid-container .album-box .img-wrapper {
