@@ -2083,7 +2083,7 @@ footer {
                 width: 409px;
 
                 @media (max-width: 800px) {
-                    max-width: 409px;
+                    width: auto;
                 }
 
                 .img-wrapper {
@@ -2098,6 +2098,10 @@ footer {
                         display: flex;
                         justify-content: space-between;
                         flex-direction: column;
+
+                        @media (max-width: 800px) {
+                            flex: 1;
+                        }
                     }
                     
                     .img-container {
@@ -2117,20 +2121,18 @@ footer {
                         height: 124px;
                         width: 124px;
 
-                        // @media (max-width: 800px) {
-                        //     height: 116px;
-                        //     width: 116px;
-                        // }
+                        @media (max-width: 800px) {
+                            width: unset;
+                        }
                     }
                     
                     .two {
                         height: 124px;
                         width: 124px;
                         
-                        // @media (max-width: 800px) {
-                        //     height: 116px;
-                        //     width: 116px;
-                        // }
+                        @media (max-width: 800px) {
+                            width: unset;
+                        }
                     }
     
                     .three {
@@ -2138,7 +2140,8 @@ footer {
                         width: 267px;
 
                         @media (max-width: 800px) {
-                            width: auto;
+                            flex: 1;
+                            width: unset;
                         }
                     }
                 }

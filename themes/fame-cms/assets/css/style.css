@@ -1860,7 +1860,7 @@ footer .line-c {
 }
 @media (max-width: 800px) {
   .gallery-page .page-content .album-grid-container .album-box {
-    max-width: 409px;
+    width: auto;
   }
 }
 .gallery-page .page-content .album-grid-container .album-box .img-wrapper {
@@ -1871,6 +1871,11 @@ footer .line-c {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+@media (max-width: 800px) {
+  .gallery-page .page-content .album-grid-container .album-box .img-wrapper .left-c {
+    flex: 1;
+  }
 }
 .gallery-page .page-content .album-grid-container .album-box .img-wrapper .img-container {
   background-color: #EEEEEE;
@@ -1888,9 +1893,19 @@ footer .line-c {
   height: 124px;
   width: 124px;
 }
+@media (max-width: 800px) {
+  .gallery-page .page-content .album-grid-container .album-box .img-wrapper .one {
+    width: unset;
+  }
+}
 .gallery-page .page-content .album-grid-container .album-box .img-wrapper .two {
   height: 124px;
   width: 124px;
+}
+@media (max-width: 800px) {
+  .gallery-page .page-content .album-grid-container .album-box .img-wrapper .two {
+    width: unset;
+  }
 }
 .gallery-page .page-content .album-grid-container .album-box .img-wrapper .three {
   height: 267px;
@@ -1898,7 +1913,8 @@ footer .line-c {
 }
 @media (max-width: 800px) {
   .gallery-page .page-content .album-grid-container .album-box .img-wrapper .three {
-    width: auto;
+    flex: 1;
+    width: unset;
   }
 }
 .gallery-page .page-content .album-grid-container .album-box .album-info-w {
