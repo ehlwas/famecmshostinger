@@ -16,9 +16,12 @@ function onStart() {
 
     $this['testimonialsList'] = Testimonials::all();
     $this['eventList'] = Events::orderBy('event_date', 'desc')->take(3)->get();
-    $this['classesList'] = Classes::orderByRaw('CAST(show_on_home AS UNSIGNED) ASC')
+    $this['classesList'] = Classes::orderBy('show_on_home', 'asc')
      ->limit(3)
      ->get();
+    // $this['classesList'] = Classes::orderByRaw('CAST(show_on_home AS UNSIGNED) ASC')
+    //  ->limit(3)
+    //  ->get();
 }
 ?>
 ==
