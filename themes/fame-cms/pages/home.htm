@@ -16,7 +16,8 @@ function onStart() {
 
     $this['testimonialsList'] = Testimonials::all();
     $this['eventList'] = Events::orderBy('event_date', 'desc')->take(3)->get();
-    $this['classesList'] = Classes::orderBy('show_on_home', 'asc')
+    $this['classesList'] = Classes::where('show_on_home', '>', 0)
+     ->orderBy('show_on_home', 'asc')
      ->take(3)
      ->get();
     // $this['classesList'] = Classes::orderByRaw('CAST(show_on_home AS UNSIGNED) ASC')
