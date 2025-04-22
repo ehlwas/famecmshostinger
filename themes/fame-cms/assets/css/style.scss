@@ -2083,7 +2083,8 @@ footer {
                 width: 409px;
 
                 @media (max-width: 800px) {
-                    width: auto;
+                    width: 100%;
+                    max-width: 409px;
                 }
 
                 .img-wrapper {
