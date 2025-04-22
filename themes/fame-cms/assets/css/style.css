@@ -636,7 +636,7 @@ footer .line-c {
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
   overflow: hidden;
 }
 @keyframes marquee {
@@ -891,7 +891,7 @@ footer .line-c {
 .home-page .enroll-section .section-title {
   margin-bottom: 50px;
   position: sticky;
-  top: 130px;
+  top: 100px;
 }
 @media (max-width: 800px) {
   .home-page .enroll-section .section-title {
@@ -954,7 +954,14 @@ footer .line-c {
 }
 @media (max-width: 800px) {
   .home-page .enroll-section .image-text-wrapper {
-    display: none;
+    top: 0 !important;
+    left: 0 !important;
+    right: unset;
+    bottom: unset;
+    height: 100%;
+    max-width: unset;
+    width: 100%;
+    opacity: 0.4;
   }
 }
 .home-page .enroll-section .image-text-wrapper .img-container {
@@ -962,6 +969,12 @@ footer .line-c {
   height: 100%;
   width: 100%;
   overflow: hidden;
+}
+.home-page .enroll-section .image-text-wrapper .img-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .home-page .enroll-section .image-text-wrapper .text-c {
   background: linear-gradient(185.43deg, #FF3465 -51.21%, #500E71 177.74%);
@@ -976,6 +989,11 @@ footer .line-c {
   align-items: center;
   justify-content: center;
   padding: 25px 35px;
+}
+@media (max-width: 800px) {
+  .home-page .enroll-section .image-text-wrapper .text-c {
+    display: none;
+  }
 }
 .home-page .enroll-section .image-text-wrapper .text-c .text {
   color: #fff;
@@ -1002,11 +1020,11 @@ footer .line-c {
 }
 .home-page .enroll-section .enroll-card.card-one {
   background: linear-gradient(227.58deg, #FFFFFF -124.77%, #FF7D9D 103.08%);
-  top: 230px;
+  top: 200px;
 }
 .home-page .enroll-section .enroll-card.card-two {
   background: linear-gradient(47.58deg, #FFFFFF -3.08%, #FF7D9D 224.77%);
-  top: 290px;
+  top: 260px;
 }
 .home-page .enroll-section .enroll-card.card-two .title-description-text {
   text-align: right;
@@ -1033,7 +1051,7 @@ footer .line-c {
 }
 .home-page .enroll-section .enroll-card.card-three {
   background: linear-gradient(99.17deg, #FFFFFF -36.01%, #FF7D9D 121.81%);
-  top: 350px;
+  top: 310px;
 }
 .home-page .enroll-section .enroll-card.card-three .image-text-wrapper {
   right: 80px;

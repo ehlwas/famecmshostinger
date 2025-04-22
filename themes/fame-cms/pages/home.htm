@@ -6,6 +6,7 @@ is_hidden = 0
 <?php
 use div\divcms\models\Testimonials;
 use div\divcms\models\Events;
+use div\divcms\models\Classes;
 function onStart() {
 	$this->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
     $this->addJs('https://cdn.jsdelivr.net/npm/simple-parallax-js@6.0.1/dist/vanilla/simpleParallaxVanilla.umd.min.js');
@@ -15,6 +16,9 @@ function onStart() {
 
     $this['testimonialsList'] = Testimonials::all();
     $this['eventList'] = Events::orderBy('event_date', 'desc')->take(3)->get();
+    $this['classesList'] = Classes::orderByRaw('CAST(show_on_home AS UNSIGNED) ASC')
+     ->limit(3)
+     ->get();
 }
 ?>
 ==
@@ -40,10 +44,12 @@ function onStart() {
                         <img src="{{ 'assets/icons/play.png'|media }}" />
                         See Promotion Video
                     </button>
-                    <button class="btn primary">
-                        <img src="{{ 'assets/icons/phone-message.png'|media }}" />
-                        Contact Us
-                    </button>
+                    <a href="{{ 'contact-us' | page }}">
+                        <button class="btn primary">
+                            <img src="{{ 'assets/icons/phone-message.png'|media }}" />
+                            Contact Us
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -196,68 +202,35 @@ function onStart() {
                 <span class="bg-text">Empowering Talent:</span> Register Today
             </h3>
 
-            <div class="enroll-card card-one">
-                <div class="title-description-text">
-                    <h5 class="ec-title">Lorem Ipsum Dolor sit amet</h5>
-                    <p class="ec-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="btn-container">
-                        <button class="btn primary">Learn More <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                    </div>
-                </div>
-                
-                <div class="image-text-wrapper">
-                    <div class="img-container">
-                        
-                    </div>
-                    <div class="text-c">
-                        <p class="text"></p>
-                    </div>
-                </div>
-            </div>
+            {% for item in classesList %}
 
-            <div class="enroll-card card-two">
-                <div class="title-description-text">
-                    <h5 class="ec-title">Lorem Ipsum Dolor sit amet</h5>
-                    <p class="ec-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="btn-container">
-                        <button class="btn primary">Learn More <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                    </div>
-                </div>
-                
-                <div class="image-text-wrapper">
-                    <div class="img-container">
-                        
-                    </div>
-                    <div class="text-c">
-                        <p class="text"></p>
-                    </div>
-                </div>
-            </div>
+                <div class="enroll-card 
+                    {{ loop.index == 1 ? 'card-one' : 
+                    (loop.index == 2 ? 'card-two' : 
+                    (loop.index == 3 ? 'card-three' : '') ) }}">
 
-            <div class="enroll-card card-three">
-                <div class="title-description-text">
-                    <h5 class="ec-title">Lorem Ipsum Dolor sit amet</h5>
-                    <p class="ec-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="btn-container">
-                        <button class="btn primary">Learn More <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    <div class="title-description-text">
+                        <h5 class="ec-title">{{ item.header_title }}</h5>
+                        <p class="ec-description">{{ item.header_description }}</p>
+                        <div class="btn-container">
+                            <a href="{{ 'classes-details-page' | page({ slug: item.slug }) }}">
+                                <button class="btn primary">Learn More <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="image-text-wrapper">
-                    <div class="img-container">
-                        
+                    
+                    <div class="image-text-wrapper">
+                        <div class="img-container">
+                            <img src="{{ item.img_poster | media }}" />
+                        </div>
+                        <div class="text-c">
+                            <p class="text"></p>
+                        </div>
                     </div>
-                    <div class="text-c">
-                        <p class="text"></p>
-                    </div>
+
                 </div>
 
-                <div class="enroll-link-c">
-                    <a href="{{ 'talent-hub' | page }}">
-                        and so much more <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
+            {% endfor %}
             
         </section>
 

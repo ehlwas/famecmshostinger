@@ -28,9 +28,11 @@ fields:
     show_on_home:
         label: 'Show on Home'
         options:
-            Hide: Hide
-            Show: Show
-        showSearch: true
+            - Hide
+            - 'Order 1'
+            - 'Order 2'
+            - 'Order 3'
+        showSearch: 0
         span: auto
         type: dropdown
     rich_text:

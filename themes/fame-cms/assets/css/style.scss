@@ -685,7 +685,7 @@ footer {
             margin: 0 50px;
             width: fit-content;
             white-space: nowrap;
-            animation: marquee 20s linear infinite;
+            animation: marquee 30s linear infinite;
             overflow: hidden;
         
             @keyframes marquee {
@@ -969,7 +969,7 @@ footer {
         .section-title {
             margin-bottom: 50px;
             position: sticky;
-            top: 130px;
+            top: 100px;
     
             @media (max-width: 800px) {
                 font-size: 30px;
@@ -1037,7 +1037,15 @@ footer {
             right: 180px;
     
             @media (max-width: 800px) {
-                display: none;            
+                // display: none;            
+                top: 0 !important;
+                left: 0 !important;
+                right: unset;
+                bottom: unset;
+                height: 100%;
+                max-width: unset;
+                width: 100%;
+                opacity: .4;
             }
     
             .img-container {
@@ -1045,6 +1053,12 @@ footer {
                 height: 100%;
                 width: 100%;
                 overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
     
             .text-c {
@@ -1060,6 +1074,10 @@ footer {
                 align-items: center;
                 justify-content: center;
                 padding: 25px 35px;
+                
+                @media (max-width: 800px) {
+                    display: none;
+                }
     
                 .text {
                     color: #fff;
@@ -1096,12 +1114,12 @@ footer {
     
             &.card-one {
                 background: linear-gradient(227.58deg, #FFFFFF -124.77%, #FF7D9D 103.08%);
-                top: 230px;
+                top: 200px;
             }
     
             &.card-two {
                 background: linear-gradient(47.58deg, #FFFFFF -3.08%, #FF7D9D 224.77%);
-                top: 290px;
+                top: 260px;
     
                 .title-description-text {
                     text-align: right;
@@ -1135,7 +1153,7 @@ footer {
     
             &.card-three {
                 background: linear-gradient(99.17deg, #FFFFFF -36.01%, #FF7D9D 121.81%);
-                top: 350px;
+                top: 310px;
                 
                 .image-text-wrapper {
                     right: 80px;
