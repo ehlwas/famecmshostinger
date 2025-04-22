@@ -1,0 +1,12 @@
+list: $/div/divcms/models/registerlink/columns.yaml
+modelClass: div\DivCms\Models\RegisterLink
+title: RegisterLink
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'div/divcms/registerlink/update/:id'

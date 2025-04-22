@@ -57,3 +57,7 @@ navigation:
                 label: Partners
                 url: div/divcms/partners
                 icon: icon-sitemap
+            register-cms:
+                label: Register
+                url: div/divcms/registerlink
+                icon: icon-sitemap

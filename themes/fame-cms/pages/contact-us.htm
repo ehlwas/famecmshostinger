@@ -3,6 +3,13 @@ url = "/contact-us"
 layout = "default"
 is_hidden = 0
 ==
+<?php
+use div\divcms\models\RegisterLink;
+function onStart() {
+    $this['registerLink'] = RegisterLink::latest()->first();
+}
+?>
+==
 <div class="contact-us-page">
 
     <div class="page-content">
@@ -51,7 +58,13 @@ is_hidden = 0
                             <img src="{{ 'assets/talent-hub-icon.png' | media }}" class="talent-icon" alt="" srcset="">
                         </div>
 
-                        <button class="btn primary">Book your slot now!</button>
+                        {% if registerLink.link %}
+                            <a href="{{ registerLink.link }}" target="_blank">
+                                <button class="btn primary">Book your slot now!</button>
+                            </a>
+                        {% else %}
+                            <button class="btn primary">Term Already Started</button>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -62,10 +75,10 @@ is_hidden = 0
                     <p class="title-form">Have a question?
                     Write to us!</p>
 
-                    <input type="text" placeholder="Full Name" />
-                    <input type="text" placeholder="Email Address" />
-                    <input type="text" placeholder="Phone Number" />
-                    <input type="text" placeholder="Subject" />
+                    <input type="text" placeholder="Full Name" required />
+                    <input type="text" placeholder="Email Address" required />
+                    <input type="text" placeholder="Phone Number" required />
+                    <input type="text" placeholder="Subject" required />
 
                     <textarea placeholder="Message"></textarea>
 

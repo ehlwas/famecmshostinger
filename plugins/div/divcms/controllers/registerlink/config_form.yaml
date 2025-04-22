@@ -1,0 +1,10 @@
+name: RegisterLink
+form: $/div/divcms/models/registerlink/fields.yaml
+modelClass: div\DivCms\Models\RegisterLink
+defaultRedirect: div/divcms/registerlink
+create:
+    redirect: 'div/divcms/registerlink/update/:id'
+    redirectClose: div/divcms/registerlink
+update:
+    redirect: div/divcms/registerlink
+    redirectClose: div/divcms/registerlink
