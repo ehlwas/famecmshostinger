@@ -37,7 +37,7 @@ function onStart() {
 
             {% for item in featuredList %}
 
-                <a href="{{ item.type == 'URL' ? item.url_link : item.image_link }}" target="_blank">
+                <a href="{{ item.type == 'URL' ? item.url_link : item.image_link | media }}" target="_blank">
                     <div class="card-box">
                         <div class="img-container">
                             <img src="{{ item.image | media }}" alt="{{ item.title }}" />
