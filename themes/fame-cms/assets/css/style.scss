@@ -218,11 +218,19 @@ header {
 
                         @media (max-width: 1190px) {
                             width: 100%;
+
+                            &.show {
+                                .dropdown-content {
+                                    display: flex;
+                                }
+                            }
                         }
 
-                        &:hover {
-                            .dropdown-content {
-                                display: flex;
+                        @media (min-width: 1190px) {
+                            &:hover {
+                                .dropdown-content {
+                                    display: flex;
+                                }
                             }
                         }
 
