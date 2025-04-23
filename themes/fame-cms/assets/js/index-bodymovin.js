@@ -4,9 +4,9 @@ var animation = bodymovin.loadAnimation({
     loop: false,
     autoplay: true,
     path: '/themes/fame-cms/assets/animation-json/animation-1.json',
-    // rendererSettings: {
-    //   preserveAspectRatio: 'none' // <- THIS breaks aspect ratio lock
-    // }
+    rendererSettings: {
+      preserveAspectRatio: 'none' // <- THIS breaks aspect ratio lock
+    }
 })
   
 function handlePlayAnimation() {

@@ -100,8 +100,10 @@ textarea {
 }
 .bodymovin-animate svg {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -10% !important;
+  left: -10% !important;
+  width: 120% !important;
+  height: 120% !important;
   z-index: -1;
 }
 
