@@ -95,6 +95,16 @@ textarea {
   text-align: center;
 }
 
+.bodymovin-animate {
+  position: relative;
+}
+.bodymovin-animate svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 header {
   background-color: white;
   border-bottom: 1px solid #E5E5E5;
@@ -578,11 +588,11 @@ footer .line-c {
     font-size: 27px;
   }
 }
-.home-page .banner-container .banner-text-wrapper .title strong {
+.home-page .banner-container .banner-text-wrapper .title .strong {
   font-weight: 600;
 }
 @media (max-width: 800px) {
-  .home-page .banner-container .banner-text-wrapper .title strong {
+  .home-page .banner-container .banner-text-wrapper .title .strong {
     background: rgba(255, 52, 101, 0.8980392157);
     padding: 0 5px;
   }

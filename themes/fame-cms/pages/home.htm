@@ -12,6 +12,8 @@ function onStart() {
     $this->addJs('https://cdn.jsdelivr.net/npm/simple-parallax-js@6.0.1/dist/vanilla/simpleParallaxVanilla.umd.min.js');
     $this->addJs('assets/js/parallax.js');
     $this->addJs('assets/js/home.js');
+    $this->addJs('assets/js/bodymovinanimation.js');
+    $this->addJs('assets/js/index-bodymovin.js');
 
 
     $this['testimonialsList'] = Testimonials::all();
@@ -40,7 +42,7 @@ function onStart() {
                 <h1 class="title">
                     A yearly event displaying<br />
                     the talents of<br />
-                    <strong>people of determination.</strong>
+                    <span id="animation1" class="strong bodymovin-animate">people of determination.</span>
                 </h1>
                 <h2 class="description">We encourage creativity and showcase fashion, art, music and entertainment.</h2>
                 <div class="btn-container">
