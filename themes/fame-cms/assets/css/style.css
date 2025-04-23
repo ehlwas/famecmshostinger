@@ -96,14 +96,16 @@ textarea {
 }
 
 .bodymovin-animate {
+  color: #fff;
   position: relative;
+  z-index: 1;
 }
 .bodymovin-animate svg {
   position: absolute;
-  top: -5% !important;
+  top: -20% !important;
   left: -5% !important;
   width: 110% !important;
-  height: 110% !important;
+  height: 140% !important;
   z-index: -1;
 }
 
@@ -707,7 +709,8 @@ footer .line-c {
   line-height: 90px;
   white-space: pre-line;
 }
-.home-page .info-section .info-content .info-text strong {
+.home-page .info-section .info-content .info-text .strong {
+  color: #fff;
   font-weight: 500;
 }
 @media (max-width: 900px) {

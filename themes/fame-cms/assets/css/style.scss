@@ -101,14 +101,16 @@ textarea {
 }
 
 .bodymovin-animate {
+    color: #fff;
     position: relative;
+    z-index: 1;
 
     svg {
         position: absolute;
-        top: -5% !important;
+        top: -20% !important;
         left: -5% !important;
         width: 110% !important;
-        height: 110% !important;
+        height: 140% !important;
         z-index: -1;
     }
 }
@@ -765,7 +767,8 @@ footer {
                 line-height: 90px;
                 white-space: pre-line;
     
-                strong {
+                .strong {
+                    color: #fff;
                     font-weight: 500;
                 }
 
