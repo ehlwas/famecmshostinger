@@ -99,6 +99,7 @@ textarea {
 header {
   background-color: white;
   border-bottom: 1px solid #E5E5E5;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   height: 95px;
   position: sticky;
   top: 0;
@@ -219,7 +220,7 @@ header nav .right-side .navigation-items-w .nav-item.dropdown-nav .dropdown-cont
   display: none;
   padding: 20px;
   position: absolute;
-  top: calc(100% - 20px);
+  top: calc(100% + 10px);
   white-space: nowrap;
 }
 @media (max-width: 1190px) {
