@@ -219,7 +219,7 @@ header nav .right-side .navigation-items-w .nav-item.dropdown-nav .dropdown-cont
   display: none;
   padding: 20px;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 20px);
   white-space: nowrap;
 }
 @media (max-width: 1190px) {
