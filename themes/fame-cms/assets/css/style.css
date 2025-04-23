@@ -205,9 +205,14 @@ header nav .right-side .navigation-items-w .nav-item:hover::before {
   header nav .right-side .navigation-items-w .nav-item.dropdown-nav {
     width: 100%;
   }
+  header nav .right-side .navigation-items-w .nav-item.dropdown-nav.show .dropdown-content {
+    display: flex;
+  }
 }
-header nav .right-side .navigation-items-w .nav-item.dropdown-nav:hover .dropdown-content {
-  display: flex;
+@media (min-width: 1190px) {
+  header nav .right-side .navigation-items-w .nav-item.dropdown-nav:hover .dropdown-content {
+    display: flex;
+  }
 }
 header nav .right-side .navigation-items-w .nav-item.dropdown-nav .dropdown-content {
   flex-direction: column;
