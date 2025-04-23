@@ -75,7 +75,7 @@ function onStart() {
 
             <div class="content-wrapper">
 
-                <p class="images-title">Images of Previous {{ record.header_title }} Classes</p>
+                <p class="images-title">Images From {{ record.header_title }} Class</p>
 
                 <div class="preview-img-container">
                     <img id="previewImg" src="{{ folderContents[0].pathname | replace({'storage/app/media/': ''}) | media }}" />
