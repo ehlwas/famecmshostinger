@@ -30,3 +30,12 @@ window.addEventListener('scroll', () => {
   }
   lastScrollY = window.scrollY;
 });
+
+
+const dropdownNav = navContainer.querySelectorAll('.dropdown-nav');
+
+dropdownNav.forEach((element) => {    
+    element.addEventListener('click', (ele) => {
+        ele.currentTarget.classList.toggle('show');
+    });
+})
