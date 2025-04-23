@@ -92,7 +92,6 @@ textarea {
 .section-description {
   font-weight: 400;
   font-size: 21.07px;
-  line-height: 55.74px;
   text-align: center;
 }
 
@@ -1498,9 +1497,13 @@ footer .line-c {
 .our-events-page .page-content .banner-container {
   background: linear-gradient(185.43deg, #FF3465 -51.21%, #500E71 177.74%);
   color: #fff;
-  height: 260px;
+  min-height: 260px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
 }
 .our-events-page .page-content .banner-container .bg-img {
   width: 100%;
@@ -1519,24 +1522,36 @@ footer .line-c {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
   height: 100%;
   padding: 50px 0;
   position: relative;
   z-index: 1;
 }
+@media (max-width: 800px) {
+  .our-events-page .page-content .banner-container .banner-wrapper {
+    gap: 10px;
+  }
+}
 .our-events-page .page-content .banner-container .banner-wrapper .section-title {
   font-weight: 400;
   font-size: clamp(34.78px, 3.4vw, 54.27px);
   line-height: 43px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
   width: 100%;
   padding: 0 30px;
 }
 .our-events-page .page-content .banner-container .banner-wrapper .section-title strong {
   font-weight: 600;
+}
+.our-events-page .page-content .banner-container .banner-wrapper .section-description {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: clamp(14px, 1.4vw, 24.46px);
+  text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
 }
 .our-events-page .page-content .grid-container {
   display: flex;
@@ -1593,9 +1608,13 @@ footer .line-c {
 .our-events-details-page .page-content .banner-container {
   background: linear-gradient(185.43deg, #FF3465 -51.21%, #500E71 177.74%);
   color: #fff;
-  height: 260px;
+  min-height: 260px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
 }
 .our-events-details-page .page-content .banner-container .bg-img {
   width: 100%;
@@ -1614,24 +1633,36 @@ footer .line-c {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
   height: 100%;
   padding: 50px 0;
   position: relative;
   z-index: 1;
 }
+@media (max-width: 800px) {
+  .our-events-details-page .page-content .banner-container .banner-wrapper {
+    gap: 10px;
+  }
+}
 .our-events-details-page .page-content .banner-container .banner-wrapper .section-title {
   font-weight: 400;
   font-size: clamp(34.78px, 3.4vw, 54.27px);
   line-height: 43px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
   width: 100%;
   padding: 0 30px;
 }
 .our-events-details-page .page-content .banner-container .banner-wrapper .section-title strong {
   font-weight: 600;
+}
+.our-events-details-page .page-content .banner-container .banner-wrapper .section-description {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: clamp(14px, 1.4vw, 24.46px);
+  text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
 }
 .our-events-details-page .page-content .details-content-container {
   max-width: 1400px;
@@ -1795,12 +1826,13 @@ footer .line-c {
 .gallery-page .page-content .banner-container {
   background: linear-gradient(185.43deg, #FF3465 -51.21%, #500E71 177.74%);
   color: #fff;
-  height: 260px;
+  min-height: 260px;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 .gallery-page .page-content .banner-container .bg-img {
   width: 100%;
@@ -1822,11 +1854,16 @@ footer .line-c {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   height: 100%;
   padding: 50px 0;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 800px) {
+  .gallery-page .page-content .banner-container .banner-wrapper {
+    gap: 10px;
+  }
 }
 .gallery-page .page-content .banner-container .banner-wrapper .section-title {
   font-weight: 400;
@@ -1844,11 +1881,6 @@ footer .line-c {
   font-weight: 500;
   font-size: clamp(14px, 1.4vw, 24.46px);
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
-}
-@media (max-width: 1100px) {
-  .gallery-page .page-content .banner-container .banner-wrapper .section-description {
-    display: none;
-  }
 }
 .gallery-page .page-content .album-grid-container {
   display: flex;
@@ -2003,12 +2035,13 @@ footer .line-c {
 .media-page .page-content .banner-container {
   background: linear-gradient(185.43deg, #FF3465 -51.21%, #500E71 177.74%);
   color: #fff;
-  height: 260px;
+  min-height: 260px;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 .media-page .page-content .banner-container .bg-img {
   width: 100%;
@@ -2030,11 +2063,16 @@ footer .line-c {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   height: 100%;
   padding: 50px 0;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 800px) {
+  .media-page .page-content .banner-container .banner-wrapper {
+    gap: 10px;
+  }
 }
 .media-page .page-content .banner-container .banner-wrapper .section-title {
   font-weight: 400;
@@ -2052,11 +2090,6 @@ footer .line-c {
   font-weight: 500;
   font-size: clamp(14px, 1.4vw, 24.46px);
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
-}
-@media (max-width: 1100px) {
-  .media-page .page-content .banner-container .banner-wrapper .section-description {
-    display: none;
-  }
 }
 .media-page .page-content .grid-container {
   display: grid;
@@ -2103,12 +2136,13 @@ footer .line-c {
 .sponsors-page .page-content .banner-container {
   background: linear-gradient(185.43deg, #FF3465 -51.21%, #500E71 177.74%);
   color: #fff;
-  height: 260px;
+  min-height: 260px;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 .sponsors-page .page-content .banner-container .bg-img {
   width: 100%;
@@ -2130,11 +2164,16 @@ footer .line-c {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   height: 100%;
   padding: 50px 0;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 800px) {
+  .sponsors-page .page-content .banner-container .banner-wrapper {
+    gap: 10px;
+  }
 }
 .sponsors-page .page-content .banner-container .banner-wrapper .section-title {
   font-weight: 400;
@@ -2152,11 +2191,6 @@ footer .line-c {
   font-weight: 500;
   font-size: clamp(14px, 1.4vw, 24.46px);
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
-}
-@media (max-width: 1100px) {
-  .sponsors-page .page-content .banner-container .banner-wrapper .section-description {
-    display: none;
-  }
 }
 .sponsors-page .page-content .info-section {
   padding: 30px;
@@ -2400,12 +2434,13 @@ footer .line-c {
 .talent-hub-page .page-content .banner-container {
   background: linear-gradient(185.43deg, #FF3465 -51.21%, #500E71 177.74%);
   color: #fff;
-  height: 260px;
+  min-height: 260px;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 @media (max-width: 800px) {
   .talent-hub-page .page-content .banner-container {
@@ -2442,7 +2477,6 @@ footer .line-c {
   display: flex;
   align-items: center;
   gap: 20px;
-  max-width: 1040px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -2478,11 +2512,6 @@ footer .line-c {
   font-weight: 500;
   font-size: clamp(14px, 1.4vw, 24.46px);
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
-}
-@media (max-width: 1100px) {
-  .talent-hub-page .page-content .banner-container .banner-wrapper .section-description {
-    display: none;
-  }
 }
 .talent-hub-page .page-content .grid-container {
   background-color: #F4F4F4;
@@ -2612,7 +2641,7 @@ footer .line-c {
 .our-team-page .page-content .banner-container {
   background: linear-gradient(185.43deg, #FF3465 -51.21%, #500E71 177.74%);
   color: #fff;
-  height: 260px;
+  min-height: 260px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -2639,11 +2668,16 @@ footer .line-c {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   height: 100%;
   padding: 50px 0;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 800px) {
+  .our-team-page .page-content .banner-container .banner-wrapper {
+    gap: 10px;
+  }
 }
 .our-team-page .page-content .banner-container .banner-wrapper .section-title {
   font-weight: 400;
@@ -2661,11 +2695,6 @@ footer .line-c {
   font-weight: 500;
   font-size: clamp(14px, 1.4vw, 24.46px);
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
-}
-@media (max-width: 1100px) {
-  .our-team-page .page-content .banner-container .banner-wrapper .section-description {
-    display: none;
-  }
 }
 .our-team-page .page-content .main-team-section .card-wrapper {
   display: grid;
@@ -2781,6 +2810,7 @@ footer .line-c {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 .classes-details-page .page-content .banner-container .bg-img {
   width: 100%;
@@ -2802,11 +2832,16 @@ footer .line-c {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   height: 100%;
-  padding: 50px 30px;
+  padding: 50px 0;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 800px) {
+  .classes-details-page .page-content .banner-container .banner-wrapper {
+    gap: 10px;
+  }
 }
 .classes-details-page .page-content .banner-container .banner-wrapper .section-title {
   font-weight: 400;
@@ -2815,7 +2850,6 @@ footer .line-c {
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
   width: 100%;
   padding: 0 30px;
-  margin-bottom: 20px;
 }
 .classes-details-page .page-content .banner-container .banner-wrapper .section-title strong {
   font-weight: 600;
@@ -2823,8 +2857,7 @@ footer .line-c {
 .classes-details-page .page-content .banner-container .banner-wrapper .section-description {
   font-family: Inter;
   font-weight: 500;
-  font-size: clamp(18px, 1.4vw, 24.46px);
-  line-height: normal;
+  font-size: clamp(14px, 1.4vw, 24.46px);
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
 }
 .classes-details-page .page-content .link-section {
@@ -2945,12 +2978,13 @@ footer .line-c {
 .gallery-images-page .page-content .banner-container {
   background: linear-gradient(185.43deg, #FF3465 -51.21%, #500E71 177.74%);
   color: #fff;
-  height: 260px;
+  min-height: 260px;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 .gallery-images-page .page-content .banner-container .bg-img {
   width: 100%;
@@ -2972,11 +3006,16 @@ footer .line-c {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   height: 100%;
   padding: 50px 0;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 800px) {
+  .gallery-images-page .page-content .banner-container .banner-wrapper {
+    gap: 10px;
+  }
 }
 .gallery-images-page .page-content .banner-container .banner-wrapper .section-title {
   font-weight: 400;
@@ -2994,11 +3033,6 @@ footer .line-c {
   font-weight: 500;
   font-size: clamp(14px, 1.4vw, 24.46px);
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.25);
-}
-@media (max-width: 1100px) {
-  .gallery-images-page .page-content .banner-container .banner-wrapper .section-description {
-    display: none;
-  }
 }
 .gallery-images-page .page-content .images-content-section {
   padding: 50px 20px;
