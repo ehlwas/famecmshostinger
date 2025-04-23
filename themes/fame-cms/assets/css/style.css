@@ -869,8 +869,7 @@ footer .line-c {
 }
 .home-page .recent-events-section .view-all-events {
   font-weight: 500;
-  font-size: 25.93px;
-  line-height: 15.7px;
+  font-size: 20px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -1102,9 +1101,7 @@ footer .line-c {
   margin-left: 10px;
 }
 .home-page .our-experience-section {
-  min-height: 1237px;
-  padding-top: 56px;
-  padding-bottom: 40px;
+  padding: 60px 0;
 }
 @media (max-width: 900px) {
   .home-page .our-experience-section {
@@ -1177,8 +1174,7 @@ footer .line-c {
 }
 .home-page .our-experience-section .view-gallery {
   font-weight: 500;
-  font-size: 25.93px;
-  line-height: 15.7px;
+  font-size: 20px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -1890,6 +1886,11 @@ footer .line-c {
   max-width: 1400px;
   margin: 0 auto;
   padding: 80px 30px;
+}
+@media (max-width: 800px) {
+  .gallery-page .page-content .album-grid-container {
+    display: grid;
+  }
 }
 .gallery-page .page-content .album-grid-container .album-box {
   cursor: pointer;

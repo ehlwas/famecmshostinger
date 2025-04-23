@@ -950,8 +950,7 @@ footer {
 
         .view-all-events {
             font-weight: 500;
-            font-size: 25.93px;
-            line-height: 15.7px;
+            font-size: 20px;
             text-align: center;
             display: flex;
             align-items: center;
@@ -1215,9 +1214,8 @@ footer {
     }
     
     .our-experience-section {
-        min-height: 1237px;
-        padding-top: 56px;
-        padding-bottom: 40px;
+        // min-height: 1237px;
+        padding: 60px 0;
         
         @media (max-width: 900px) {
             padding: 56px 30px 50px;
@@ -1299,8 +1297,7 @@ footer {
 
         .view-gallery {
             font-weight: 500;
-            font-size: 25.93px;
-            line-height: 15.7px;
+            font-size: 20px;
             text-align: center;
             display: flex;
             align-items: center;
@@ -2133,6 +2130,10 @@ footer {
             max-width: 1400px;
             margin: 0 auto;
             padding: 80px 30px;
+
+            @media (max-width: 800px) {
+                display: grid;
+            }
 
             .album-box {
                 cursor: pointer;
