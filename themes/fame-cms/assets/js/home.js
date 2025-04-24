@@ -13,3 +13,25 @@
 // });
 
 // observer.observe(video);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const headerContainer = document.querySelector('#bannerContainer');
+    const slides = headerContainer.querySelectorAll('.slider-w');
+    const slideCount = slides.length;
+
+    let slideCounter = 0;
+
+    const sliderAnimation = () => {
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === slideCounter);
+        });
+    };
+
+    // sliderAnimation();
+
+    setInterval(() => {
+        slideCounter = (slideCounter + 1) % slideCount;
+        sliderAnimation();
+    }, 5000);
+});
