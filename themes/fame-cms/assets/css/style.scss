@@ -104,6 +104,7 @@ textarea {
     color: #fff;
     position: relative;
     z-index: 1;
+    white-space: nowrap;
 
     &#animation1 {
 
@@ -121,10 +122,10 @@ textarea {
 
         svg {
             position: absolute;
-            top: -20% !important;
+            top: -28% !important;
             left: -30% !important;
             width: 160% !important;
-            height: 140% !important;
+            height: 160% !important;
             z-index: -1;
         }
     }
@@ -133,10 +134,10 @@ textarea {
 
         svg {
             position: absolute;
-            top: -20% !important;
+            top: -32% !important;
             left: -20% !important;
             width: 140% !important;
-            height: 140% !important;
+            height: 160% !important;
             z-index: -1;
         }
     }
@@ -145,10 +146,10 @@ textarea {
 
         svg {
             position: absolute;
-            top: -45% !important;
+            top: -72% !important;
             left: -10% !important;
             width: 116% !important;
-            height: 180% !important;
+            height: 230% !important;
             z-index: -1;
         }
     }
@@ -157,10 +158,10 @@ textarea {
 
         svg {
             position: absolute;
-            top: -20% !important;
+            top: -28% !important;
             left: -15% !important;
             width: 130% !important;
-            height: 140% !important;
+            height: 154% !important;
             z-index: -1;
         }
     }
@@ -169,10 +170,10 @@ textarea {
 
         svg {
             position: absolute;
-            top: -20% !important;
-            left: -25% !important;
-            width: 150% !important;
-            height: 140% !important;
+            top: -30% !important;
+            left: -29% !important;
+            width: 159% !important;
+            height: 158% !important;
             z-index: -1;
         }
     }
@@ -181,10 +182,10 @@ textarea {
 
         svg {
             position: absolute;
-            top: -20% !important;
-            left: -5% !important;
-            width: 110% !important;
-            height: 140% !important;
+            top: -31% !important;
+            left: -6% !important;
+            width: 112% !important;
+            height: 160% !important;
             z-index: -1;
         }
     }
@@ -292,7 +293,7 @@ header {
                         width: 0;
                         background-color: #FF3465;
                         position: absolute;
-                        bottom: -4px;
+                        bottom: 0px;
                         left: 50%;
                         transform: translateX(-50%);
                         border-radius: 6px;
@@ -336,7 +337,7 @@ header {
                             display: none;
                             padding: 20px;
                             position: absolute;
-                            top: calc(100% + 10px);
+                            top: 100%;
                             white-space: nowrap;
 
                             @media (max-width: 1190px) {
@@ -710,7 +711,8 @@ footer {
             .title {
                 font-weight: 400;
                 // font-size: 54.27px;
-                font-size: 4.4vw;
+                // font-size: 4.4vw;
+                font-size: clamp(50px, 4.4vw, 80px);
                 text-shadow: 0px 5.19px 5.19px #00000040;
     
                 @media (max-width: 900px) {
@@ -723,18 +725,14 @@ footer {
     
                 .strong {
                     font-weight: 600;
-    
-                    @media (max-width: 800px) {
-                        background: #FF3465E5;
-                        padding: 0 5px;
-                    }
                 }
             }
     
             .description {
                 font-weight: 400;
                 // font-size: 24.46px;
-                font-size: 1.9vw;
+                // font-size: 1.9vw;
+                font-size: clamp(30px, 1.9vw, 46px);
                 text-shadow: 0px 5.19px 5.19px #00000040;
     
                 @media (max-width: 900px) {
@@ -1080,6 +1078,10 @@ footer {
                 flex-direction: column;
                 line-height: unset;
             }
+
+            span {
+                color: #F4F4F4;
+            }
         }
     
         .title-description-text {
@@ -1417,6 +1419,10 @@ footer {
             
             @media (max-width: 800px) {
                 font-size: 30px;
+            }
+
+            span {
+                color: #F4F4F4;
             }
         }
     
@@ -1956,7 +1962,7 @@ footer {
             position: relative;
             
             .link-info {
-                color: #000;
+                color: #9F1F6B;
                 font-weight: 500;
                 font-size: 21px;
                 margin-bottom: 40px;
@@ -2977,6 +2983,7 @@ footer {
                 align-items: center;
                 justify-content: center;
                 user-select: none;
+                padding: 0 20px;
 
                 .card-img {
                     position: absolute;
@@ -3278,7 +3285,11 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0 20px;
+            padding: 0 60px;
+
+            @media (max-width: 800px) {
+                padding: 0 20px;
+            }
     
             .bg-img {
                 width: 100%;
@@ -3340,7 +3351,7 @@ footer {
             padding: 50px 20px;
             
             .link-info {
-                color: #000;
+                color: #9F1F6B;
                 font-weight: 500;
                 font-size: 21px;
                 max-width: 1400px;
@@ -3555,7 +3566,7 @@ footer {
                 margin: 0 auto;
 
                 .link-info {
-                    color: #000;
+                    color: #9F1F6B;
                     font-weight: 500;
                     font-size: 21px;
                     margin-bottom: 10px;

@@ -99,6 +99,7 @@ textarea {
   color: #fff;
   position: relative;
   z-index: 1;
+  white-space: nowrap;
 }
 .bodymovin-animate#animation1 svg {
   position: absolute;
@@ -110,50 +111,50 @@ textarea {
 }
 .bodymovin-animate#animation2 svg {
   position: absolute;
-  top: -20% !important;
+  top: -28% !important;
   left: -30% !important;
   width: 160% !important;
-  height: 140% !important;
+  height: 160% !important;
   z-index: -1;
 }
 .bodymovin-animate#animation3 svg {
   position: absolute;
-  top: -20% !important;
+  top: -32% !important;
   left: -20% !important;
   width: 140% !important;
-  height: 140% !important;
+  height: 160% !important;
   z-index: -1;
 }
 .bodymovin-animate#animation4 svg {
   position: absolute;
-  top: -45% !important;
+  top: -72% !important;
   left: -10% !important;
   width: 116% !important;
-  height: 180% !important;
+  height: 230% !important;
   z-index: -1;
 }
 .bodymovin-animate#animation5 svg {
   position: absolute;
-  top: -20% !important;
+  top: -28% !important;
   left: -15% !important;
   width: 130% !important;
-  height: 140% !important;
+  height: 154% !important;
   z-index: -1;
 }
 .bodymovin-animate#animation6 svg {
   position: absolute;
-  top: -20% !important;
-  left: -25% !important;
-  width: 150% !important;
-  height: 140% !important;
+  top: -30% !important;
+  left: -29% !important;
+  width: 159% !important;
+  height: 158% !important;
   z-index: -1;
 }
 .bodymovin-animate#animation7 svg {
   position: absolute;
-  top: -20% !important;
-  left: -5% !important;
-  width: 110% !important;
-  height: 140% !important;
+  top: -31% !important;
+  left: -6% !important;
+  width: 112% !important;
+  height: 160% !important;
   z-index: -1;
 }
 
@@ -253,7 +254,7 @@ header nav .right-side .navigation-items-w .nav-item::before {
   width: 0;
   background-color: #FF3465;
   position: absolute;
-  bottom: -4px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 6px;
@@ -286,7 +287,7 @@ header nav .right-side .navigation-items-w .nav-item.dropdown-nav .dropdown-cont
   display: none;
   padding: 20px;
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
   white-space: nowrap;
 }
 @media (max-width: 1190px) {
@@ -627,7 +628,7 @@ footer .line-c {
 }
 .home-page .banner-container .banner-text-wrapper .title {
   font-weight: 400;
-  font-size: 4.4vw;
+  font-size: clamp(50px, 4.4vw, 80px);
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.2509803922);
 }
 @media (max-width: 900px) {
@@ -643,15 +644,9 @@ footer .line-c {
 .home-page .banner-container .banner-text-wrapper .title .strong {
   font-weight: 600;
 }
-@media (max-width: 800px) {
-  .home-page .banner-container .banner-text-wrapper .title .strong {
-    background: rgba(255, 52, 101, 0.8980392157);
-    padding: 0 5px;
-  }
-}
 .home-page .banner-container .banner-text-wrapper .description {
   font-weight: 400;
-  font-size: 1.9vw;
+  font-size: clamp(30px, 1.9vw, 46px);
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.2509803922);
 }
 @media (max-width: 900px) {
@@ -969,6 +964,9 @@ footer .line-c {
     line-height: unset;
   }
 }
+.home-page .enroll-section .section-title span {
+  color: #F4F4F4;
+}
 .home-page .enroll-section .title-description-text {
   display: flex;
   flex-direction: column;
@@ -1262,6 +1260,9 @@ footer .line-c {
   .home-page .testimonial-section .section-title {
     font-size: 30px;
   }
+}
+.home-page .testimonial-section .section-title span {
+  color: #F4F4F4;
 }
 @media (max-width: 800px) {
   .home-page .testimonial-section .section-description {
@@ -1730,7 +1731,7 @@ footer .line-c {
   position: relative;
 }
 .our-events-details-page .page-content .details-content-container .link-info {
-  color: #000;
+  color: #9F1F6B;
   font-weight: 500;
   font-size: 21px;
   margin-bottom: 40px;
@@ -2610,6 +2611,7 @@ footer .line-c {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  padding: 0 20px;
 }
 .talent-hub-page .page-content .grid-container .card-box .card-img {
   position: absolute;
@@ -2874,7 +2876,12 @@ footer .line-c {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 60px;
+}
+@media (max-width: 800px) {
+  .classes-details-page .page-content .banner-container {
+    padding: 0 20px;
+  }
 }
 .classes-details-page .page-content .banner-container .bg-img {
   width: 100%;
@@ -2928,7 +2935,7 @@ footer .line-c {
   padding: 50px 20px;
 }
 .classes-details-page .page-content .link-section .link-info {
-  color: #000;
+  color: #9F1F6B;
   font-weight: 500;
   font-size: 21px;
   max-width: 1400px;
@@ -3106,7 +3113,7 @@ footer .line-c {
   margin: 0 auto;
 }
 .gallery-images-page .page-content .images-content-section .section-content .link-info {
-  color: #000;
+  color: #9F1F6B;
   font-weight: 500;
   font-size: 21px;
   margin-bottom: 10px;
