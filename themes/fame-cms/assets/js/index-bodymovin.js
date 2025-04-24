@@ -13,6 +13,21 @@ const animationSetup = (container, animationName) => {
     })
 
 }
+
+const interObserSetup = (animation) => {
+    return new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    animation.play();
+                }, 800);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+}
   
 function handlePlayAnimation() {
     // animation.setSpeed(0.5);
@@ -36,16 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (animationOne) {
         const bodymovinAnimation = animationSetup(animationOne, 'animation-1')
         
-        const observer = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    bodymovinAnimation.play();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.5
-        });
+        const observer = interObserSetup(bodymovinAnimation)
         
         observer.observe(animationOne);
     }
@@ -55,16 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (animationTwo) {
         const bodymovinAnimation = animationSetup(animationTwo, 'animation-2')
         
-        const observer = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    bodymovinAnimation.play();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.5
-        });
+        const observer = interObserSetup(bodymovinAnimation);
         
         observer.observe(animationTwo);
     }
@@ -74,16 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (animationThree) {
         const bodymovinAnimation = animationSetup(animationThree, 'animation-3')
         
-        const observer = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    bodymovinAnimation.play();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.5
-        });
+        const observer = interObserSetup(bodymovinAnimation);
         
         observer.observe(animationThree);
     }
@@ -93,16 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (animationFour) {
         const bodymovinAnimation = animationSetup(animationFour, 'animation-4')
         
-        const observer = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    bodymovinAnimation.play();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.5
-        });
+        const observer = interObserSetup(bodymovinAnimation);
         
         observer.observe(animationFour);
     }
@@ -112,16 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (animationFive) {
         const bodymovinAnimation = animationSetup(animationFive, 'animation-5')
         
-        const observer = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    bodymovinAnimation.play();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.5
-        });
+        const observer = interObserSetup(bodymovinAnimation);
         
         observer.observe(animationFive);
     }
@@ -131,16 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (animationSix) {
         const bodymovinAnimation = animationSetup(animationSix, 'animation-6')
         
-        const observer = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    bodymovinAnimation.play();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.5
-        });
+        const observer = interObserSetup(bodymovinAnimation);
         
         observer.observe(animationSix);
     }
@@ -150,16 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (animationSeven) {
         const bodymovinAnimation = animationSetup(animationSeven, 'animation-7')
         
-        const observer = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    bodymovinAnimation.play();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.5
-        });
+        const observer = interObserSetup(bodymovinAnimation);
         
         observer.observe(animationSeven);
     }

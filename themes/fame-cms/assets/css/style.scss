@@ -105,14 +105,90 @@ textarea {
     position: relative;
     z-index: 1;
 
-    svg {
-        position: absolute;
-        top: -20% !important;
-        left: -5% !important;
-        width: 110% !important;
-        height: 140% !important;
-        z-index: -1;
+    &#animation1 {
+
+        svg {
+            position: absolute;
+            top: -20% !important;
+            left: -5% !important;
+            width: 110% !important;
+            height: 140% !important;
+            z-index: -1;
+        }
     }
+
+    &#animation2 {
+
+        svg {
+            position: absolute;
+            top: -20% !important;
+            left: -30% !important;
+            width: 160% !important;
+            height: 140% !important;
+            z-index: -1;
+        }
+    }
+
+    &#animation3 {
+
+        svg {
+            position: absolute;
+            top: -20% !important;
+            left: -20% !important;
+            width: 140% !important;
+            height: 140% !important;
+            z-index: -1;
+        }
+    }
+    
+    &#animation4 {
+
+        svg {
+            position: absolute;
+            top: -45% !important;
+            left: -10% !important;
+            width: 116% !important;
+            height: 180% !important;
+            z-index: -1;
+        }
+    }
+    
+    &#animation5 {
+
+        svg {
+            position: absolute;
+            top: -20% !important;
+            left: -15% !important;
+            width: 130% !important;
+            height: 140% !important;
+            z-index: -1;
+        }
+    }
+    
+    &#animation6 {
+
+        svg {
+            position: absolute;
+            top: -20% !important;
+            left: -25% !important;
+            width: 150% !important;
+            height: 140% !important;
+            z-index: -1;
+        }
+    }
+    
+    &#animation7 {
+
+        svg {
+            position: absolute;
+            top: -20% !important;
+            left: -5% !important;
+            width: 110% !important;
+            height: 140% !important;
+            z-index: -1;
+        }
+    }
+
 }
 
 header {
