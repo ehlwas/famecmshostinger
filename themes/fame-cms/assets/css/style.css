@@ -603,7 +603,7 @@ footer .line-c {
 .home-page .banner-container .slider-w.active {
   animation-name: activeTransitionOut;
   animation-duration: 1100ms;
-  animation-delay: 4000ms;
+  animation-delay: 9000ms;
   animation-direction: linear;
   opacity: 1;
   z-index: 2;
