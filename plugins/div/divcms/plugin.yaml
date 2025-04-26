@@ -61,3 +61,7 @@ navigation:
                 label: Register
                 url: div/divcms/registerlink
                 icon: icon-sitemap
+            home-hero-banner:
+                label: 'Home Hero Banner'
+                url: div/divcms/hero
+                icon: icon-sitemap

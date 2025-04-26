@@ -23,12 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideCounter = 0;
 
     const sliderAnimation = () => {
-        slides.forEach((slide, index) => {
-            slide.classList.toggle('active', index === slideCounter);
+        slides.forEach(slide => {
+            slide.classList.remove('active', 'next', 'prev');
         });
+
+        const nextIndex = (slideCounter + 1) % slideCount;
+
+        slides[slideCounter].classList.add('active');
+        slides[nextIndex].classList.add('next');
+
+        // Only add 'prev' if more than 2 slides
+        if (slideCount > 2) {
+            const prevIndex = (slideCounter - 1 + slideCount) % slideCount;
+            slides[prevIndex].classList.add('prev');
+        }
     };
 
-    // sliderAnimation();
+    sliderAnimation();
 
     setInterval(() => {
         slideCounter = (slideCounter + 1) % slideCount;

@@ -663,11 +663,12 @@ footer {
         .slider-w {
             height: 100%;
             position: absolute;
-            top: -50px;
+            top: 0;
             left: 0;
             right: 0;
             opacity: 0;
-            transition: 1000ms ease-in-out;
+            z-index: -1;
+            // transition: 1000ms ease-in-out;
 
             &::after {
                 content: '';
@@ -682,8 +683,28 @@ footer {
             }
 
             &.active {
-                top: 0;
+                animation-name: activeTransitionOut;
+                animation-duration: 1100ms;
+                animation-delay: 4000ms;
+                animation-direction: linear;
                 opacity: 1;
+                z-index: 2;
+            }
+
+            &.next {
+                opacity: 1;
+                z-index: 1;
+            }
+
+            @keyframes activeTransitionOut {
+                0% {
+                    top: 0;
+                    opacity: 1;
+                }
+                100% {
+                    top: -50px;
+                    opacity: 0;
+                }
             }
         
             .simpleParallax {

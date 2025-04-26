@@ -1,0 +1,11 @@
+name: Hero
+modelClass: div\DivCms\Models\Hero
+form: $/div/divcms/models/hero/fields.yaml
+defaultRedirect: div/divcms/hero
+create:
+    redirect: 'div/divcms/hero/update/:id'
+    redirectClose: div/divcms/hero
+update:
+    redirect: div/divcms/hero
+    redirectClose: div/divcms/hero
+preview: {  }

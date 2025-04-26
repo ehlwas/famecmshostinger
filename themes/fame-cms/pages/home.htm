@@ -37,7 +37,7 @@ function onStart() {
 
         <div class="banner-container" id="bannerContainer">
 
-            <div class="slider-w active">
+            <div class="slider-w">
                 <img src="{{ 'images/home/home.png'|media }}" class="home-banner-img" id="img-moving-vertical" />
                 
                 <div class="banner-text-wrapper">
@@ -340,6 +340,49 @@ function onStart() {
 
                         {% endfor %}
 
+                        {% if testimonialsList|length < 3 %}
+
+                            {% for item in testimonialsList %}
+
+                                <div class="swiper-slide">
+                                    
+                                    <div class="testimonial-box">
+
+                                        <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
+                                        
+                                        <p class="message">
+                                            “{{ item.message }}
+                                        </p>
+
+                                        <p class="name">{{ item.name }}</p>
+                                        
+                                    </div>
+                                
+                                </div>
+
+                            {% endfor %}
+                                
+                            {% for item in testimonialsList %}
+
+                                <div class="swiper-slide">
+                                    
+                                    <div class="testimonial-box">
+
+                                        <img src="{{ 'assets/icons/quote.png' | media }}" class="quote-sign" />
+                                        
+                                        <p class="message">
+                                            “{{ item.message }}
+                                        </p>
+
+                                        <p class="name">{{ item.name }}</p>
+                                        
+                                    </div>
+                                
+                                </div>
+
+                            {% endfor %}
+                            
+                        {% endif %}
 
                     </div>
 

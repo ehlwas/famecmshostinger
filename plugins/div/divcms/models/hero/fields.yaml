@@ -1,0 +1,18 @@
+fields:
+    title:
+        label: Title
+        size: ''
+        span: auto
+        type: richeditor
+    description:
+        label: 'Sub Title'
+        span: auto
+        type: text
+    button_text:
+        label: 'Button Text'
+        span: auto
+        type: text
+    button_link:
+        label: 'Button Link'
+        span: auto
+        type: text

@@ -81,3 +81,6 @@
 1.0.28:
     - 'Updated table div_divcms_classes'
     - builder_table_update_div_divcms_classes_5.php
+1.0.29:
+    - 'Created table div_divcms_hero'
+    - builder_table_create_div_divcms_hero.php
