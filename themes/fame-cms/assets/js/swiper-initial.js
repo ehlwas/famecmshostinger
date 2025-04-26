@@ -5,7 +5,7 @@ new Swiper('#testimonialSwiper', {
     loop: true,
     initialSlide: 1,
     slidesPerView: 3,
-    autoHeight: false,
+    autoHeight: true,
     slidesPerView: 'auto',
     centeredSlides: true,
     spaceBetween: 50,
