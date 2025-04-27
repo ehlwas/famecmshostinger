@@ -652,7 +652,7 @@ footer {
         position: relative;
         overflow: hidden;
 
-        @media (max-width: 900px) {
+        @media (max-width: 800px) {
             height: 55vh;
         }
     
@@ -750,6 +750,7 @@ footer {
                     // font-size: 4.4vw;
                     font-size: clamp(50px, 4.4vw, 80px);
                     text-shadow: 0px 5.19px 5.19px #00000040;
+                    white-space: pre-line;
         
                     @media (max-width: 900px) {
                         font-size: 50px;

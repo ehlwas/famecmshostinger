@@ -3,7 +3,7 @@ fields:
         label: Title
         size: ''
         span: auto
-        type: richeditor
+        type: textarea
     description:
         label: 'Sub Title'
         span: auto
@@ -16,3 +16,8 @@ fields:
         label: 'Button Link'
         span: auto
         type: text
+    hero_img:
+        label: 'Banner Image'
+        span: auto
+        mode: file
+        type: mediafinder

@@ -571,7 +571,7 @@ footer .line-c {
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .home-page .banner-container {
     height: 55vh;
   }
@@ -661,6 +661,7 @@ footer .line-c {
   font-weight: 400;
   font-size: clamp(50px, 4.4vw, 80px);
   text-shadow: 0px 5.19px 5.19px rgba(0, 0, 0, 0.2509803922);
+  white-space: pre-line;
 }
 @media (max-width: 900px) {
   .home-page .banner-container .slider-w .banner-text-wrapper .title {

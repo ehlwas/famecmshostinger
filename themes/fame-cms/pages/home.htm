@@ -7,6 +7,7 @@ is_hidden = 0
 use div\divcms\models\Testimonials;
 use div\divcms\models\Events;
 use div\divcms\models\Classes;
+use div\divcms\models\Hero;
 function onStart() {
 	$this->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
     $this->addJs('https://cdn.jsdelivr.net/npm/simple-parallax-js@6.0.1/dist/vanilla/simpleParallaxVanilla.umd.min.js');
@@ -25,6 +26,7 @@ function onStart() {
     // $this['classesList'] = Classes::orderByRaw('CAST(show_on_home AS UNSIGNED) ASC')
     //  ->limit(3)
     //  ->get();
+    $this['heroList'] = Hero::all();
 }
 ?>
 ==
@@ -42,8 +44,8 @@ function onStart() {
                 
                 <div class="banner-text-wrapper">
                     <h1 class="title">
-                        A yearly event displaying<br />
-                        the talents of<br />
+                        A yearly event displaying
+                        the talents of
                         <span id="animation1" class="strong bodymovin-animate">people of determination.</span>
                     </h1>
                     <h2 class="description">We encourage creativity and showcase fashion, art, music and entertainment.</h2>
@@ -73,15 +75,32 @@ function onStart() {
                             <img src="{{ 'assets/icons/play.png'|media }}" />
                             See Promotion Video
                         </button>
-                        <a href="{{ 'contact-us' | page }}">
-                            <button class="btn primary">
-                                <img src="{{ 'assets/icons/phone-message.png'|media }}" />
-                                Contact Us
-                            </button>
-                        </a>
                     </div>
                 </div>
             </div>
+
+            {% for item in heroList %}
+
+                <div class="slider-w">
+                    <img src="{{ item.hero_img|media }}" class="home-banner-img" id="img-moving-vertical" />
+                    
+                    <div class="banner-text-wrapper">
+                        <h1 class="title">{{ item.title }}</h1>
+                        <h2 class="description">{{ item.description }}</h2>
+                        {% if item.button_text %}
+                            <div class="btn-container">
+                                <a href="{{ item.button_link }}" target="_blank">
+                                    <button class="btn primary">
+                                        {{ item.button_text }}
+                                    </button>
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+            {% endfor %}
+
 
         </div>
         
