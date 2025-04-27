@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sliderAnimation();
 
-    // setInterval(() => {
-    //     slideCounter = (slideCounter + 1) % slideCount;
-    //     sliderAnimation();
-    // }, 10000);
+    setInterval(() => {
+        slideCounter = (slideCounter + 1) % slideCount;
+        sliderAnimation();
+    }, 10000);
 });
