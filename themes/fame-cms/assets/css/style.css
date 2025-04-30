@@ -1861,16 +1861,10 @@ footer .line-c {
 .our-events-details-page .page-content .details-content-container .rich-text-editor {
   all: initial; /* Reset everything first */
   font-family: "Poppins", sans-serif; /* Now re-apply what you want */
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   margin-top: 20px;
   line-height: 1.7em;
   font-size: 15px;
-}
-.our-events-details-page .page-content .details-content-container .rich-text-editor * {
-  all: unset;
-  display: revert;
+  color: #2B2B2B;
 }
 .our-events-details-page .page-content .details-content-container .rich-text-editor a {
   color: var(--primary);
