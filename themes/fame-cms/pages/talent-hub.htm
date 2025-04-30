@@ -74,6 +74,16 @@ function onStart() {
                         <img src="{{ item.img_poster | media }}" class="card-img" />
 
                         <p class="card-title">{{ item.header_title }}</p>
+
+                        <div class="hover-container">
+                            <p class="card-title">{{ item.header_title }}</p>
+                            <p class="card-desc">
+                                {{ item.header_description|length > 100 
+                                    ? item.header_description|slice(0, 100) ~ '...' 
+                                    : item.header_description }}
+                            </p>
+                            <button class="btn primary">Explore Class <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                        </div>
                                                 
                     </div>
                     

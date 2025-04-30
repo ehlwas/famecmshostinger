@@ -561,6 +561,9 @@ footer .copy-right .powered-by {
   align-items: center;
   gap: 2px;
 }
+footer .copy-right .powered-by .div-link {
+  display: flex;
+}
 footer .line-c {
   height: 7px;
   background: linear-gradient(90deg, rgba(173, 46, 233, 0.4) 0%, rgba(204, 204, 204, 0.4) 48.5%, rgba(173, 46, 233, 0.4) 97.5%);
@@ -2631,16 +2634,12 @@ footer .line-c {
   padding: 60px 30px;
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
+  justify-content: center;
   gap: 30px;
 }
 @media (max-width: 1400px) {
   .talent-hub-page .page-content .grid-container {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  }
-}
-@media (max-width: 800px) {
-  .talent-hub-page .page-content .grid-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, 400px);
   }
 }
 .talent-hub-page .page-content .grid-container .card-box {
@@ -2656,7 +2655,13 @@ footer .line-c {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  padding: 0 20px;
+  padding: 20px;
+}
+.talent-hub-page .page-content .grid-container .card-box:hover .card-title {
+  opacity: 0;
+}
+.talent-hub-page .page-content .grid-container .card-box:hover .hover-container {
+  opacity: 1;
 }
 .talent-hub-page .page-content .grid-container .card-box .card-img {
   position: absolute;
@@ -2676,6 +2681,38 @@ footer .line-c {
   text-align: center;
   position: relative;
   z-index: 1;
+  opacity: 1;
+  transition: 400ms ease;
+}
+@media (max-width: 1400px) {
+  .talent-hub-page .page-content .grid-container .card-box .card-title {
+    font-size: 35px;
+  }
+}
+.talent-hub-page .page-content .grid-container .card-box .hover-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 16px;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 400ms ease;
+  padding: 20px;
+}
+.talent-hub-page .page-content .grid-container .card-box .hover-container .card-title {
+  opacity: 1;
+  font-size: 30px;
+}
+.talent-hub-page .page-content .grid-container .card-box .hover-container .card-desc {
+  color: #fff;
 }
 .talent-hub-page .page-content .mission-vision-container .mission-vision-wrapper {
   max-width: 1400px;
