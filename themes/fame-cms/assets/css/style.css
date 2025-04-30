@@ -1864,13 +1864,27 @@ footer .line-c {
 .our-events-details-page .page-content .details-content-container .rich-text-editor {
   all: initial; /* Reset everything first */
   font-family: "Poppins", sans-serif; /* Now re-apply what you want */
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin-top: 20px;
+  line-height: 1.7em;
+  font-size: 15px;
+  color: #2B2B2B;
 }
-.our-events-details-page .page-content .details-content-container .rich-text-editor * {
-  all: unset;
-  display: revert;
+.our-events-details-page .page-content .details-content-container .rich-text-editor a {
+  color: var(--primary);
+}
+.our-events-details-page .page-content .details-content-container .rich-text-editor p {
+  padding-bottom: 1em;
+}
+.our-events-details-page .page-content .details-content-container .rich-text-editor h1 {
+  padding-top: 10px !important;
+}
+.our-events-details-page .page-content .details-content-container .rich-text-editor h2 {
+  color: var(--primary);
+  padding-top: 20px !important;
+}
+.our-events-details-page .page-content .details-content-container .rich-text-editor h1, .our-events-details-page .page-content .details-content-container .rich-text-editor h2, .our-events-details-page .page-content .details-content-container .rich-text-editor h3, .our-events-details-page .page-content .details-content-container .rich-text-editor h4, .our-events-details-page .page-content .details-content-container .rich-text-editor h5, .our-events-details-page .page-content .details-content-container .rich-text-editor h6 {
+  padding-bottom: 10px;
+  line-height: 1em;
 }
 .our-events-details-page .page-content .details-content-container .gallery-slideshow-container {
   margin-top: 60px;

@@ -2124,13 +2124,31 @@ footer {
                 all: initial; /* Reset everything first */
             
                 font-family: "Poppins", sans-serif; /* Now re-apply what you want */
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-            
-                * {
-                    all: unset;
-                    display: revert;
+                margin-top: 20px;
+                line-height: 1.7em;
+                font-size: 15px;
+                color: #2B2B2B;
+                  
+                a {
+                    color: var(--primary);
+                }
+              
+                p {
+                    padding-bottom: 1em;
+                }
+              
+                h1 {
+                    padding-top: 10px !important;
+                }
+              
+                h2 {
+                    color: var(--primary);
+                    padding-top: 20px !important;
+                }
+              
+                h1, h2, h3, h4, h5, h6 {
+                    padding-bottom: 10px;
+                    line-height: 1em;
                 }
             }
     
