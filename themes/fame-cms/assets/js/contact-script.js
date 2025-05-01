@@ -13,7 +13,10 @@ contactForm.addEventListener('submit', function(e) {
         let resultBox = document.getElementById('formResult');
         if (data.success) {
             resultBox.innerHTML = `<div class='text-green-600'>${data.message}</div>`;
-            contactForm.style.display = 'none';
+            const elements = contactForm.querySelectorAll('input, textarea, select, button');
+            elements.forEach(el => {
+                el.disabled = true;
+            });
         } else {
             resultBox.innerHTML = `<div class='text-red-600'>${data.message}</div>`;
         }
