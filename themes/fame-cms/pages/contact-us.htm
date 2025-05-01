@@ -2,6 +2,7 @@ title = "Contact Us"
 url = "/contact-us"
 layout = "default"
 is_hidden = 0
+[contactForm]
 ==
 <?php
 use div\divcms\models\RegisterLink;
@@ -70,17 +71,17 @@ function onStart() {
             </div>
 
             <div class="col">
-                <form class="contact-form">
+                <form class="contact-form" data-request="contactForm::onSend" data-request-update="'#formResult': '#formResult'">
 
                     <p class="title-form">Have a question?
                     Write to us!</p>
 
-                    <input type="text" placeholder="Full Name" required />
-                    <input type="text" placeholder="Email Address" required />
-                    <input type="text" placeholder="Phone Number" required />
-                    <input type="text" placeholder="Subject" required />
+                    <input type="text" name="name" placeholder="Full Name" required />
+                    <input type="text" name="email" placeholder="Email Address" required />
+                    <input type="text" name="phone" placeholder="Phone Number" required />
+                    <input type="text" name="subject" placeholder="Subject" required />
 
-                    <textarea placeholder="Message"></textarea>
+                    <textarea name="message" placeholder="Message" required></textarea>
 
                     <div class="btn-container">
                         <button type="submit" class="btn primary">Send</button>

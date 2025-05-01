@@ -1,0 +1,11 @@
+recipient:
+    label: Recipient Email
+    type: text
+    default: contact@yourdomain.com
+    span: left
+
+successMessage:
+    label: Success Message
+    type: text
+    default: Thank you! We'll be in touch soon.
+    span: right

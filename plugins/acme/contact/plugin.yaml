@@ -1,0 +1,6 @@
+plugin:
+    name: Contact
+    description: A simple contact form plugin.
+    author: Acme
+    icon: icon-envelope
+    version: 1.0.0

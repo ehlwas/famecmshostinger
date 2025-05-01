@@ -35,13 +35,13 @@ return [
 
     'mailers' => [
         'smtp' => [
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'password' => env('MAIL_PASSWORD', ''),
-            'port' => env('MAIL_PORT', 587),
-            'timeout' => null,
             'transport' => 'smtp',
-            'username' => env('MAIL_USERNAME', ''),
-            'encryption' => env('MAIL_ENCRYPTION', null),
+            'host' => env('MAIL_HOST', 'mail.pvedubai.com'),
+            'port' => env('MAIL_PORT', 465),
+            'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'timeout' => null,
         ],
         'ses' => [
             'transport' => 'ses',
@@ -87,7 +87,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'noreply@example.com'),
-        'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Winter CMS')),
+        'address' => env('MAIL_FROM_ADDRESS', 'form@pvedubai.com'),
+        'name' => env('MAIL_FROM_NAME', 'PVE Dubai'),
     ],
 ];
