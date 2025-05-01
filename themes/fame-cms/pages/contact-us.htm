@@ -2,12 +2,12 @@ title = "Contact Us"
 url = "/contact-us"
 layout = "default"
 is_hidden = 0
-[contactForm]
 ==
 <?php
 use div\divcms\models\RegisterLink;
 function onStart() {
     $this['registerLink'] = RegisterLink::latest()->first();
+    $this->addJs('assets/js/contact-script.js');
 }
 ?>
 ==
@@ -71,7 +71,7 @@ function onStart() {
             </div>
 
             <div class="col">
-                <form class="contact-form" data-request="contactForm::onSend" data-request-update="'#formResult': '#formResult'">
+                <form class="contact-form" method="POST" action="{{ 'send-mail.php' | theme }}" id="contactForm">
 
                     <p class="title-form">Have a question?
                     Write to us!</p>
@@ -79,7 +79,14 @@ function onStart() {
                     <input type="text" name="name" placeholder="Full Name" required />
                     <input type="text" name="email" placeholder="Email Address" required />
                     <input type="text" name="phone" placeholder="Phone Number" required />
-                    <input type="text" name="subject" placeholder="Subject" required />
+                    {# <input type="text" name="subject" placeholder="Subject" required /> #}
+                    <select name="subject" required>
+                        <option value="" hidden class="placeholder">Select Subject</option>
+                        <option value="Sponsorship opportunities">Sponsorship opportunities</option>
+                        <option value="Volunteer with us">Volunteer with us</option>
+                        <option value="Learn more about Talent Hub">Learn more about Talent Hub</option>
+                        <option value="General inquiries">General inquiries</option>
+                    </select>
 
                     <textarea name="message" placeholder="Message" required></textarea>
 
@@ -88,6 +95,7 @@ function onStart() {
                     </div>
                     
                 </form>
+                <div id="formResult"></div>
             </div>
 
 

@@ -76,6 +76,21 @@ textarea {
   min-height: 188px;
 }
 
+select {
+  background-color: #EDEDED;
+  border: 0;
+  width: 100%;
+  height: 67px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0 29px;
+  color: #6d6d6d;
+}
+select option {
+  color: #000;
+}
+
 .bg-text {
   background-color: #FF3465;
   color: white;
@@ -1187,7 +1202,7 @@ footer .line-c {
 .home-page .enroll-section .enroll-link-c a {
   color: #2B2B2B;
   font-weight: 500;
-  font-size: 25.93px;
+  font-size: 20px;
   line-height: 15.7px;
   text-align: center;
   display: flex;
@@ -2456,6 +2471,9 @@ footer .line-c {
   margin-top: 30px;
 }
 .contact-us-page .page-content .contact-form textarea {
+  margin-top: 30px;
+}
+.contact-us-page .page-content .contact-form select {
   margin-top: 30px;
 }
 .contact-us-page .page-content .contact-form .btn-container {
