@@ -650,6 +650,7 @@ footer .line-c {
   overflow: hidden;
 }
 .home-page .banner-container .slider-w .home-banner-img {
+  background-color: #000;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;

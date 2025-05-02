@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
+        $mail->addReplyTo($_POST['email'], $_POST['name']);
         $mail->setFrom('form@pvedubai.com', 'PVE Dubai Form');
         $mail->addAddress('rosy@pvedubai.com');
 
