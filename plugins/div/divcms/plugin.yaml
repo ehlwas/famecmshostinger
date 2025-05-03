@@ -28,31 +28,31 @@ navigation:
             team:
                 label: Team
                 url: div/divcms/team
-                icon: icon-sitemap
+                icon: icon-user
             volunteers:
                 label: Volunteers
                 url: div/divcms/volunteers
-                icon: icon-sitemap
+                icon: icon-users
             testimonials:
                 label: Testimonials
                 url: div/divcms/testimonials
-                icon: icon-sitemap
+                icon: icon-star
             events:
                 label: Events
                 url: div/divcms/events
-                icon: icon-sitemap
+                icon: icon-calendar
             gallery:
                 label: Gallery
                 url: div/divcms/gallery
-                icon: icon-sitemap
+                icon: icon-image
             classes:
                 label: Classes
                 url: div/divcms/classes
-                icon: icon-sitemap
+                icon: icon-book
             featured-in:
                 label: 'Featured In'
                 url: div/divcms/featured
-                icon: icon-sitemap
+                icon: icon-external-link-square
             partners:
                 label: Partners
                 url: div/divcms/partners
@@ -60,8 +60,8 @@ navigation:
             register-cms:
                 label: Register
                 url: div/divcms/registerlink
-                icon: icon-sitemap
+                icon: icon-pencil
             home-hero-banner:
                 label: 'Home Hero Banner'
                 url: div/divcms/hero
-                icon: icon-sitemap
+                icon: icon-tablet
