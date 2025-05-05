@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let formData = new FormData(form);
 
         try {
-            const response = await fetch(contactForm.action, {
+            const response = await fetch(form.action, {
                 method: 'POST',
                 body: formData
             });
