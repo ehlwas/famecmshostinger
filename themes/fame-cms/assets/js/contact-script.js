@@ -1,43 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contactForm');
-    const resultBox = document.getElementById('formResult');
+const contactForm = document.getElementById('contactForm');
 
-    if (!contactForm) return;
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const elements = contactForm.querySelectorAll('input, textarea, select, button');
-        toggleElements(elements, true);
-
-        let form = e.target;
-        let formData = new FormData(form);
-
-        try {
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData
-            });
-
-            const data = await response.json();
-
-            showMessage(data.message, data.success ? 'green' : 'red');
-
-            if (!data.success) {
-                toggleElements(elements, false);
-            }
-        } catch (error) {
-            console.error('Form submission error:', error);
-            showMessage('Something went wrong. Please try again later.', 'red');
-            toggleElements(elements, false);
-        }
+    const elements = contactForm.querySelectorAll('input, textarea, select, button');
+    elements.forEach(el => {
+        el.disabled = true;
     });
 
-    function toggleElements(elements, disabled) {
-        elements.forEach(el => el.disabled = disabled);
-    }
+    let form = e.target;
+    let formData = new FormData(form);
 
-    function showMessage(message, color) {
-        resultBox.innerHTML = `<div class='text-${color}-600'>${message}</div>`;
-    }
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    }).then(response => response.json()).then(data => {
+        let resultBox = document.getElementById('formResult');
+        if (data.success) {
+            resultBox.innerHTML = `<div class='text-green-600'>${data.message}</div>`;
+        } else {
+            resultBox.innerHTML = `<div class='text-red-600'>${data.message}</div>`;
+            elements.forEach(el => {
+                el.disabled = false;
+            });
+        }
+    }).catch(err => {
+        console.error(err);
+        elements.forEach(el => {
+            el.disabled = false;
+        });
+    });
 });
