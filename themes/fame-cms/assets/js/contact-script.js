@@ -8,10 +8,18 @@ contactForm.addEventListener('submit', function(e) {
         el.disabled = true;
     });
 
+    const url = 'https://pvedubai.com/api/send-mail.php';
+
     let form = e.target;
     let formData = new FormData(form);
 
-    fetch(form.action, {
+    formData.append('name', form.name.value);
+    formData.append('email', form.email.value);
+    formData.append('phone', form.phone.value);
+    formData.append('subject', form.subject.value);
+    formData.append('message', form.message.value);
+
+    fetch(url, {
         method: 'POST',
         body: formData
     }).then(response => response.json()).then(data => {
