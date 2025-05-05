@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const elements = contactForm.querySelectorAll('input, textarea, select, button');
         toggleElements(elements, true);
 
-        const formData = new FormData(contactForm);
+        let form = e.target;
+        let formData = new FormData(form);
 
         try {
             const response = await fetch(contactForm.action, {
