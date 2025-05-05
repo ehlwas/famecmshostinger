@@ -1,26 +1,42 @@
-const contactForm = document.getElementById('contactForm');
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+    const resultBox = document.getElementById('formResult');
 
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+    if (!contactForm) return;
 
-    let form = e.target;
-    let formData = new FormData(form);
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    fetch(form.action, {
-        method: 'POST',
-        body: formData
-    }).then(response => response.json()).then(data => {
-        let resultBox = document.getElementById('formResult');
-        if (data.success) {
-            resultBox.innerHTML = `<div class='text-green-600'>${data.message}</div>`;
-            const elements = contactForm.querySelectorAll('input, textarea, select, button');
-            elements.forEach(el => {
-                el.disabled = true;
+        const elements = contactForm.querySelectorAll('input, textarea, select, button');
+        toggleElements(elements, true);
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData
             });
-        } else {
-            resultBox.innerHTML = `<div class='text-red-600'>${data.message}</div>`;
+
+            const data = await response.json();
+
+            showMessage(data.message, data.success ? 'green' : 'red');
+
+            if (!data.success) {
+                toggleElements(elements, false);
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            showMessage('Something went wrong. Please try again later.', 'red');
+            toggleElements(elements, false);
         }
-    }).catch(err => {
-        console.error(err);
     });
+
+    function toggleElements(elements, disabled) {
+        elements.forEach(el => el.disabled = disabled);
+    }
+
+    function showMessage(message, color) {
+        resultBox.innerHTML = `<div class='text-${color}-600'>${message}</div>`;
+    }
 });
