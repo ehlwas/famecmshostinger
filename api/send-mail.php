@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Load template
         ob_start();
-        include __DIR__ . '/../email-template.php';
+        include __DIR__ . '/email-template.php';
         $mail->Body = ob_get_clean();
 
         $mail->send();

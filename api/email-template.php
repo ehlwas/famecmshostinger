@@ -20,7 +20,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="header"><h2>New Contact Form Submission</h2></div>
+    <div class="header"><h2>You've Got a New Inquiry via Contact Form</h2></div>
     <div class="content">
       <p><span class="label">Name:</span> <?= htmlspecialchars($name) ?></p>
       <p><span class="label">Email:</span> <?= htmlspecialchars($email) ?></p>
