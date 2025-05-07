@@ -8,7 +8,7 @@ contactForm.addEventListener('submit', function(e) {
         el.disabled = true;
     });
 
-    const url = 'https://pvedubai.com/api/send-mail.php';
+    const url = '/api/send-mail.php';
 
     let form = e.target;
     let formData = new FormData(form);

@@ -2,10 +2,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
-// Clean output buffer just in case
-while (ob_get_level()) ob_end_clean();
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -20,23 +18,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
-        $mail->addReplyTo($_POST['email'], $_POST['name']);
+        $name = $_POST['name'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $phone = $_POST['phone'] ?? '';
+        $subject = $_POST['subject'] ?? 'Contact Form Submission';
+        $message = $_POST['message'] ?? '';
+
+        $mail->addReplyTo($email, $name);
         $mail->setFrom('form@pvedubai.com', 'PVE Dubai Form');
         $mail->addAddress('rosy@pvedubai.com');
-
         $mail->isHTML(true);
-        $mail->Subject = $_POST['subject'] ?? 'Contact Form Submission';
-        $mail->Body = "
-            <strong>Name:</strong> {$_POST['name']}<br>
-            <strong>Email:</strong> {$_POST['email']}<br>
-            <strong>Phone:</strong> {$_POST['phone']}<br>
-            <strong>Message:</strong><br>{$_POST['message']}
-        ";
+        $mail->Subject = $subject;
+
+        // Load template
+        ob_start();
+        include __DIR__ . '/../email-template.php';
+        $mail->Body = ob_get_clean();
 
         $mail->send();
         echo json_encode(['success' => true, 'message' => 'Message sent successfully.']);
+
     } catch (Exception $e) {
         echo json_encode(['success' => false, 'message' => "Mailer Error: {$mail->ErrorInfo}"]);
     }
+} else {
+    echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
 }
-?>
