@@ -1,0 +1,4 @@
+title: ContactNumber
+modelClass: div\DivCms\Models\ContactNumber
+toolbar:
+    buttons: reorder_toolbar

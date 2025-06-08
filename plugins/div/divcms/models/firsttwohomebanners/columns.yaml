@@ -1,0 +1,7 @@
+columns:
+    button_one:
+        label: 'Promotional Link'
+        type: text
+    banner_index:
+        label: Banner
+        type: text

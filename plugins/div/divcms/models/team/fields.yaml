@@ -5,7 +5,7 @@ fields:
         required: 1
         type: text
     description:
-        label: 'Text area'
+        label: Description
         span: auto
         size: ''
         type: textarea

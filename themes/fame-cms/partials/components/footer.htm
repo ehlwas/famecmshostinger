@@ -1,6 +1,13 @@
 [viewBag]
 snippetProperties[0][id] = -1
 ==
+<?php
+use div\divcms\models\ContactNumber;
+function onStart() {
+    $this['contactNumber'] = ContactNumber::latest()->first();
+}
+?>
+==
 <footer>
     <!-- <img src="/assets/images/footer/bg-footer.png" class="bg-footer"> -->
     <div class="footer-group">
@@ -20,9 +27,11 @@ snippetProperties[0][id] = -1
                         <img src="{{ 'assets/icons/instagram.png'|media }}" />
                     </a>
 
-                    <a href="https://wa.me/971506945330" target="_blank">
-                        <img src="{{ 'assets/icons/whatsapp.png'|media }}" />
-                    </a>
+                    {% if contactNumber.contact_num %}
+                        <a href="https://wa.me/{{ contactNumber.contact_num }}" target="_blank">
+                            <img src="{{ 'assets/icons/whatsapp.png'|media }}" />
+                        </a>
+                    {% endif %}
                 </div>
             </div>
 

@@ -1,0 +1,12 @@
+title: HomeHeroBannerFirstTwo
+modelClass: div\DivCms\Models\FirstTwoHomeBanners
+list: $/div/divcms/models/firsttwohomebanners/columns.yaml
+recordUrl: 'div/divcms/homeherobannerfirsttwo/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

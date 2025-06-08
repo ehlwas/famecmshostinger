@@ -1,0 +1,4 @@
+columns:
+    mission_vision:
+        label: 'Mission Vision'
+        type: text

@@ -1,0 +1,7 @@
+fields:
+    sub_paragraph:
+        label: 'Sub Paragraph'
+        span: auto
+        size: ''
+        required: 1
+        type: richeditor

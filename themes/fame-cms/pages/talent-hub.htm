@@ -5,11 +5,13 @@ is_hidden = 0
 ==
 <?php
 use div\divcms\models\Classes;
+use div\divcms\models\MissionVision;
 function onStart() {
     $this->addJs('assets/js/bodymovinanimation.js');
     $this->addJs('assets/js/index-bodymovin.js');
 
     $this['classesList'] = Classes::all();
+    $this['missionvision'] = MissionVision::latest()->first();
 }
 ?>
 ==
@@ -53,9 +55,10 @@ function onStart() {
                     <h2 class="section-title">
                         Our <span id="animation7" class="bodymovin-animate">Mission & Vision</span>
                     </h2>
-                    <p class="text">Our mission is to provide a creative, engaging and safe space for children and young people of determination to learn new skills, develop existing talents and to build confidence.</p>
+                    {{ missionvision.mission_vision | raw }}
+                    {# <p class="text">Our mission is to provide a creative, engaging and safe space for children and young people of determination to learn new skills, develop existing talents and to build confidence.</p>
                     <p class="text">In the social setting of the Talent Hub, our members have all the benefits of being a part of a unique youth club. Enriching independence whilst encouraging socialising and team ethic as we work towards end of term productions and ultimately the end of year F.A.M.E. event.</p>
-                    <p class="text">Our vision is to be fully inclusive and to ensure integration into the community by enabling the people of determination to fully participate in all spheres of life.</p>
+                    <p class="text">Our vision is to be fully inclusive and to ensure integration into the community by enabling the people of determination to fully participate in all spheres of life.</p> #}
                 </div>
                 
             </div>

@@ -1,0 +1,4 @@
+title: MissionVision
+modelClass: div\DivCms\Models\MissionVision
+toolbar:
+    buttons: reorder_toolbar

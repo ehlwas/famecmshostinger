@@ -1,0 +1,4 @@
+columns:
+    sub_paragraph:
+        label: 'Sub Paragraph'
+        type: text

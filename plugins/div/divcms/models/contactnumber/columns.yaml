@@ -1,0 +1,5 @@
+columns:
+    contact_num:
+        label: 'Contact Number'
+        type: text
+        searchable: false

@@ -1,0 +1,4 @@
+title: OurStory
+modelClass: div\DivCms\Models\OurStory
+toolbar:
+    buttons: reorder_toolbar

@@ -90,3 +90,18 @@
 1.0.31:
     - 'Updated table div_divcms_hero'
     - builder_table_update_div_divcms_hero.php
+1.0.32:
+    - 'Created table div_divcms_our_experience'
+    - builder_table_create_div_divcms_our_experience.php
+1.0.33:
+    - 'Created table div_divcms_contact_number'
+    - builder_table_create_div_divcms_contact_number.php
+1.0.34:
+    - 'Created table div_divcms_mission_vision'
+    - builder_table_create_div_divcms_mission_vision.php
+1.0.35:
+    - 'Created table div_divcms_our_story'
+    - builder_table_create_div_divcms_our_story.php
+1.0.36:
+    - 'Created table div_divcms_first_two_home_banners'
+    - builder_table_create_div_divcms_first_two_home_banners.php

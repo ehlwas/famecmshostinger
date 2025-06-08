@@ -1,0 +1,4 @@
+title: OurExperience
+modelClass: div\DivCms\Models\OurExperience
+toolbar:
+    buttons: reorder_toolbar

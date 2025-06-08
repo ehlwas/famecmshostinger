@@ -1,0 +1,10 @@
+name: OurStory
+form: $/div/divcms/models/ourstory/fields.yaml
+modelClass: div\DivCms\Models\OurStory
+defaultRedirect: div/divcms/ourstory
+create:
+    redirect: 'div/divcms/ourstory/update/:id'
+    redirectClose: div/divcms/ourstory
+update:
+    redirect: div/divcms/ourstory
+    redirectClose: div/divcms/ourstory

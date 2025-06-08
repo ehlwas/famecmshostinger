@@ -1,0 +1,10 @@
+name: OurExperience
+form: $/div/divcms/models/ourexperience/fields.yaml
+modelClass: div\DivCms\Models\OurExperience
+defaultRedirect: div/divcms/ourexperience
+create:
+    redirect: 'div/divcms/ourexperience/update/:id'
+    redirectClose: div/divcms/ourexperience
+update:
+    redirect: div/divcms/ourexperience
+    redirectClose: div/divcms/ourexperience

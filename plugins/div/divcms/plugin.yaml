@@ -65,3 +65,27 @@ navigation:
                 label: 'Home Hero Banner'
                 url: div/divcms/hero
                 icon: icon-tablet
+            home-first-two-hero-banner-item:
+                label: 'Home Hero Banner FIRST TWO'
+                url: div/divcms/homeherobannerfirsttwo
+                icon: icon-tablet
+            our-experience-item:
+                label: 'Our Experience'
+                url: div/divcms/ourexperience
+                icon: icon-slideshare
+                permissions:
+                    - div.general
+            contact-number-item:
+                label: 'Contact Number'
+                url: div/divcms/contactnumber
+                icon: icon-phone
+            mission-vision-item:
+                label: 'Mission Vision'
+                url: div/divcms/missionvision
+                icon: icon-university
+                permissions:
+                    - div.general
+            our-story-item:
+                label: 'Our Story'
+                url: div/divcms/ourstory
+                icon: icon-file-text-o

@@ -1,0 +1,7 @@
+fields:
+    img_path:
+        label: Image
+        span: auto
+        mode: file
+        required: 1
+        type: mediafinder

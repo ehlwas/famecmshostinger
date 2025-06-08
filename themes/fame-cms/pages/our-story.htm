@@ -5,12 +5,14 @@ is_hidden = 0
 ==
 <?php
 use div\DivCms\Models\Team;
+use div\DivCms\Models\OurStory;
 function onStart() {
 
     $items = Team::all();
 
     $this['data'] = $items;
     
+    $this['subParagraph'] = OurStory::latest()->first();
 }
 ?>
 ==
@@ -31,9 +33,10 @@ function onStart() {
                         in 2016 by <span class="name">Rosy Ahmed</span>,
                         the CEO of Purple Vogue Events.</h1>
 
-                    <p class="paragraph">F.A.M.E. which represents fashion, art, music & entertainment, is an annual stage show that was launched as a means of encouraging integration and providing a platform for people of determination to showcase their talents.</p>
+                    {{ subParagraph.sub_paragraph | raw }}
+                    {# <p class="paragraph">F.A.M.E. which represents fashion, art, music & entertainment, is an annual stage show that was launched as a means of encouraging integration and providing a platform for people of determination to showcase their talents.</p>
                     <p class="paragraph">Using these four channels, F.A.M.E. acts include a fashion show, musical and dance performances and dramatic acts. Over the years the show has become the UAE’s biggest inclusive event and each year grows in participants and creativity. New participants are encouraged to the stage each year as we develop the show content.</p>
-                    <p class="paragraph">With the growing interest in the annual F.A.M.E. production, we are pleased to be launching the F.A.M.E. TALENT HUB. A place where children and youths from the community can sign up to a variety of recreational classes and enjoy all that the Talent Hub has to offer.</p>
+                    <p class="paragraph">With the growing interest in the annual F.A.M.E. production, we are pleased to be launching the F.A.M.E. TALENT HUB. A place where children and youths from the community can sign up to a variety of recreational classes and enjoy all that the Talent Hub has to offer.</p> #}
                 </div>
 
                 <div class="right-c">

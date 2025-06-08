@@ -1,0 +1,4 @@
+columns:
+    img_path:
+        label: Image
+        type: text

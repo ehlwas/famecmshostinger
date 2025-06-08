@@ -1,0 +1,7 @@
+fields:
+    mission_vision:
+        label: 'Mission Vision'
+        span: auto
+        size: ''
+        required: 1
+        type: richeditor

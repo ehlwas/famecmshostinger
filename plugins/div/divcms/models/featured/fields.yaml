@@ -9,7 +9,7 @@ fields:
         mode: file
         type: mediafinder
     type:
-        label: Dropdown
+        label: Type
         options:
             URL: URL
             Image: Image

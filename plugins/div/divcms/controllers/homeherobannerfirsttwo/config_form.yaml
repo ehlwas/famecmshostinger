@@ -1,0 +1,10 @@
+name: HomeHeroBannerFirstTwo
+form: $/div/divcms/models/firsttwohomebanners/fields.yaml
+modelClass: div\DivCms\Models\FirstTwoHomeBanners
+defaultRedirect: div/divcms/homeherobannerfirsttwo
+create:
+    redirect: 'div/divcms/homeherobannerfirsttwo/update/:id'
+    redirectClose: div/divcms/homeherobannerfirsttwo
+update:
+    redirect: div/divcms/homeherobannerfirsttwo
+    redirectClose: div/divcms/homeherobannerfirsttwo

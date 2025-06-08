@@ -8,6 +8,8 @@ use div\divcms\models\Testimonials;
 use div\divcms\models\Events;
 use div\divcms\models\Classes;
 use div\divcms\models\Hero;
+use div\divcms\models\OurExperience;
+use div\divcms\models\FirstTwoHomeBanners;
 function onStart() {
 	$this->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
     $this->addJs('https://cdn.jsdelivr.net/npm/simple-parallax-js@6.0.1/dist/vanilla/simpleParallaxVanilla.umd.min.js');
@@ -27,9 +29,20 @@ function onStart() {
     //  ->limit(3)
     //  ->get();
     $this['heroList'] = Hero::all();
+
+    $this['ourExperienceList'] = OurExperience::latest()->take(5)->get();
+
+    $this['heroBannerOne'] = FirstTwoHomeBanners::where('banner_index', 1)
+    ->latest()
+    ->first();
+
+    $this['heroBannerTwo'] = FirstTwoHomeBanners::where('banner_index', 2)
+    ->latest()
+    ->first();
 }
 ?>
 ==
+{% set numberWords = ['one', 'two', 'three', 'four', 'five'] %}
 {% put scripts %}
     <script type="module" src="{{ 'assets/js/swiper-initial.js' | theme }}"></script>
 {% endput %}
@@ -48,10 +61,14 @@ function onStart() {
                         <span id="animation1" class="strong bodymovin-animate">people of determination.</span></h1>
                     <h2 class="description">We encourage creativity and showcase fashion, art, music and entertainment.</h2>
                     <div class="btn-container">
-                        <button class="btn outline-dashed">
-                            <img src="{{ 'assets/icons/play.png'|media }}" />
-                            See Promotion Video
-                        </button>
+                        {% if heroBannerOne.button_one %}
+                            <a href="{{ heroBannerOne.button_one }}">
+                                <button class="btn outline-dashed">
+                                    <img src="{{ 'assets/icons/play.png'|media }}" />
+                                    See Promotion Video
+                                </button>
+                            </a>
+                        {% endif %}
                         <a href="{{ 'contact-us' | page }}">
                             <button class="btn primary">
                                 <img src="{{ 'assets/icons/phone-message.png'|media }}" />
@@ -68,12 +85,16 @@ function onStart() {
                 <div class="banner-text-wrapper">
                     <h1 class="title">A Stage for Stars Who Inspire.</h1>
                     <h2 class="description">Celebrating Ability, Creativity, and Dreams on Stage.</h2>
-                    <div class="btn-container">
-                        <button class="btn outline-dashed">
-                            <img src="{{ 'assets/icons/play.png'|media }}" />
-                            See Promotion Video
-                        </button>
-                    </div>
+                    {% if heroBannerOne.button_one %}
+                        <div class="btn-container">
+                                <a href="{{ heroBannerOne.button_one }}">
+                                    <button class="btn outline-dashed">
+                                        <img src="{{ 'assets/icons/play.png'|media }}" />
+                                        See Promotion Video
+                                    </button>
+                                </a>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
 
@@ -348,27 +369,23 @@ function onStart() {
             <div class="img-grid-container">
 
                 <div class="g-col first">
-                    <div class="img-container img-one">
-                        <img src="{{ 'images/home/exp-1.png'|media }}" id="img-moving-vertical" />
-                    </div>
 
-                    <div class="img-container img-two">
-                        <img src="{{ 'images/home/exp-2.png'|media }}" id="img-moving-vertical" />
-                    </div>
+                    {% for item in ourExperienceList|slice(0, 2) %}
+                        <div class="img-container img-{{ numberWords[loop.index0] }}">
+                            <img src="{{ item.img_path|media }}" id="img-moving-vertical" />
+                        </div>
+                    {% endfor %}
+
                 </div>
 
                 <div class="g-col second">
-                    <div class="img-container img-three">
-                        <img src="{{ 'images/home/exp-3.png'|media }}" id="img-moving-vertical" />
-                    </div>
 
-                    <div class="img-container img-four">
-                        <img src="{{ 'images/home/exp-4.png'|media }}" id="img-moving-vertical" />
-                    </div>
-
-                    <div class="img-container img-five">
-                        <img src="{{ 'images/home/exp-5.png'|media }}" id="img-moving-vertical" />
-                    </div>
+                    {% for item in ourExperienceList|slice(2) %}
+                        <div class="img-container img-{{ numberWords[loop.index0 + 2] }}">
+                            <img src="{{ item.img_path|media }}" id="img-moving-vertical" />
+                        </div>
+                    {% endfor %}
+                    
                 </div>
                 
             </div>

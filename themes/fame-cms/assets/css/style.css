@@ -1504,15 +1504,15 @@ footer .line-c {
   font-size: 34.11px;
   line-height: 45.88px;
   white-space: pre-line;
+  margin-bottom: 30px;
 }
 .our-story-page .page-content .banner-container .banner-wrapper .left-c .banner-title .name {
   font-size: 46.68px;
 }
-.our-story-page .page-content .banner-container .banner-wrapper .left-c .paragraph {
+.our-story-page .page-content .banner-container .banner-wrapper .left-c p {
   font-family: Inter;
   font-weight: 500;
   font-size: 18.51px;
-  margin-top: 30px;
 }
 .our-story-page .page-content .banner-container .banner-wrapper .right-c {
   width: 40%;
@@ -2806,12 +2806,11 @@ footer .line-c {
     white-space: nowrap;
   }
 }
-.talent-hub-page .page-content .mission-vision-container .mission-vision-wrapper .info-wrapper .text {
+.talent-hub-page .page-content .mission-vision-container .mission-vision-wrapper .info-wrapper p {
   color: #300843;
-  margin-top: 12px;
 }
 @media (max-width: 1000px) {
-  .talent-hub-page .page-content .mission-vision-container .mission-vision-wrapper .info-wrapper .text {
+  .talent-hub-page .page-content .mission-vision-container .mission-vision-wrapper .info-wrapper p {
     font-family: Inter;
     font-weight: 400;
     font-size: 18px;

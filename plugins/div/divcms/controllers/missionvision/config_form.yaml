@@ -1,0 +1,11 @@
+name: MissionVision
+modelClass: div\DivCms\Models\MissionVision
+form: $/div/divcms/models/missionvision/fields.yaml
+defaultRedirect: div/divcms/missionvision
+create:
+    redirect: 'div/divcms/missionvision/update/:id'
+    redirectClose: div/divcms/missionvision
+update:
+    redirect: div/divcms/missionvision
+    redirectClose: div/divcms/missionvision
+preview: {  }

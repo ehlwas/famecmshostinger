@@ -1,0 +1,13 @@
+fields:
+    button_one:
+        label: 'Promotional Link'
+        span: auto
+        type: text
+    banner_index:
+        label: Banner
+        span: auto
+        showSearch: true
+        options:
+            1: 'Banner One'
+            2: 'Banner Two'
+        type: dropdown

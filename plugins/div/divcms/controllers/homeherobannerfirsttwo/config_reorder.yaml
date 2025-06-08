@@ -1,0 +1,4 @@
+title: HomeHeroBannerFirstTwo
+modelClass: div\DivCms\Models\FirstTwoHomeBanners
+toolbar:
+    buttons: reorder_toolbar

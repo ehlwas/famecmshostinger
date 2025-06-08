@@ -4,7 +4,7 @@ fields:
         span: auto
         type: text
     slug:
-        label: Slug
+        label: 'Link Preview'
         span: auto
         readOnly: 1
         preset:

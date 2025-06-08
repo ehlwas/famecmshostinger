@@ -1,0 +1,10 @@
+name: ContactNumber
+form: $/div/divcms/models/contactnumber/fields.yaml
+modelClass: div\DivCms\Models\ContactNumber
+defaultRedirect: div/divcms/contactnumber
+create:
+    redirect: 'div/divcms/contactnumber/update/:id'
+    redirectClose: div/divcms/contactnumber
+update:
+    redirect: div/divcms/contactnumber
+    redirectClose: div/divcms/contactnumber
